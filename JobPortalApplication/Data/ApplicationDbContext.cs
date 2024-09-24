@@ -13,8 +13,10 @@ namespace JobPortalApplication.Data
         public DbSet<Skill> Skills { get; set; }
         public DbSet<JobLevel> JobLevels { get; set; }
 
-        // Seed data skill table 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+		public DbSet<JobType> JobTypes { get; set; }
+
+		// Seed data skill table 
+		protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Skill>().HasData(
                 new Skill { Id = 1, Name = "HTML", Status = true },
