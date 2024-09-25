@@ -27,6 +27,8 @@
 
     <!-- Template Stylesheet -->
     <link href="~/admin/css/style.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
 </head>
 
 <body>
@@ -170,7 +172,7 @@
             </nav>
             <!-- Navbar End -->
 
-
+            <partial name="_Notification" />
            @RenderBody()
 
 
@@ -212,6 +214,7 @@
 
     <!-- Template Javascript -->
     <script src="~/admin/js/main.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
 
 </body>
 

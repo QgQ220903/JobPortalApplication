@@ -7,10 +7,8 @@ namespace JobPortalApplication.Models
     {
         [Key]
         public int Id { get; set; }
-        [Required(ErrorMessage ="Vui lòng nhập tên kỹ năng")]
-        [DisplayName("Tên Kỹ Năng")]
+        [Required]
         public string Name { get; set; }
-        [DisplayName("Trạng Thái")]
         public bool Status { get; set; }
     }
 }

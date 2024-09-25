@@ -3,8 +3,9 @@
     <div class="row g-4">
         <div class="col-lg-12">
             <div class="bg-light rounded h-100 p-4">
-                <h3 class="mb-4 fw-bold text-primary">Add New Skill</h3>
+                <h3 class="mb-4 fw-bold text-primary">Update Skill</h3>
                 <form method="post">
+                    <input asp-for="Id" hidden/>
                     <div class="form-floating mb-3">
                         <input asp-for="Name" type="text" class="form-control" id="floatingInput" placeholder="">
                         <label asp-for="Name" for="floatingInput"></label>
@@ -14,7 +15,7 @@
                         <input asp-for="Status" type="hidden" value="true" />
                     </div>
 
-                    <button type="submit" class="btn btn-primary">Create</button>
+                    <button type="submit" class="btn btn-primary">Update</button>
                     <a asp-area="Admin" asp-controller="JobSkill" asp-action="Index" class="btn btn-danger">Back To List</a>
                 </form>
             </div>
@@ -24,7 +25,7 @@
 
 @section Scripts {
     @{
-        <partial name="_ValidationScriptsPartial"/>
+        <partial name="_ValidationScriptsPartial" />
     }
 }
 
