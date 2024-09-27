@@ -1,5 +1,7 @@
 ﻿using JobPortalApplication.Data;
 using JobPortalApplication.Models;
+using JobPortalApplication.Repository;
+using JobPortalApplication.Repository.IRepository;
 using Microsoft.AspNetCore.Mvc;
 
 namespace JobPortalApplication.Areas.Admin.Controllers
@@ -7,14 +9,14 @@ namespace JobPortalApplication.Areas.Admin.Controllers
     [Area("Admin")]
     public class JobSkillController : Controller
     {
-        private readonly ApplicationDbContext _context;
-        public JobSkillController(ApplicationDbContext context) 
+        private readonly IUnitOfWork _unitOfWork;
+        public JobSkillController(IUnitOfWork unitOfWork) 
         {
-            _context = context;
+            _unitOfWork = unitOfWork;
         }
         public IActionResult Index()
         {
-            List<Skill> skillList = _context.Skills.ToList();
+            List<Skill> skillList = _unitOfWork.SkillRepo.GetAll().ToList();
             return View(skillList);
         }
 
@@ -27,8 +29,8 @@ namespace JobPortalApplication.Areas.Admin.Controllers
         {
             if(ModelState.IsValid)
             {
-                _context.Skills.Add(skill);
-                _context.SaveChanges();
+                _unitOfWork.SkillRepo.Add(skill);
+                _unitOfWork.Save();
                 TempData["success"] = "Skill created successfully";
                 return RedirectToAction("Index", "JobSkill");
             }
@@ -41,7 +43,7 @@ namespace JobPortalApplication.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-            Skill? skill = _context.Skills.FirstOrDefault(x => x.Id == id);
+            Skill? skill = _unitOfWork.SkillRepo.Get(x => x.Id == id);
             if(skill == null)
             {
                 return NotFound();
@@ -53,8 +55,8 @@ namespace JobPortalApplication.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Skills.Update(skill);
-                _context.SaveChanges();
+                _unitOfWork.SkillRepo.Update(skill);
+                _unitOfWork.Save();
                 TempData["success"] = "Skill updated successfully";
 
                 return RedirectToAction("Index", "JobSkill");
@@ -68,7 +70,7 @@ namespace JobPortalApplication.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-            Skill? skill = _context.Skills.FirstOrDefault(x => x.Id == id);
+            Skill? skill = _unitOfWork.SkillRepo.Get(x => x.Id == id);
             if(skill == null)
             {
                 return NotFound();
@@ -78,13 +80,13 @@ namespace JobPortalApplication.Areas.Admin.Controllers
         [HttpPost, ActionName("Delete")]
         public IActionResult DeletePOST(int id)
         {
-            Skill? skill = _context.Skills.FirstOrDefault(x=>x.Id == id);
+            Skill? skill = _unitOfWork.SkillRepo.Get(x=>x.Id == id);
             if (skill == null)
             {
                 return NotFound();
             }
-            _context.Skills.Remove(skill);
-            _context.SaveChanges();
+            _unitOfWork.SkillRepo.Remove(skill);
+            _unitOfWork.Save();
             TempData["success"] = "Skill deleted successfully";
             return RedirectToAction("Index", "JobSkill");
         }
