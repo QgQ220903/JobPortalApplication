@@ -4,6 +4,7 @@ using JobPortalApplication.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace JobPortalApplication.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240929135458_createCompanyTable")]
+    partial class createCompanyTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -46,6 +49,7 @@ namespace JobPortalApplication.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Logo")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
@@ -59,7 +63,7 @@ namespace JobPortalApplication.Migrations
                     b.Property<bool>("Status")
                         .HasColumnType("bit");
 
-                    b.Property<DateTime?>("Update")
+                    b.Property<DateTime>("Update")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Website")
@@ -74,7 +78,7 @@ namespace JobPortalApplication.Migrations
                         new
                         {
                             Id = 1,
-                            Create = new DateTime(2022, 9, 30, 23, 8, 48, 702, DateTimeKind.Local).AddTicks(3354),
+                            Create = new DateTime(2022, 9, 29, 20, 54, 57, 492, DateTimeKind.Local).AddTicks(5422),
                             Description = "Leading company in tech innovations and AI solutions.",
                             Email = "contact@techinnovators.com",
                             Industry = "Technology",
@@ -82,13 +86,13 @@ namespace JobPortalApplication.Migrations
                             Name = "Tech Innovators",
                             Phone = "123-456-7890",
                             Status = true,
-                            Update = new DateTime(2024, 9, 30, 23, 8, 48, 702, DateTimeKind.Local).AddTicks(3378),
+                            Update = new DateTime(2024, 9, 29, 20, 54, 57, 492, DateTimeKind.Local).AddTicks(5450),
                             Website = "https://www.techinnovators.com"
                         },
                         new
                         {
                             Id = 2,
-                            Create = new DateTime(2021, 9, 30, 23, 8, 48, 702, DateTimeKind.Local).AddTicks(3382),
+                            Create = new DateTime(2021, 9, 29, 20, 54, 57, 492, DateTimeKind.Local).AddTicks(5452),
                             Description = "Sustainable solutions for a greener future.",
                             Email = "info@greenearth.com",
                             Industry = "Environmental",
@@ -96,13 +100,13 @@ namespace JobPortalApplication.Migrations
                             Name = "Green Earth Co.",
                             Phone = "987-654-3210",
                             Status = true,
-                            Update = new DateTime(2024, 9, 30, 23, 8, 48, 702, DateTimeKind.Local).AddTicks(3383),
+                            Update = new DateTime(2024, 9, 29, 20, 54, 57, 492, DateTimeKind.Local).AddTicks(5453),
                             Website = "https://www.greenearth.com"
                         },
                         new
                         {
                             Id = 3,
-                            Create = new DateTime(2019, 9, 30, 23, 8, 48, 702, DateTimeKind.Local).AddTicks(3385),
+                            Create = new DateTime(2019, 9, 29, 20, 54, 57, 492, DateTimeKind.Local).AddTicks(5489),
                             Description = "Providing innovative healthcare solutions worldwide.",
                             Email = "support@healthfirst.com",
                             Industry = "Healthcare",
@@ -110,13 +114,13 @@ namespace JobPortalApplication.Migrations
                             Name = "HealthFirst Inc.",
                             Phone = "555-678-1234",
                             Status = true,
-                            Update = new DateTime(2024, 9, 30, 23, 8, 48, 702, DateTimeKind.Local).AddTicks(3385),
+                            Update = new DateTime(2024, 9, 29, 20, 54, 57, 492, DateTimeKind.Local).AddTicks(5490),
                             Website = "https://www.healthfirst.com"
                         },
                         new
                         {
                             Id = 4,
-                            Create = new DateTime(2023, 9, 30, 23, 8, 48, 702, DateTimeKind.Local).AddTicks(3387),
+                            Create = new DateTime(2023, 9, 29, 20, 54, 57, 492, DateTimeKind.Local).AddTicks(5492),
                             Description = "Investing in future leaders and breakthrough industries.",
                             Email = "contact@globalventures.com",
                             Industry = "Investment",
@@ -124,13 +128,13 @@ namespace JobPortalApplication.Migrations
                             Name = "Global Ventures",
                             Phone = "321-987-6543",
                             Status = true,
-                            Update = new DateTime(2024, 9, 30, 23, 8, 48, 702, DateTimeKind.Local).AddTicks(3388),
+                            Update = new DateTime(2024, 9, 29, 20, 54, 57, 492, DateTimeKind.Local).AddTicks(5492),
                             Website = "https://www.globalventures.com"
                         },
                         new
                         {
                             Id = 5,
-                            Create = new DateTime(2020, 9, 30, 23, 8, 48, 702, DateTimeKind.Local).AddTicks(3389),
+                            Create = new DateTime(2020, 9, 29, 20, 54, 57, 492, DateTimeKind.Local).AddTicks(5494),
                             Description = "Developing renewable energy solutions for the future.",
                             Email = "support@futureenergy.com",
                             Industry = "Energy",
@@ -138,13 +142,13 @@ namespace JobPortalApplication.Migrations
                             Name = "Future Energy Corp",
                             Phone = "222-333-4444",
                             Status = true,
-                            Update = new DateTime(2024, 9, 30, 23, 8, 48, 702, DateTimeKind.Local).AddTicks(3391),
+                            Update = new DateTime(2024, 9, 29, 20, 54, 57, 492, DateTimeKind.Local).AddTicks(5497),
                             Website = "https://www.futureenergy.com"
                         },
                         new
                         {
                             Id = 6,
-                            Create = new DateTime(2018, 9, 30, 23, 8, 48, 702, DateTimeKind.Local).AddTicks(3393),
+                            Create = new DateTime(2018, 9, 29, 20, 54, 57, 492, DateTimeKind.Local).AddTicks(5499),
                             Description = "Bringing technology into the classroom to transform learning.",
                             Email = "info@edutech.com",
                             Industry = "Education",
@@ -152,7 +156,7 @@ namespace JobPortalApplication.Migrations
                             Name = "EduTech Solutions",
                             Phone = "999-888-7777",
                             Status = true,
-                            Update = new DateTime(2024, 9, 30, 23, 8, 48, 702, DateTimeKind.Local).AddTicks(3393),
+                            Update = new DateTime(2024, 9, 29, 20, 54, 57, 492, DateTimeKind.Local).AddTicks(5500),
                             Website = "https://www.edutech.com"
                         });
                 });
