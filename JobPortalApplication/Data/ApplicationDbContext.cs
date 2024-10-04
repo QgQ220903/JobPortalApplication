@@ -14,9 +14,10 @@ namespace JobPortalApplication.Data
         public DbSet<JobLevel> JobLevels { get; set; }
 		public DbSet<JobType> JobTypes { get; set; }
 		public DbSet<Company> Companys { get; set; }
+        public DbSet<Employer> Employers { get; set; }
 
-		// Seed data skill table 
-		protected override void OnModelCreating(ModelBuilder modelBuilder)
+        // Seed data skill table 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Skill>().HasData(
                 new Skill { Id = 1, Name = "HTML", Status = true },
@@ -121,7 +122,23 @@ namespace JobPortalApplication.Data
 					Status = true
 				}
 			);
+            modelBuilder.Entity<Employer>().HasData(
+                new Employer
+                {
+                    Id = 1,
+                    Username = "phanduycuu",
+                    Password = "123456789Aa",
+                    Email = "contact@techinnovators.com",
+                    CompanyId = 3,
+                    Fullname = "Phan Duy Cuu",
+                    Create = DateTime.Now.AddYears(-2),
+                    Update = DateTime.Now,
+                    Status = true
+                }
 
-		}
+            );
+
+
+        }
 	}
 }

@@ -5,6 +5,7 @@
         ISkillRepository SkillRepo { get; }
 
         ICompanyRepository CompanyRepo { get; }
+        IEmployerRepository EmployerRepo { get; }
         void Save();
     }
 }

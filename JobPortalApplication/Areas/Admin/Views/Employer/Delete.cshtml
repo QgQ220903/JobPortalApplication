@@ -1,0 +1,67 @@
+﻿@model EmployerVM
+<div class="container-fluid pt-4 px-0">
+    <div class="row g-4">
+        <div class="col-lg-12">
+            <div class="bg-light rounded h-100 p-4">
+                <h3 class="mb-4 fw-bold text-primary">Delete Employer</h3>
+                <form method="post" enctype="multipart/form-data">
+                    <input asp-for="@Model.Employer.Id" type="hidden">
+                    <div class="form-floating mb-3">
+                        <input readonly asp-for="@Model.Employer.Username" type="text" class="form-control" id="floatingInput" placeholder="">
+                        <label asp-for="@Model.Employer.Username" for="floatingInput"></label>
+                        <span asp-validation-for="@Model.Employer.Username" class="text-danger m-2"></span>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input readonly asp-for="@Model.Employer.Password" type="text" class="form-control" id="floatingInput" placeholder="">
+                        <label asp-for="@Model.Employer.Password" for="floatingInput"></label>
+                        <span asp-validation-for="@Model.Employer.Password" class="text-danger m-2"></span>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input readonly asp-for="@Model.Employer.Email" type="text" class="form-control" id="floatingInput" placeholder="">
+                        <label asp-for="@Model.Employer.Email" for="floatingInput"></label>
+                        <span asp-validation-for="@Model.Employer.Email" class="text-danger m-2"></span>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input readonly asp-for="@Model.Employer.Fullname" type="text" class="form-control" id="floatingInput" placeholder="">
+                        <label asp-for="@Model.Employer.Fullname" for="floatingInput"></label>
+                        <span asp-validation-for="@Model.Employer.Fullname" class="text-danger m-2"></span>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <select disabled asp-for="@Model.Employer.CompanyId" asp-items="@Model.CompanyList" class="form-control">
+                            <option disabled selected>--Select Company--</option>
+                        </select>
+                        <label asp-for="@Model.Employer.CompanyId"></label>
+                        <span asp-validation-for="@Model.Employer.CompanyId" class="text-danger m-2"></span>
+                    </div>
+
+                    <div>
+                        <input asp-for="@Model.Employer.Create" type="hidden" class="form-control" id="floatingInputCreate"
+                               value="@DateTime.Now.ToString("dd/MM/yyyy")" placeholder="">
+                        <input asp-for="@Model.Employer.Update" type="hidden" class="form-control" id="floatingInputCreate"
+                               value="" placeholder="">
+
+                    </div>
+
+
+                    <div>
+                        <input asp-for="@Model.Employer.Status" type="hidden" value="true" />
+                    </div>
+                    <button type="submit" class="btn btn-primary">Delete</button>
+
+                    <a asp-area="Admin" asp-controller="Employer" asp-action="Index" class="btn btn-danger">Back To List</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}
+
