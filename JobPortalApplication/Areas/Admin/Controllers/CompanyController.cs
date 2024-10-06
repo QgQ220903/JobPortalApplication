@@ -42,10 +42,17 @@ namespace JobPortalApplication.Areas.Admin.Controllers
 
                     company.Logo = @"\admin\img\Company\" + fileName;
                 }
+              
                 _unitOfWork.CompanyRepo.Add(company);
                 _unitOfWork.Save();
                 TempData["success"] = "Company created successfully";
                 return RedirectToAction("Index", "Company");
+            }
+            if (file == null)
+            {
+                // Truyền thông báo lỗi bằng ViewBag
+                ViewBag.ErrorMessage = "File logo không được để trống!";
+                return View();
             }
             return View();
 
@@ -137,15 +144,16 @@ namespace JobPortalApplication.Areas.Admin.Controllers
                 return NotFound();
             }
 
-           
-            var oldLogo = Path.Combine(_webHostEnvironment.WebRootPath, company.Logo.TrimStart('\\'));
-
-            if (System.IO.File.Exists(oldLogo))
+            if (!string.IsNullOrEmpty(company.Logo))
             {
-                System.IO.File.Delete(oldLogo);
-            }
-            
+                var oldLogo = Path.Combine(_webHostEnvironment.WebRootPath, company.Logo.TrimStart('\\'));
 
+                if (System.IO.File.Exists(oldLogo))
+                {
+                    System.IO.File.Delete(oldLogo);
+                }
+            }
+                         
             _unitOfWork.CompanyRepo.Remove(company);
             _unitOfWork.Save();
             TempData["success"] = "Company deleted successfully";

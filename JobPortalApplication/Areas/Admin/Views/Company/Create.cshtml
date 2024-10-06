@@ -17,16 +17,16 @@
                         <span asp-validation-for="Industry" class="text-danger m-2"></span>
                     </div>
 
-                    <div class="mb-3">
-                        <label asp-for="Description" class="ms-2 text-muted"></label>
-                        <textarea asp-for="Description" class="" id="" placeholder=""></textarea>
-                        
-                         @* <span asp-validation-for="Description" class="text-danger m-2"></span> *@
+                    <div class=" mb-3">
+                        <label asp-for="Description" for="floatingInputDescription" class="ms-2 text-muted"></label>                       
+                        <textarea  asp-for="Description" class="form-control" id="floatingInputDescription" placeholder=""></textarea>
+                         <span asp-validation-for="Description" class="text-danger m-2"></span> 
                     </div>
 
                     <div class="form-floating mb-3">
                         <input name="file" type="file" class="form-control" id="" placeholder="">
-                        <label asp-for="Logo"></label>                                     
+                        <label asp-for="Logo"></label> 
+                        <span class="text-danger m-2">@ViewBag.ErrorMessage</span>
                     </div>
 
                     <div class="form-floating mb-3">
@@ -82,10 +82,9 @@
         tinymce.init({
             selector: 'textarea',
             plugins: [
-                // Core editing features
+               
                 'anchor', 'autolink', 'charmap', 'codesample', 'emoticons',  'lists', 'table', 'visualblocks', 'wordcount',
-                // Your account includes a free trial of TinyMCE premium features
-                // Try the most popular premium features until Oct 13, 2024:
+            
                 'checklist', 'mediaembed', 'casechange', 'export', 'formatpainter', 'pageembed', 'a11ychecker', 'tinymcespellchecker', 'permanentpen', 'powerpaste', 'advtable', 'advcode', 'editimage', 'advtemplate', 'ai', 'mentions', 'tinycomments', 'tableofcontents', 'footnotes', 'mergetags', 'autocorrect', 'typography', 'inlinecss', 'markdown',
             ],
             toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough |  addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent |',
