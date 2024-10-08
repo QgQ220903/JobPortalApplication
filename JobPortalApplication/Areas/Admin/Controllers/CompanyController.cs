@@ -16,8 +16,11 @@ namespace JobPortalApplication.Areas.Admin.Controllers
 		}
 		public IActionResult Index()
         {
-			List<Company> companyList = _unitOfWork.CompanyRepo.GetAll().ToList();
-			return View(companyList);
+            List<Company> companyList = _unitOfWork.CompanyRepo
+            .GetAll() // Áp dụng bộ lọc cho bảng có Status
+            .ToList();
+
+            return View(companyList);
         }
         public IActionResult Create()
         {
@@ -122,7 +125,7 @@ namespace JobPortalApplication.Areas.Admin.Controllers
 
         }
 
-        public IActionResult Delete(int id)
+     /*   public IActionResult Delete(int id)
         {
             if (id == null || id == 0)
             {
@@ -134,8 +137,8 @@ namespace JobPortalApplication.Areas.Admin.Controllers
                 return NotFound();
             }
             return View(company);
-        }
-        [HttpPost, ActionName("Delete")]
+        }*/
+     /*   [HttpPost, ActionName("Delete")]
         public IActionResult DeletePOST(int id)
         {
             Company? company = _unitOfWork.CompanyRepo.Get(x => x.Id == id);
@@ -158,6 +161,55 @@ namespace JobPortalApplication.Areas.Admin.Controllers
             _unitOfWork.Save();
             TempData["success"] = "Company deleted successfully";
             return RedirectToAction("Index", "Company");
+        }*/
+
+        /* CALL API*/
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            //List<Company> companyList = _unitOfWork.CompanyRepo.GetAll().ToList();
+            List<Company> companyList = _unitOfWork.CompanyRepo
+              .GetAll()
+              .Where(c => c.Status == true)
+              .ToList();
+            return Json(new {Data = companyList});
+        }
+
+		//[HttpDelete]
+		//public IActionResult Delete(int? id)
+		//{
+		//	Company? company = _unitOfWork.CompanyRepo.Get(x => x.Id == id);
+		//	if (company == null)
+		//	{
+		//		return NotFound();
+		//	}
+
+		//	if (!string.IsNullOrEmpty(company.Logo))
+		//	{
+		//		var oldLogo = Path.Combine(_webHostEnvironment.WebRootPath, company.Logo.TrimStart('\\'));
+
+		//		if (System.IO.File.Exists(oldLogo))
+		//		{
+		//			System.IO.File.Delete(oldLogo);
+		//		}
+		//	}
+
+		//	_unitOfWork.CompanyRepo.Remove(company);
+		//	_unitOfWork.Save();
+
+  //          return Json(new {success  = true, message = "Delete Successful"});
+		//}
+
+        [HttpPut]
+        public IActionResult Hidden(int? id)
+        {
+            Company? company = _unitOfWork.CompanyRepo.Get(x => x.Id == id);
+            company.Status = false;
+
+            _unitOfWork.CompanyRepo.Update(company);
+            _unitOfWork.Save();
+
+            return Json(new { success = true, message = "Delete Successful" });
         }
     }
 }
