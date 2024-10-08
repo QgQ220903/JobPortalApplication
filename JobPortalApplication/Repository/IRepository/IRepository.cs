@@ -9,6 +9,6 @@ namespace JobPortalApplication.Repository.IRepository
         void Add(T entity);
         void Remove(T entity);
         void RemoveRange(IEnumerable<T> entities);
-        
+        IEnumerable<T> GetListTrue(Expression<Func<T, bool>> filter);
     }
 }

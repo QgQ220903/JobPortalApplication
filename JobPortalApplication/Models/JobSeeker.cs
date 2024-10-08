@@ -23,5 +23,6 @@ namespace JobPortalApplication.Models
         public DateTime Create_at { get; set; }
         [Required]
         public DateTime Update_at { get; set; }
+        public bool Status { get; set; }
     }
 }

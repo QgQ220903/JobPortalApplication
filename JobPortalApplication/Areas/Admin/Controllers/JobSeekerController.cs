@@ -115,37 +115,27 @@ namespace JobPortalApplication.Areas.Admin.Controllers
             return View(seeker);
         }
 
+        #region API CALLS
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            List<JobSeeker> objJobSeeker = _unitOfWork.SeekerRepo.GetListTrue(x => x.Status == true).ToList();
+            return Json(new { data = objJobSeeker });
+        }
 
         public IActionResult Delete(int id)
         {
-            if (id == null || id == 0)
+            var seekerDelete = _unitOfWork.SeekerRepo.Get(x => x.Id == id);
+            if (seekerDelete == null)
             {
-                return NotFound();
+                return Json(new { success = false, message = "Error while deleting" });
             }
-
-            JobSeeker? seeker = _unitOfWork.SeekerRepo.Get(x => x.Id == id);
-            if (seeker == null)
-            {
-                return NotFound();
-            }
-
-            return View(seeker);
-        }
-
-        [HttpPost, ActionName("Delete")]
-        public IActionResult DeletePOST(int id)
-        {
-            JobSeeker? seeker = _unitOfWork.SeekerRepo.Get(x => x.Id == id);
-            if (seeker == null)
-            {
-                return NotFound();
-            }
-
-            _unitOfWork.SeekerRepo.Remove(seeker);
+            seekerDelete.Status = false;
+            _unitOfWork.SeekerRepo.Update(seekerDelete);
             _unitOfWork.Save();
-            TempData["success"] = "JobSeeker deleted successfully";
-            return RedirectToAction("Index", "JobSeeker");
+            return Json(new { success = true, message = "Delete Successful" });
         }
+        #endregion
 
         // Kiểm tra số điện thoại
         public static bool CheckPatternPhone(string phone)

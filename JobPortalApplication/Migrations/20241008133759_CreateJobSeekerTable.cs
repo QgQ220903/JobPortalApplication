@@ -25,7 +25,8 @@ namespace JobPortalApplication.Migrations
                     FullName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Phone = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Create_at = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Update_at = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    Update_at = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Status = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -34,14 +35,14 @@ namespace JobPortalApplication.Migrations
 
             migrationBuilder.InsertData(
                 table: "JobSeekers",
-                columns: new[] { "Id", "Create_at", "Email", "FullName", "Password", "Phone", "Update_at", "UserName" },
+                columns: new[] { "Id", "Create_at", "Email", "FullName", "Password", "Phone", "Status", "Update_at", "UserName" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2024, 10, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), "quangha@gmail.com", "Nguyen Quang Ha", "quangha1", "0354156978", new DateTime(2024, 10, 4, 0, 0, 0, 0, DateTimeKind.Unspecified), "QuangHa" },
-                    { 2, new DateTime(2024, 10, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), "duycuu@gmail.com", "Phan Duy Cuu", "duycuu1", "0356786989", new DateTime(2024, 10, 4, 0, 0, 0, 0, DateTimeKind.Unspecified), "DuyCuu" },
-                    { 3, new DateTime(2024, 10, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), "giaquy@gmail.com", "Quach Gia Quy", "giaquy1", "0354153324", new DateTime(2024, 10, 4, 0, 0, 0, 0, DateTimeKind.Unspecified), "GiaQuy" },
-                    { 4, new DateTime(2024, 10, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), "quangtruong@gmail.com", "Tran Quang Truong", "quangtruong1", "0357564421", new DateTime(2024, 10, 4, 0, 0, 0, 0, DateTimeKind.Unspecified), "QuangTruong" },
-                    { 5, new DateTime(2024, 10, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), "thienphuc@gmail.com", "Le Thien Phuc", "thienphuc1", "0357531486", new DateTime(2024, 10, 4, 0, 0, 0, 0, DateTimeKind.Unspecified), "ThienPhuc" }
+                    { 1, new DateTime(2024, 10, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), "quangha@gmail.com", "Nguyen Quang Ha", "quangha1", "0354156978", true, new DateTime(2024, 10, 4, 0, 0, 0, 0, DateTimeKind.Unspecified), "QuangHa" },
+                    { 2, new DateTime(2024, 10, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), "duycuu@gmail.com", "Phan Duy Cuu", "duycuu1", "0356786989", true, new DateTime(2024, 10, 4, 0, 0, 0, 0, DateTimeKind.Unspecified), "DuyCuu" },
+                    { 3, new DateTime(2024, 10, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), "giaquy@gmail.com", "Quach Gia Quy", "giaquy1", "0354153324", true, new DateTime(2024, 10, 4, 0, 0, 0, 0, DateTimeKind.Unspecified), "GiaQuy" },
+                    { 4, new DateTime(2024, 10, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), "quangtruong@gmail.com", "Tran Quang Truong", "quangtruong1", "0357564421", true, new DateTime(2024, 10, 4, 0, 0, 0, 0, DateTimeKind.Unspecified), "QuangTruong" },
+                    { 5, new DateTime(2024, 10, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), "thienphuc@gmail.com", "Le Thien Phuc", "thienphuc1", "0357531486", true, new DateTime(2024, 10, 4, 0, 0, 0, 0, DateTimeKind.Unspecified), "ThienPhuc" }
                 });
         }
 

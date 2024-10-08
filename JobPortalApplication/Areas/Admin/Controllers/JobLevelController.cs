@@ -14,7 +14,7 @@ namespace JobPortalApplication.Areas.Admin.Controllers
         }
         public IActionResult Index()
         {
-            List<JobLevel> levelList = _unitOfWork.LevelRepo.GetAll().ToList();
+            List<JobLevel> levelList = _unitOfWork.LevelRepo.GetListTrue(x => x.Status == true).ToList();
             return View(levelList);
         }
         public IActionResult Create()
@@ -59,31 +59,27 @@ namespace JobPortalApplication.Areas.Admin.Controllers
             }
             return View();
         }
+
+        #region API CALLS
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            List<JobLevel> objJobLevel = _unitOfWork.LevelRepo.GetListTrue(x => x.Status == true).ToList();
+            return Json(new { data = objJobLevel });
+        }
+
         public IActionResult Delete(int id)
         {
-            if (id == null || id == 0)
+            var levelDelete = _unitOfWork.LevelRepo.Get(x => x.Id == id);
+            if (levelDelete == null)
             {
-                return NotFound();
+                return Json(new { success = false, message = "Error while deleting" });
             }
-            JobLevel? level = _unitOfWork.LevelRepo.Get(x => x.Id == id);
-            if (level == null)
-            {
-                return NotFound();
-            }
-            return View(level);
-        }
-        [HttpPost, ActionName("Delete")]
-        public IActionResult DeletePOST(int id)
-        {
-            JobLevel? level= _unitOfWork.LevelRepo.Get(x => x.Id == id);
-            if (level == null)
-            {
-                return NotFound();
-            }
-            _unitOfWork.LevelRepo.Remove(level);
+            levelDelete.Status = false;
+            _unitOfWork.LevelRepo.Update(levelDelete);
             _unitOfWork.Save();
-            TempData["success"] = "Level deleted successfully";
-            return RedirectToAction("Index", "JobLevel");
+            return Json(new { success = true, message = "Delete Successful" });
         }
+        #endregion
     }
 }

@@ -95,6 +95,9 @@ namespace JobPortalApplication.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<bool>("Status")
+                        .HasColumnType("bit");
+
                     b.Property<DateTime>("Update_at")
                         .HasColumnType("datetime2");
 
@@ -115,6 +118,7 @@ namespace JobPortalApplication.Migrations
                             FullName = "Nguyen Quang Ha",
                             Password = "quangha1",
                             Phone = "0354156978",
+                            Status = true,
                             Update_at = new DateTime(2024, 10, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             UserName = "QuangHa"
                         },
@@ -126,6 +130,7 @@ namespace JobPortalApplication.Migrations
                             FullName = "Phan Duy Cuu",
                             Password = "duycuu1",
                             Phone = "0356786989",
+                            Status = true,
                             Update_at = new DateTime(2024, 10, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             UserName = "DuyCuu"
                         },
@@ -137,6 +142,7 @@ namespace JobPortalApplication.Migrations
                             FullName = "Quach Gia Quy",
                             Password = "giaquy1",
                             Phone = "0354153324",
+                            Status = true,
                             Update_at = new DateTime(2024, 10, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             UserName = "GiaQuy"
                         },
@@ -148,6 +154,7 @@ namespace JobPortalApplication.Migrations
                             FullName = "Tran Quang Truong",
                             Password = "quangtruong1",
                             Phone = "0357564421",
+                            Status = true,
                             Update_at = new DateTime(2024, 10, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             UserName = "QuangTruong"
                         },
@@ -159,6 +166,7 @@ namespace JobPortalApplication.Migrations
                             FullName = "Le Thien Phuc",
                             Password = "thienphuc1",
                             Phone = "0357531486",
+                            Status = true,
                             Update_at = new DateTime(2024, 10, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             UserName = "ThienPhuc"
                         });
