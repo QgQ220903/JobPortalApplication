@@ -7,6 +7,7 @@
         ILevelRepository LevelRepo { get; }
         ISeekerRepository SeekerRepo { get; }
 
+        IEmployerRepository EmployerRepo { get; }
         void Save();
     }
 }

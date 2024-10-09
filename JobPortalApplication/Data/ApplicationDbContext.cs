@@ -14,8 +14,11 @@ namespace JobPortalApplication.Data
         public DbSet<JobLevel> JobLevels { get; set; }
 		public DbSet<JobType> JobTypes { get; set; }
 		public DbSet<Company> Companys { get; set; }
+        public DbSet<Employer> Employers { get; set; }
+
 
         public DbSet<JobSeeker> JobSeekers { get; set; }
+
         // Seed data skill table 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -129,8 +132,25 @@ namespace JobPortalApplication.Data
                 new JobSeeker { Id = 4, UserName = "QuangTruong", Password = "quangtruong1", Email = "quangtruong@gmail.com", FullName = "Tran Quang Truong", Phone = "0357564421", Create_at = new DateTime(2024, 10, 2), Update_at = new DateTime(2024, 10, 4), Status = true },
                 new JobSeeker { Id = 5, UserName = "ThienPhuc", Password = "thienphuc1", Email = "thienphuc@gmail.com", FullName = "Le Thien Phuc", Phone = "0357531486", Create_at = new DateTime(2024, 10, 2), Update_at = new DateTime(2024, 10, 4), Status = true }
             );
+           
+            modelBuilder.Entity<Employer>().HasData(
+                new Employer
+                {
+                    Id = 1,
+                    Username = "phanduycuu",
+                    Password = "123456789Aa",
+                    Email = "contact@techinnovators.com",
+                    CompanyId = 3,
+                    Fullname = "Phan Duy Cuu",
+					Location= "Bac ruong",
+                    Create = DateTime.Now.AddYears(-2),
+                    Update = DateTime.Now,
+                    Status = true
+                }
+
+            );
+
         }
-    }
-	
+	}
 
 }

@@ -1,4 +1,5 @@
 ﻿using JobPortalApplication.Data;
+using JobPortalApplication.Models;
 using JobPortalApplication.Repository.IRepository;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
@@ -13,37 +14,41 @@ namespace JobPortalApplication.Repository
         {
             _context = context;
             this.dbSet = _context.Set<T>();
+            _context.Employers.Include(u => u.Company).Include(u => u.CompanyId);
         }
         public void Add(T entity)
         {
             dbSet.Add(entity);
         }
 
-        public T Get(Expression<Func<T, bool>> filter)
+        public T Get(Expression<Func<T, bool>> filter, string? includeProperties = null)
         {
             IQueryable<T> query = dbSet;
             query = query.Where(filter);
+            if (!string.IsNullOrEmpty(includeProperties))
+            {
+                foreach (var includeProp in includeProperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+                {
+                    query = query.Include(includeProp);
+                }
+
+            }
             return query.FirstOrDefault();
         }
 
-            public IEnumerable<T> GetAll()
-            {
-                IQueryable<T> query = dbSet;
-                return query.ToList();
-            }
-
-       /* public IEnumerable<T> GetAll(Expression<Func<T, bool>> filter = null)
+        public IEnumerable<T> GetAll(string? includeProperties = null)
         {
             IQueryable<T> query = dbSet;
-
-            if (filter != null)
+            if (!string.IsNullOrEmpty(includeProperties))
             {
-                query = query.Where(filter);
-            }
+                foreach (var includeProp in includeProperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+                {
+                    query = query.Include(includeProp);
+                }
 
+            }
             return query.ToList();
         }
-*/
 
         public void Remove(T entity)
         {
@@ -54,11 +59,17 @@ namespace JobPortalApplication.Repository
         {
             dbSet.RemoveRange(entities);
         }
-
-        public IEnumerable<T> GetListTrue(Expression<Func<T, bool>> filter)
+        public IEnumerable<T> GetAll_WSET(Expression<Func<T, bool>> filter , string? includeProperties = null)
         {
-            IQueryable<T> query = dbSet;
-            query = query.Where(filter);
+            IQueryable<T> query = dbSet.Where(filter);        
+            if (!string.IsNullOrEmpty(includeProperties))
+            {
+                foreach (var includeProp in includeProperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+                {
+                    query = query.Include(includeProp); 
+                }
+            }
+
             return query.ToList();
         }
     }
