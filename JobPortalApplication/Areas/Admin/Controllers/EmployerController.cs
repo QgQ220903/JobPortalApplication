@@ -75,7 +75,7 @@ namespace JobPortalApplication.Areas.Admin.Controllers
 
         }
 
-        public IActionResult Delete(int id)
+        public IActionResult Detail(int id)
         {
             EmployerVM employerVM = new EmployerVM()
             {
@@ -97,15 +97,41 @@ namespace JobPortalApplication.Areas.Admin.Controllers
                 return View(employerVM);
             }
         }
-        [HttpPost, ActionName("Delete")]
-        public IActionResult DeletePOST(int id)
+        //[HttpPost, ActionName("Delete")]
+        //public IActionResult DeletePOST(int id)
+        //{
+        //    Employer employer = _unitOfWork.EmployerRepo.Get(e => e.Id == id);
+        //    employer.Status = false;
+        //    _unitOfWork.EmployerRepo.Update(employer);
+        //    _unitOfWork.Save();
+        //    TempData["success"] = "Employer deleted successfully";
+        //    return RedirectToAction("Index", "Employer");
+        //}
+        
+        
+        /* CALL API*/
+        [HttpGet]
+        public IActionResult GetAll()
         {
-            Employer employer = _unitOfWork.EmployerRepo.Get(e => e.Id == id);
+            //List<Company> companyList = _unitOfWork.CompanyRepo.GetAll().ToList();
+            List<Employer> employerList = _unitOfWork.EmployerRepo
+              .GetAll_WSET(e => e.Status == true, includeProperties: "Company")
+              .ToList();
+            return Json(new { Data = employerList });
+        }
+
+        
+
+        [HttpPut]
+        public IActionResult Hidden(int? id)
+        {
+            Employer? employer = _unitOfWork.EmployerRepo.Get(x => x.Id == id);
             employer.Status = false;
+
             _unitOfWork.EmployerRepo.Update(employer);
             _unitOfWork.Save();
-            TempData["success"] = "Employer deleted successfully";
-            return RedirectToAction("Index", "Employer");
+
+            return Json(new { success = true, message = "Delete Successful" });
         }
 
     }

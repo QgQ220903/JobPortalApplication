@@ -38,19 +38,23 @@
                         <span asp-validation-for="@Model.Employer.CompanyId" class="text-danger m-2"></span>
                     </div>
 
-                    <div>
-                        <input asp-for="@Model.Employer.Create" type="hidden" class="form-control" id="floatingInputCreate"
-                               value="@DateTime.Now.ToString("dd/MM/yyyy")" placeholder="">
-                        <input asp-for="@Model.Employer.Update" type="hidden" class="form-control" id="floatingInputCreate"
-                               value="" placeholder="">
+                    <div class="form-floating mb-3">
+                        <input readonly asp-for="@Model.Employer.Create" type="text" class="form-control" id="floatingInput" placeholder="">
+                        <label asp-for="@Model.Employer.Create" for="floatingInput"></label>
+                        <span asp-validation-for="@Model.Employer.Create" class="text-danger m-2"></span>
+                    </div>
 
+                    <div class="form-floating mb-3">
+                        <input readonly asp-for="@Model.Employer.Update" type="text" class="form-control" id="floatingInput" placeholder="">
+                        <label asp-for="@Model.Employer.Update" for="floatingInput"></label>
+                        <span asp-validation-for="@Model.Employer.Update" class="text-danger m-2"></span>
                     </div>
 
 
                     <div>
                         <input asp-for="@Model.Employer.Status" type="hidden" value="true" />
                     </div>
-                    <button type="submit" class="btn btn-primary">Delete</button>
+                    
 
                     <a asp-area="Admin" asp-controller="Employer" asp-action="Index" class="btn btn-danger">Back To List</a>
                 </form>

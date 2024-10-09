@@ -23,10 +23,10 @@ namespace JobPortalApplication.Models
         public  Company Company { get; set; }
         public string Location { get; set; }
 
-        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+        //[DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime Create { get; set; }
 
-        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+        //[DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime? Update { get; set; }
         public bool Status { get; set; }
 

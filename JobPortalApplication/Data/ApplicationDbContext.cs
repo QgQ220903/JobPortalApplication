@@ -122,6 +122,13 @@ namespace JobPortalApplication.Data
 					Status = true
 				}
 			);
+            modelBuilder.Entity<Employer>()
+			   .HasIndex(e => e.Username)
+			   .IsUnique();
+
+            modelBuilder.Entity<Employer>()
+                .HasIndex(e => e.Email)
+                .IsUnique();
             modelBuilder.Entity<Employer>().HasData(
                 new Employer
                 {
