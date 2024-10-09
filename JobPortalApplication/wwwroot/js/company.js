@@ -15,20 +15,22 @@ function loadDataTable() {
         },
         "columns": [
             { data: 'id', "width": "5%" },
-            { data: 'name', "width": "15%" },
+            { data: 'name', "width": "25%" },
             { data: 'industry', "width": "15%" },
             { data: 'email', "width": "15%" },
             { data: 'phone', "width": "15%" },
-            { data: 'website', "width": "15%" },
             {
                 data: 'id',
                 "render": function (data) {
-                    return `<div class = "w-75 btn-group" role="group"> 
+                    return `<div class = "w-75 d-flex gap-1" role=""> 
                     <a href="/admin/company/update?id=${data}" class="btn btn-sm btn-warning mx-1">
-                        <i class="fa-solid fa-pen-to-square"></i> Edit
+                        <i class="fa-solid fa-pen-to-square"></i> 
                     </a>
                     <a onClick=Delete('/admin/company/hidden/${data}')  class="btn btn-sm btn-danger mx-1">
-                        <i class="fa-solid fa-trash"></i> Delete
+                        <i class="fa-solid fa-trash"></i> 
+                    </a>
+                     <a href="/admin/company/detail?id=${data}"  class="btn btn-sm btn-info mx-1">
+                        <i class="fa-solid fa-eye"></i> 
                     </a>
                     </div>`;
                 },
