@@ -3,6 +3,7 @@ using JobPortalApplication.Models.ViewModels;
 using JobPortalApplication.Repository.IRepository;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 
 namespace JobPortalApplication.Areas.Admin.Controllers
 {
@@ -16,7 +17,7 @@ namespace JobPortalApplication.Areas.Admin.Controllers
         }
         public IActionResult Index()
         {
-            List<Employer> employerlist = _unitOfWork.EmployerRepo.GetAll(includeProperties:"Company").ToList();
+            List<Employer> employerlist = _unitOfWork.EmployerRepo.GetAll_WSET(e => e.Status == true,includeProperties:"Company").ToList();
             return View(employerlist);
         }
 
@@ -49,15 +50,13 @@ namespace JobPortalApplication.Areas.Admin.Controllers
                 if (ModelState.IsValid)
                 {
                     if (employerVM.Employer.Id == 0)
-                    {
+                    {   
                         _unitOfWork.EmployerRepo.Add(employerVM.Employer);
                     }
                     else
                     {
-                        _unitOfWork.EmployerRepo.Update(employerVM.Employer);
+                    _unitOfWork.EmployerRepo.Update(employerVM.Employer);
                     }
-                        
-                
                     _unitOfWork.Save();
                     TempData["success"] = "Employer created successfully";
                     return RedirectToAction("Index", "Employer");
@@ -71,8 +70,8 @@ namespace JobPortalApplication.Areas.Admin.Controllers
                     });
                     return View(employerVM);
                 }
-            
-            
+
+
 
         }
 
@@ -101,12 +100,9 @@ namespace JobPortalApplication.Areas.Admin.Controllers
         [HttpPost, ActionName("Delete")]
         public IActionResult DeletePOST(int id)
         {
-            Employer? employer = _unitOfWork.EmployerRepo.Get(x => x.Id == id);
-            if (employer == null)
-            {
-                return NotFound();
-            }
-            _unitOfWork.EmployerRepo.Remove(employer);
+            Employer employer = _unitOfWork.EmployerRepo.Get(e => e.Id == id);
+            employer.Status = false;
+            _unitOfWork.EmployerRepo.Update(employer);
             _unitOfWork.Save();
             TempData["success"] = "Employer deleted successfully";
             return RedirectToAction("Index", "Employer");

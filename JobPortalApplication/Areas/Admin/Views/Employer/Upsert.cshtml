@@ -37,14 +37,32 @@
                         <label asp-for="@Model.Employer.CompanyId"></label>
                         <span asp-validation-for="@Model.Employer.CompanyId" class="text-danger m-2"></span>
                     </div>
-
-                    <div>
+                    <div class="form-floating mb-3">
+                        <input asp-for="@Model.Employer.Location" type="text" class="form-control" id="floatingInput" placeholder="">
+                        <label asp-for="@Model.Employer.Location" for="floatingInput"></label>
+                        <span asp-validation-for="@Model.Employer.Location" class="text-danger m-2"></span>
+                    </div>
+                    @if (Model.Employer.Id != 0)
+                    {
+                        <div>
+                            <input asp-for="@Model.Employer.Create" type="hidden" class="form-control" id="floatingInputCreate"
+                                   value="@Model.Employer.Create" placeholder="">
+                            <input asp-for="@Model.Employer.Update" type="hidden" class="form-control" id="floatingInputCreate"
+                                   value="@DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss")" placeholder="">
+                            
+                        </div>
+                    }
+                    else
+                    {
+                        <div>
                         <input asp-for="@Model.Employer.Create" type="hidden" class="form-control" id="floatingInputCreate"
-                               value="@DateTime.Now.ToString("dd/MM/yyyy")" placeholder="">
+                                   value="@DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss")" placeholder="">
                         <input asp-for="@Model.Employer.Update" type="hidden" class="form-control" id="floatingInputCreate"
                                value="" placeholder="">
                         
                     </div>
+                    }
+                    
 
                     
                     <div>

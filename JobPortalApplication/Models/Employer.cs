@@ -12,7 +12,7 @@ namespace JobPortalApplication.Models
         public string Username { get; set; }
 
         public string Password { get; set; }
-
+        [EmailAddress(ErrorMessage = "Email is not valid")]
         public string Email { get; set; }
 
         public string Fullname { get; set; }
@@ -21,6 +21,7 @@ namespace JobPortalApplication.Models
         [ForeignKey("CompanyId")]
         [ValidateNever]
         public  Company Company { get; set; }
+        public string Location { get; set; }
 
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime Create { get; set; }

@@ -1,4 +1,5 @@
 ﻿using JobPortalApplication.Data;
+using JobPortalApplication.Models;
 using JobPortalApplication.Repository.IRepository;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
@@ -57,6 +58,19 @@ namespace JobPortalApplication.Repository
         public void RemoveRange(IEnumerable<T> entities)
         {
             dbSet.RemoveRange(entities);
+        }
+        public IEnumerable<T> GetAll_WSET(Expression<Func<T, bool>> filter , string? includeProperties = null)
+        {
+            IQueryable<T> query = dbSet.Where(filter);        
+            if (!string.IsNullOrEmpty(includeProperties))
+            {
+                foreach (var includeProp in includeProperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+                {
+                    query = query.Include(includeProp); 
+                }
+            }
+
+            return query.ToList();
         }
     }
 }

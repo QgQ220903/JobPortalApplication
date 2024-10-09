@@ -131,6 +131,7 @@ namespace JobPortalApplication.Data
                     Email = "contact@techinnovators.com",
                     CompanyId = 3,
                     Fullname = "Phan Duy Cuu",
+					Location= "Bac ruong",
                     Create = DateTime.Now.AddYears(-2),
                     Update = DateTime.Now,
                     Status = true

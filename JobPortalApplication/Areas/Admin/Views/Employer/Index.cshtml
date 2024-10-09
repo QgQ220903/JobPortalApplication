@@ -19,7 +19,9 @@
                                 <th scope="col" class="text-center">Email</th>
                                 <th scope="col" class="text-center">Fullname</th>
                                 <th scope="col" class="text-center">CompanyID</th>
-                                <th scope="col" class="text-center">Action</th>
+                                <th scope="col" class="text-center">Location</th>
+                                <th scope="col" class="text-center">Action</th
+                               
                             </tr>
                         </thead>
                         <tbody>
@@ -32,13 +34,15 @@
                                     <td class="text-center">@obj.Email</td>
                                     <td class="text-center">@obj.Fullname</td>
                                     <td class="text-center">@obj.Company.Name</td>
+                                    <td class="text-center">@obj.Location</td>
+                                    
                                     <td class="text-center">
                                             <a class="btn btn-sm btn-warning" asp-area="Admin" asp-controller="Employer" asp-action="Upsert" asp-route-id="@obj.Id">
-                                            <i class="fa-solid fa-pen-to-square"></i> Edit
-                                        </a>
-                                        <a class="btn btn-sm btn-danger" asp-area="Admin" asp-controller="Employer" asp-action="Delete" asp-route-id="@obj.Id">
-                                            <i class="fa-solid fa-trash"></i> Delete
-                                        </a>
+                                                <i class="fa-solid fa-pen-to-square"></i> Edit
+                                            </a>
+                                            <a class="btn btn-sm btn-danger" asp-area="Admin" asp-controller="Employer" asp-action="Delete" asp-route-id="@obj.Id">
+                                                <i class="fa-solid fa-trash"></i> Delete
+                                            </a>
                                     </td>
                                 </tr>
                             }

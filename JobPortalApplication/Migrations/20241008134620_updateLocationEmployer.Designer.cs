@@ -4,6 +4,7 @@ using JobPortalApplication.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace JobPortalApplication.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241008134620_updateLocationEmployer")]
+    partial class updateLocationEmployer
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -74,7 +77,7 @@ namespace JobPortalApplication.Migrations
                         new
                         {
                             Id = 1,
-                            Create = new DateTime(2022, 10, 8, 21, 34, 21, 531, DateTimeKind.Local).AddTicks(3366),
+                            Create = new DateTime(2022, 10, 8, 20, 46, 19, 192, DateTimeKind.Local).AddTicks(3123),
                             Description = "Leading company in tech innovations and AI solutions.",
                             Email = "contact@techinnovators.com",
                             Industry = "Technology",
@@ -82,13 +85,13 @@ namespace JobPortalApplication.Migrations
                             Name = "Tech Innovators",
                             Phone = "123-456-7890",
                             Status = true,
-                            Update = new DateTime(2024, 10, 8, 21, 34, 21, 531, DateTimeKind.Local).AddTicks(3381),
+                            Update = new DateTime(2024, 10, 8, 20, 46, 19, 192, DateTimeKind.Local).AddTicks(3139),
                             Website = "https://www.techinnovators.com"
                         },
                         new
                         {
                             Id = 2,
-                            Create = new DateTime(2021, 10, 8, 21, 34, 21, 531, DateTimeKind.Local).AddTicks(3385),
+                            Create = new DateTime(2021, 10, 8, 20, 46, 19, 192, DateTimeKind.Local).AddTicks(3142),
                             Description = "Sustainable solutions for a greener future.",
                             Email = "info@greenearth.com",
                             Industry = "Environmental",
@@ -96,13 +99,13 @@ namespace JobPortalApplication.Migrations
                             Name = "Green Earth Co.",
                             Phone = "987-654-3210",
                             Status = true,
-                            Update = new DateTime(2024, 10, 8, 21, 34, 21, 531, DateTimeKind.Local).AddTicks(3386),
+                            Update = new DateTime(2024, 10, 8, 20, 46, 19, 192, DateTimeKind.Local).AddTicks(3143),
                             Website = "https://www.greenearth.com"
                         },
                         new
                         {
                             Id = 3,
-                            Create = new DateTime(2019, 10, 8, 21, 34, 21, 531, DateTimeKind.Local).AddTicks(3388),
+                            Create = new DateTime(2019, 10, 8, 20, 46, 19, 192, DateTimeKind.Local).AddTicks(3145),
                             Description = "Providing innovative healthcare solutions worldwide.",
                             Email = "support@healthfirst.com",
                             Industry = "Healthcare",
@@ -110,13 +113,13 @@ namespace JobPortalApplication.Migrations
                             Name = "HealthFirst Inc.",
                             Phone = "555-678-1234",
                             Status = true,
-                            Update = new DateTime(2024, 10, 8, 21, 34, 21, 531, DateTimeKind.Local).AddTicks(3389),
+                            Update = new DateTime(2024, 10, 8, 20, 46, 19, 192, DateTimeKind.Local).AddTicks(3146),
                             Website = "https://www.healthfirst.com"
                         },
                         new
                         {
                             Id = 4,
-                            Create = new DateTime(2023, 10, 8, 21, 34, 21, 531, DateTimeKind.Local).AddTicks(3390),
+                            Create = new DateTime(2023, 10, 8, 20, 46, 19, 192, DateTimeKind.Local).AddTicks(3147),
                             Description = "Investing in future leaders and breakthrough industries.",
                             Email = "contact@globalventures.com",
                             Industry = "Investment",
@@ -124,13 +127,13 @@ namespace JobPortalApplication.Migrations
                             Name = "Global Ventures",
                             Phone = "321-987-6543",
                             Status = true,
-                            Update = new DateTime(2024, 10, 8, 21, 34, 21, 531, DateTimeKind.Local).AddTicks(3391),
+                            Update = new DateTime(2024, 10, 8, 20, 46, 19, 192, DateTimeKind.Local).AddTicks(3148),
                             Website = "https://www.globalventures.com"
                         },
                         new
                         {
                             Id = 5,
-                            Create = new DateTime(2020, 10, 8, 21, 34, 21, 531, DateTimeKind.Local).AddTicks(3392),
+                            Create = new DateTime(2020, 10, 8, 20, 46, 19, 192, DateTimeKind.Local).AddTicks(3149),
                             Description = "Developing renewable energy solutions for the future.",
                             Email = "support@futureenergy.com",
                             Industry = "Energy",
@@ -138,13 +141,13 @@ namespace JobPortalApplication.Migrations
                             Name = "Future Energy Corp",
                             Phone = "222-333-4444",
                             Status = true,
-                            Update = new DateTime(2024, 10, 8, 21, 34, 21, 531, DateTimeKind.Local).AddTicks(3394),
+                            Update = new DateTime(2024, 10, 8, 20, 46, 19, 192, DateTimeKind.Local).AddTicks(3151),
                             Website = "https://www.futureenergy.com"
                         },
                         new
                         {
                             Id = 6,
-                            Create = new DateTime(2018, 10, 8, 21, 34, 21, 531, DateTimeKind.Local).AddTicks(3395),
+                            Create = new DateTime(2018, 10, 8, 20, 46, 19, 192, DateTimeKind.Local).AddTicks(3152),
                             Description = "Bringing technology into the classroom to transform learning.",
                             Email = "info@edutech.com",
                             Industry = "Education",
@@ -152,7 +155,7 @@ namespace JobPortalApplication.Migrations
                             Name = "EduTech Solutions",
                             Phone = "999-888-7777",
                             Status = true,
-                            Update = new DateTime(2024, 10, 8, 21, 34, 21, 531, DateTimeKind.Local).AddTicks(3396),
+                            Update = new DateTime(2024, 10, 8, 20, 46, 19, 192, DateTimeKind.Local).AddTicks(3153),
                             Website = "https://www.edutech.com"
                         });
                 });
@@ -208,13 +211,13 @@ namespace JobPortalApplication.Migrations
                         {
                             Id = 1,
                             CompanyId = 3,
-                            Create = new DateTime(2022, 10, 8, 21, 34, 21, 531, DateTimeKind.Local).AddTicks(3413),
+                            Create = new DateTime(2022, 10, 8, 20, 46, 19, 192, DateTimeKind.Local).AddTicks(3200),
                             Email = "contact@techinnovators.com",
                             Fullname = "Phan Duy Cuu",
                             Location = "Bac ruong",
                             Password = "123456789Aa",
                             Status = true,
-                            Update = new DateTime(2024, 10, 8, 21, 34, 21, 531, DateTimeKind.Local).AddTicks(3414),
+                            Update = new DateTime(2024, 10, 8, 20, 46, 19, 192, DateTimeKind.Local).AddTicks(3204),
                             Username = "phanduycuu"
                         });
                 });

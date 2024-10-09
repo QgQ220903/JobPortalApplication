@@ -1,6 +1,8 @@
 ﻿using JobPortalApplication.Data;
 using JobPortalApplication.Models;
 using JobPortalApplication.Repository.IRepository;
+using Microsoft.EntityFrameworkCore;
+using System.Linq.Expressions;
 
 namespace JobPortalApplication.Repository
 {
@@ -28,6 +30,6 @@ namespace JobPortalApplication.Repository
                 
             }
         }
-
+        
     }
 }

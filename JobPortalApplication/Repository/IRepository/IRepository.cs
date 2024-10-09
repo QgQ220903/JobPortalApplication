@@ -1,4 +1,5 @@
-﻿using System.Linq.Expressions;
+﻿using JobPortalApplication.Models;
+using System.Linq.Expressions;
 
 namespace JobPortalApplication.Repository.IRepository
 {
@@ -9,6 +10,7 @@ namespace JobPortalApplication.Repository.IRepository
         void Add(T entity);
         void Remove(T entity);
         void RemoveRange(IEnumerable<T> entities);
-        
+        IEnumerable<T> GetAll_WSET(Expression<Func<T, bool>> filter, string? includeProperties = null);
+
     }
 }
