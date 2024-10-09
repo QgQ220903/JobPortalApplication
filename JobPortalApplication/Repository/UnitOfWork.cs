@@ -7,7 +7,12 @@ namespace JobPortalApplication.Repository
     {
         private ApplicationDbContext _context;
         public ISkillRepository SkillRepo { get; private set; }
+
         public ICompanyRepository CompanyRepo { get; private set; }
+
+        public ILevelRepository LevelRepo { get; private set; }
+        public ISeekerRepository SeekerRepo { get; private set; }
+
 
 
         public UnitOfWork(ApplicationDbContext context)
@@ -15,6 +20,9 @@ namespace JobPortalApplication.Repository
             _context = context;
             SkillRepo = new SkillRepository(_context);
             CompanyRepo = new CompanyRepository(_context);
+            LevelRepo = new LevelRepository(_context);
+            SeekerRepo = new SeekerRepository(_context);
+
         }
 
         public void Save()

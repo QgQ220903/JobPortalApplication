@@ -54,5 +54,12 @@ namespace JobPortalApplication.Repository
         {
             dbSet.RemoveRange(entities);
         }
+
+        public IEnumerable<T> GetListTrue(Expression<Func<T, bool>> filter)
+        {
+            IQueryable<T> query = dbSet;
+            query = query.Where(filter);
+            return query.ToList();
+        }
     }
 }

@@ -10,7 +10,7 @@ namespace JobPortalApplication.Areas.Admin.Controllers
     public class JobSkillController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
-        public JobSkillController(IUnitOfWork unitOfWork) 
+        public JobSkillController(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
         }
@@ -27,7 +27,7 @@ namespace JobPortalApplication.Areas.Admin.Controllers
         [HttpPost]
         public IActionResult Create(Skill skill)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 _unitOfWork.SkillRepo.Add(skill);
                 _unitOfWork.Save();
@@ -44,7 +44,7 @@ namespace JobPortalApplication.Areas.Admin.Controllers
                 return NotFound();
             }
             Skill? skill = _unitOfWork.SkillRepo.Get(x => x.Id == id);
-            if(skill == null)
+            if (skill == null)
             {
                 return NotFound();
             }
@@ -71,7 +71,7 @@ namespace JobPortalApplication.Areas.Admin.Controllers
                 return NotFound();
             }
             Skill? skill = _unitOfWork.SkillRepo.Get(x => x.Id == id);
-            if(skill == null)
+            if (skill == null)
             {
                 return NotFound();
             }
@@ -80,7 +80,7 @@ namespace JobPortalApplication.Areas.Admin.Controllers
         [HttpPost, ActionName("Delete")]
         public IActionResult DeletePOST(int id)
         {
-            Skill? skill = _unitOfWork.SkillRepo.Get(x=>x.Id == id);
+            Skill? skill = _unitOfWork.SkillRepo.Get(x => x.Id == id);
             if (skill == null)
             {
                 return NotFound();

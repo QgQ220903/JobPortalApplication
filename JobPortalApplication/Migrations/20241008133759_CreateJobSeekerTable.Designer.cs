@@ -4,6 +4,7 @@ using JobPortalApplication.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace JobPortalApplication.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241008133759_CreateJobSeekerTable")]
+    partial class CreateJobSeekerTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,141 +24,6 @@ namespace JobPortalApplication.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
-
-            modelBuilder.Entity("JobPortalApplication.Models.Company", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<DateTime>("Create")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Industry")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Logo")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Phone")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("Status")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTime?>("Update")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Website")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Companys");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Create = new DateTime(2022, 9, 30, 23, 8, 48, 702, DateTimeKind.Local).AddTicks(3354),
-                            Description = "Leading company in tech innovations and AI solutions.",
-                            Email = "contact@techinnovators.com",
-                            Industry = "Technology",
-                            Logo = "",
-                            Name = "Tech Innovators",
-                            Phone = "123-456-7890",
-                            Status = true,
-                            Update = new DateTime(2024, 9, 30, 23, 8, 48, 702, DateTimeKind.Local).AddTicks(3378),
-                            Website = "https://www.techinnovators.com"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Create = new DateTime(2021, 9, 30, 23, 8, 48, 702, DateTimeKind.Local).AddTicks(3382),
-                            Description = "Sustainable solutions for a greener future.",
-                            Email = "info@greenearth.com",
-                            Industry = "Environmental",
-                            Logo = "",
-                            Name = "Green Earth Co.",
-                            Phone = "987-654-3210",
-                            Status = true,
-                            Update = new DateTime(2024, 9, 30, 23, 8, 48, 702, DateTimeKind.Local).AddTicks(3383),
-                            Website = "https://www.greenearth.com"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Create = new DateTime(2019, 9, 30, 23, 8, 48, 702, DateTimeKind.Local).AddTicks(3385),
-                            Description = "Providing innovative healthcare solutions worldwide.",
-                            Email = "support@healthfirst.com",
-                            Industry = "Healthcare",
-                            Logo = "",
-                            Name = "HealthFirst Inc.",
-                            Phone = "555-678-1234",
-                            Status = true,
-                            Update = new DateTime(2024, 9, 30, 23, 8, 48, 702, DateTimeKind.Local).AddTicks(3385),
-                            Website = "https://www.healthfirst.com"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Create = new DateTime(2023, 9, 30, 23, 8, 48, 702, DateTimeKind.Local).AddTicks(3387),
-                            Description = "Investing in future leaders and breakthrough industries.",
-                            Email = "contact@globalventures.com",
-                            Industry = "Investment",
-                            Logo = "",
-                            Name = "Global Ventures",
-                            Phone = "321-987-6543",
-                            Status = true,
-                            Update = new DateTime(2024, 9, 30, 23, 8, 48, 702, DateTimeKind.Local).AddTicks(3388),
-                            Website = "https://www.globalventures.com"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Create = new DateTime(2020, 9, 30, 23, 8, 48, 702, DateTimeKind.Local).AddTicks(3389),
-                            Description = "Developing renewable energy solutions for the future.",
-                            Email = "support@futureenergy.com",
-                            Industry = "Energy",
-                            Logo = "",
-                            Name = "Future Energy Corp",
-                            Phone = "222-333-4444",
-                            Status = true,
-                            Update = new DateTime(2024, 9, 30, 23, 8, 48, 702, DateTimeKind.Local).AddTicks(3391),
-                            Website = "https://www.futureenergy.com"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            Create = new DateTime(2018, 9, 30, 23, 8, 48, 702, DateTimeKind.Local).AddTicks(3393),
-                            Description = "Bringing technology into the classroom to transform learning.",
-                            Email = "info@edutech.com",
-                            Industry = "Education",
-                            Logo = "",
-                            Name = "EduTech Solutions",
-                            Phone = "999-888-7777",
-                            Status = true,
-                            Update = new DateTime(2024, 9, 30, 23, 8, 48, 702, DateTimeKind.Local).AddTicks(3393),
-                            Website = "https://www.edutech.com"
-                        });
-                });
 
             modelBuilder.Entity("JobPortalApplication.Models.JobLevel", b =>
                 {
