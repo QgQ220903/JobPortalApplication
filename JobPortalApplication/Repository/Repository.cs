@@ -72,5 +72,12 @@ namespace JobPortalApplication.Repository
 
             return query.ToList();
         }
+
+        public IEnumerable<T> GetListTrue(Expression<Func<T, bool>> filter)
+        {
+            IQueryable<T> query = dbSet;
+            query = query.Where(filter);
+            return query.ToList();
+        }
     }
 }
