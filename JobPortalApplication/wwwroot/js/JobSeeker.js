@@ -9,10 +9,9 @@ function loadDataTable() {
         "ajax": { url: '/admin/jobseeker/getall' },
         "columns": [
             { data: 'id', "width": "10%" },
-            { data: 'userName', "width": "10%" },
-            { data: 'password', "width": "10%" },
-            { data: 'email', "width": "10%" },
-            { data: 'fullName', "width": "10%" },
+            { data: 'userName', "width": "10%" },        
+            { data: 'email', "width": "15%" },
+            { data: 'fullName', "width": "15%" },
             { data: 'phone', "width": "10%" },
             { data: 'create_at', "width": "10%" },
             { data: 'update_at', "width": "10%" },
@@ -20,8 +19,8 @@ function loadDataTable() {
                 data: 'id',
                 "render": function (data) {
                     return `
-                    <a href="/admin/jobseeker/update/${data}" class="btn btn-sm btn-warning" > <i class="fa-solid fa-pen-to-square"></i> Edit </a>
-                    <a onClick=Delete('/admin/jobseeker/delete/${data}') class="btn btn-sm btn-danger" > <i class="fa-solid fa-trash"></i> Delete </a>`
+                    <a href="/admin/jobseeker/update/${data}" class="btn btn-sm btn-warning" > <i class="fa-solid fa-pen-to-square"></i></a>
+                    <a onClick=Delete('/admin/jobseeker/delete/${data}') class="btn btn-sm btn-danger" > <i class="fa-solid fa-trash"></i></a>`
                 },
                 "width": "20%"
             }

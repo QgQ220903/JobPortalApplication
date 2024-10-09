@@ -14,8 +14,8 @@ function loadDataTable() {
                 data: 'id',
                 "render": function (data) {
                     return `
-                    <a href="/admin/joblevel/update/${data}" class="btn btn-sm btn-warning" > <i class="fa-solid fa-pen-to-square"></i> Edit </a>
-                    <a onClick=Delete('/admin/joblevel/delete/${data}') class="btn btn-sm btn-danger" > <i class="fa-solid fa-trash"></i> Delete </a>`
+                    <a href="/admin/joblevel/update/${data}" class="btn btn-sm btn-warning" > <i class="fa-solid fa-pen-to-square"></i></a>
+                    <a onClick=Delete('/admin/joblevel/delete/${data}') class="btn btn-sm btn-danger" > <i class="fa-solid fa-trash"></i></a>`
                 },
                 "width": "30%"
             }
