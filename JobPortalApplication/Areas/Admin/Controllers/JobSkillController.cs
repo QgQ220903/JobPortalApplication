@@ -64,7 +64,7 @@ namespace JobPortalApplication.Areas.Admin.Controllers
             return View();
         }
 
-        public IActionResult Delete(int id)
+/*        public IActionResult Delete(int id)
         {
             if (id == null || id == 0)
             {
@@ -76,8 +76,8 @@ namespace JobPortalApplication.Areas.Admin.Controllers
                 return NotFound();
             }
             return View(skill);
-        }
-        [HttpPost, ActionName("Delete")]
+        }*/
+/*        [HttpPost, ActionName("Delete")]
         public IActionResult DeletePOST(int id)
         {
             Skill? skill = _unitOfWork.SkillRepo.Get(x => x.Id == id);
@@ -89,6 +89,29 @@ namespace JobPortalApplication.Areas.Admin.Controllers
             _unitOfWork.Save();
             TempData["success"] = "Skill deleted successfully";
             return RedirectToAction("Index", "JobSkill");
+        }*/
+
+
+        #region API CALLS
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            List<Skill> skillListObj = _unitOfWork.SkillRepo.GetListTrue(x => x.Status == true).ToList();
+            return Json(new { data = skillListObj });
         }
+
+        public IActionResult Delete(int id)
+        {
+            var skillDelete = _unitOfWork.SkillRepo.Get(x => x.Id == id);
+            if (skillDelete == null)
+            {
+                return Json(new { success = false, message = "Error while deleting" });
+            }
+            skillDelete.Status = false;
+            _unitOfWork.SkillRepo.Update(skillDelete);
+            _unitOfWork.Save();
+            return Json(new { success = true, message = "Delete Successfully" });
+        }
+        #endregion
     }
 }

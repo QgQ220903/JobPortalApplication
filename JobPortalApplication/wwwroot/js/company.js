@@ -6,6 +6,7 @@ $(document).ready(function () {
 
 function loadDataTable() {
     dataTable = $('#tbtCompanyData').DataTable({
+
         "ajax": {
             url: '/admin/company/getall',
             dataSrc: function (json) {
@@ -36,6 +37,10 @@ function loadDataTable() {
                 },
                 "width": "15%"
             }
+        ],
+       "lengthMenu": [
+            [5, 10, 25, -1],
+            [5, 10, 25, 'All']
         ]
     });
 }
