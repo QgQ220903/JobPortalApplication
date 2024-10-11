@@ -24,9 +24,9 @@
                         <span asp-validation-for="@Model.Job.Requirements" class="text-danger m-2"></span>
                     </div>
 
-                    <div class="form-floating mb-3">
-                        <input asp-for="@Model.Job.Benefits" type="text" class="form-control" id="floatingInput" placeholder="">
-                        <label asp-for="@Model.Job.Benefits" for="floatingInput"></label>
+                    <div class="mb-3">
+                        <label asp-for="@Model.Job.Benefits" for="floatingInput" class="ms-2 text-muted"></label>
+                        <textarea asp-for="@Model.Job.Benefits" type="text" class="form-control" id="floatingInput" placeholder=""></textarea>                    
                         <span asp-validation-for="@Model.Job.Benefits" class="text-danger m-2"></span>
                     </div>
                     <div class="form-floating mb-3">
