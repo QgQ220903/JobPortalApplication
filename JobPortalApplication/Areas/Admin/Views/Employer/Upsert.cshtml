@@ -9,7 +9,10 @@
                     <div class="form-floating mb-3">
                         <input asp-for="@Model.Employer.Username" type="text" class="form-control" id="floatingInput" placeholder="">
                         <label asp-for="@Model.Employer.Username" for="floatingInput"></label>
-                        <span asp-validation-for="@Model.Employer.Username" class="text-danger m-2"></span>
+                        <div style="position: relative;">
+                            <span asp-validation-for="@Model.Employer.Username" class="text-danger m-2"></span>
+                            <span id="username-error" class="text-danger m-2" style="position: absolute; top: 0; left: 0;"></span>
+                        </div>
                     </div>
 
                     <div class="form-floating mb-3">
@@ -19,9 +22,12 @@
                     </div>
 
                     <div class="form-floating mb-3">
-                        <input asp-for="@Model.Employer.Email" type="text" class="form-control" id="floatingInput" placeholder="">
+                        <input asp-for="@Model.Employer.Email" type="text" class="form-control" id="floatingEmail" placeholder="">
                         <label asp-for="@Model.Employer.Email" for="floatingInput"></label>
-                        <span asp-validation-for="@Model.Employer.Email" class="text-danger m-2"></span>
+                        <div style="position: relative;">
+                            <span asp-validation-for="@Model.Employer.Email" class="text-danger m-2"></span>
+                            <span id="email-error" class="text-danger m-2" style="position: absolute; top: 0; left: 0;"></span>
+                        </div>
                     </div>
 
                     <div class="form-floating mb-3">
@@ -84,6 +90,91 @@
 </div>
 
 @section Scripts {
+
+    <script>
+        $(document).ready(function () {
+            var usernameExists = false; // Biến để theo dõi trạng thái của username
+            var emailExists = false;    // Biến để theo dõi trạng thái của email
+
+            // Lưu giá trị ban đầu của username và email khi form được tải
+            var initialUsername = $('#floatingInput').val();
+            var initialEmail = $('#floatingEmail').val();
+
+            // Hàm kiểm tra username
+            function checkUsername() {
+                var username = $('#floatingInput').val();
+                var usernameErrorMessage = $('#username-error');
+
+                if (username !== initialUsername && username) { // Chỉ kiểm tra nếu username thay đổi
+                    $.ajax({
+                        url: '/admin/employer/IsUsernameAndEmailAvailable',
+                        type: 'GET',
+                        data: { username: username, email: '' }, // Gửi email rỗng để chỉ kiểm tra username
+                        success: function (result) {
+                            if (result.isUsernameTaken) {
+                                usernameErrorMessage.text('Username already exists').css('color', 'red');
+                                usernameExists = true; // Cập nhật biến nếu username đã tồn tại
+                            } else {
+                                usernameErrorMessage.text('');
+                                usernameExists = false; // Reset nếu username không tồn tại
+                            }
+                        },
+                        error: function () {
+                            usernameErrorMessage.text('Error checking login name').css('color', 'red');
+                            usernameExists = true; // Trong trường hợp lỗi, ngăn submit
+                        }
+                    });
+                }
+            }
+
+            // Hàm kiểm tra email
+            function checkEmail() {
+                var email = $('#floatingEmail').val();
+                var emailErrorMessage = $('#email-error');
+
+                if (email !== initialEmail && email) { // Chỉ kiểm tra nếu email thay đổi
+                    $.ajax({
+                        url: '/admin/employer/IsUsernameAndEmailAvailable',
+                        type: 'GET',
+                        data: { username: '', email: email }, // Gửi username rỗng để chỉ kiểm tra email
+                        success: function (result) {
+                            if (result.isEmailTaken) {
+                                emailErrorMessage.text('Email already exists').css('color', 'red');
+                                emailExists = true; // Cập nhật biến nếu email đã tồn tại
+                            } else {
+                                emailErrorMessage.text('');
+                                emailExists = false; // Reset nếu email không tồn tại
+                            }
+                        },
+                        error: function () {
+                            emailErrorMessage.text('Error checking email').css('color', 'red');
+                            emailExists = true; // Trong trường hợp lỗi, ngăn submit
+                        }
+                    });
+                }
+            }
+
+            // Gọi hàm kiểm tra khi username hoặc email bị thay đổi
+            $('#floatingInput').on('blur', checkUsername);
+            $('#floatingEmail').on('blur', checkEmail);
+
+            // Kiểm tra trạng thái của username và email trước khi submit form
+            $('form').on('submit', function (e) {
+                if (usernameExists || emailExists) {
+                    e.preventDefault(); // Ngăn không cho submit form
+
+                    if (usernameExists) {
+                        $('#floatingInput').focus(); // Focus vào ô username nếu trùng
+                    } else if (emailExists) {
+                        $('#floatingEmail').focus(); // Focus vào ô email nếu trùng
+                    }
+                }
+            });
+        });
+    </script>
+
+
+
     @{
         <partial name="_ValidationScriptsPartial"/>
     }
