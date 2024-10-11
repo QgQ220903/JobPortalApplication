@@ -25,7 +25,7 @@ namespace JobPortalApplication.Areas.Admin.Controllers
         {
             EmployerVM employerVM = new EmployerVM()
             {
-                CompanyList = _unitOfWork.CompanyRepo.GetAll().Select(u => new SelectListItem
+                CompanyList = _unitOfWork.CompanyRepo.GetAll_WSET(e => e.Status == true).Select(u => new SelectListItem
                 {
                     Text = u.Name,
                     Value = u.Id.ToString()
@@ -132,6 +132,15 @@ namespace JobPortalApplication.Areas.Admin.Controllers
             _unitOfWork.Save();
 
             return Json(new { success = true, message = "Delete Successful" });
+        }
+
+        [HttpGet]
+        public JsonResult IsUsernameAndEmailAvailable(string username, string email)
+        {
+            var isUsernameTaken = _unitOfWork.EmployerRepo.Get(e => e.Username == username);
+            var isEmailTaken = _unitOfWork.EmployerRepo.Get(e => e.Email == email);
+
+            return Json(new { isUsernameTaken = isUsernameTaken != null, isEmailTaken = isEmailTaken != null });
         }
 
     }
