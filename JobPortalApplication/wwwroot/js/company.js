@@ -24,7 +24,7 @@ function loadDataTable() {
                 data: 'id',
                 "render": function (data) {
                     return `<div class = "w-75 d-flex gap-1" role=""> 
-                    <a href="/admin/company/update?id=${data}" class="btn btn-sm btn-warning mx-1">
+                    <a href="/admin/company/upsert?id=${data}" class="btn btn-sm btn-warning mx-1">
                         <i class="fa-solid fa-pen-to-square"></i> 
                     </a>
                     <a onClick=Delete('/admin/company/hidden/${data}')  class="btn btn-sm btn-danger mx-1">
