@@ -66,50 +66,6 @@ namespace JobPortalApplication.Areas.Admin.Controllers
             return View();
         }
 
-/*        public IActionResult Delete(int id)
-        {
-            if (id == null || id == 0)
-            {
-                return NotFound();
-            }
-            Skill? skill = _unitOfWork.SkillRepo.Get(x => x.Id == id);
-<<<<<<< Updated upstream
-=======
-            if(skill == null)
-            {
-                return NotFound();
-            }
-            return View(skill);
-        }
-        [HttpPost, ActionName("Delete")]
-        public IActionResult DeletePOST(int id)
-        {
-            Skill? skill = _unitOfWork.SkillRepo.Get(x=>x.Id == id);
->>>>>>> Stashed changes
-            if (skill == null)
-            {
-                return NotFound();
-            }
-<<<<<<< Updated upstream
-            return View(skill);
-        }*/
-/*        [HttpPost, ActionName("Delete")]
-        public IActionResult DeletePOST(int id)
-        {
-            Skill? skill = _unitOfWork.SkillRepo.Get(x => x.Id == id);
-            if (skill == null)
-            {
-                return NotFound();
-            }
-=======
->>>>>>> Stashed changes
-            _unitOfWork.SkillRepo.Remove(skill);
-            _unitOfWork.Save();
-            TempData["success"] = "Skill deleted successfully";
-            return RedirectToAction("Index", "JobSkill");
-        }*/
-
-
         #region API CALLS
         [HttpGet]
         public IActionResult GetAll()
