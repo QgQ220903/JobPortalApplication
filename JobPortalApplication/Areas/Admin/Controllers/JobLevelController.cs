@@ -1,6 +1,7 @@
 ﻿using JobPortalApplication.Models;
 using JobPortalApplication.Repository.IRepository;
 using Microsoft.AspNetCore.Mvc;
+using NuGet.Protocol.Plugins;
 
 namespace JobPortalApplication.Areas.Admin.Controllers
 {
@@ -26,6 +27,12 @@ namespace JobPortalApplication.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
+                // Kiểm tra trùng username
+                if (IsUserNameDuplicate(level.Name))
+                {
+                    ModelState.AddModelError("Name", "name đã tồn tại!");
+                    return View(level);
+                }
                 _unitOfWork.LevelRepo.Add(level);
                 _unitOfWork.Save();
                 TempData["success"] = "Level created successfully";
@@ -35,7 +42,7 @@ namespace JobPortalApplication.Areas.Admin.Controllers
         }
         public IActionResult Update(int id)
         {
-            if (id == null || id == 0)
+            if (id <= 0)
             {
                 return NotFound();
             }
@@ -51,6 +58,12 @@ namespace JobPortalApplication.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
+                // Kiểm tra trùng username
+                if (IsUserNameDuplicate(level.Name, level.Id))
+                {
+                    ModelState.AddModelError("Name", "Name đã tồn tại!");
+                    return View(level);
+                }
                 _unitOfWork.LevelRepo.Update(level);
                 _unitOfWork.Save();
                 TempData["success"] = "Level updated successfully";
@@ -81,5 +94,18 @@ namespace JobPortalApplication.Areas.Admin.Controllers
             return Json(new { success = true, message = "Delete Successful" });
         }
         #endregion
+
+        // Kiểm tra trùng username
+        public bool IsUserNameDuplicate(string username, int? id = null)
+        {
+            if (id == null)
+            {
+                return _unitOfWork.LevelRepo.Get(x => x.Name == username) != null;
+            }
+            else
+            {
+                return _unitOfWork.LevelRepo.Get(x => x.Name == username && x.Id != id) != null;
+            }
+        }
     }
 }
