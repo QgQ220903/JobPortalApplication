@@ -10,7 +10,8 @@ namespace JobPortalApplication.Areas.Admin.Controllers
     public class JobSkillController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
-        public JobSkillController(IUnitOfWork unitOfWork)
+
+        public JobSkillController(IUnitOfWork unitOfWork) 
         {
             _unitOfWork = unitOfWork;
         }
@@ -44,7 +45,8 @@ namespace JobPortalApplication.Areas.Admin.Controllers
                 return NotFound();
             }
             Skill? skill = _unitOfWork.SkillRepo.Get(x => x.Id == id);
-            if (skill == null)
+
+            if(skill == null)
             {
                 return NotFound();
             }
@@ -64,31 +66,26 @@ namespace JobPortalApplication.Areas.Admin.Controllers
             return View();
         }
 
+        #region API CALLS
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            List<Skill> skillListObj = _unitOfWork.SkillRepo.GetListTrue(x => x.Status == true).ToList();
+            return Json(new { data = skillListObj });
+        }
+
         public IActionResult Delete(int id)
         {
-            if (id == null || id == 0)
+            var skillDelete = _unitOfWork.SkillRepo.Get(x => x.Id == id);
+            if (skillDelete == null)
             {
-                return NotFound();
+                return Json(new { success = false, message = "Error while deleting" });
             }
-            Skill? skill = _unitOfWork.SkillRepo.Get(x => x.Id == id);
-            if (skill == null)
-            {
-                return NotFound();
-            }
-            return View(skill);
-        }
-        [HttpPost, ActionName("Delete")]
-        public IActionResult DeletePOST(int id)
-        {
-            Skill? skill = _unitOfWork.SkillRepo.Get(x => x.Id == id);
-            if (skill == null)
-            {
-                return NotFound();
-            }
-            _unitOfWork.SkillRepo.Remove(skill);
+            skillDelete.Status = false;
+            _unitOfWork.SkillRepo.Update(skillDelete);
             _unitOfWork.Save();
-            TempData["success"] = "Skill deleted successfully";
-            return RedirectToAction("Index", "JobSkill");
+            return Json(new { success = true, message = "Delete Successfully" });
         }
+        #endregion
     }
 }

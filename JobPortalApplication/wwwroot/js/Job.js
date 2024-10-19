@@ -5,10 +5,9 @@ $(document).ready(function () {
 });
 
 function loadDataTable() {
-    dataTable = $('#tbtCompanyData').DataTable({
-
+    dataTable = $('#tbtJobData').DataTable({
         "ajax": {
-            url: '/admin/company/getall',
+            url: '/admin/job/getall',
             dataSrc: function (json) {
                 console.log(json);  // In ra dữ liệu từ API
                 return json.data || [];
@@ -16,31 +15,28 @@ function loadDataTable() {
         },
         "columns": [
             { data: 'id', "width": "5%" },
-            { data: 'name', "width": "25%" },
-            { data: 'industry', "width": "15%" },
-            { data: 'email', "width": "15%" },
-            { data: 'phone', "width": "15%" },
+            { data: 'title', "width": "25%" },
+            { data: 'employer.fullname', "width": "15%" },
+            { data: 'employer.company.name', "width": "15%" },
+            { data: 'jobLevel.name', "width": "15%" },
+            { data: 'jobType.name', "width": "15%" },
             {
                 data: 'id',
                 "render": function (data) {
                     return `<div class = "w-75 d-flex gap-1" role=""> 
-                    <a href="/admin/company/upsert?id=${data}" class="btn btn-sm btn-warning mx-1">
+                    <a href="/admin/job/Upsert?id=${data}" class="btn btn-sm btn-warning mx-1">
                         <i class="fa-solid fa-pen-to-square"></i> 
                     </a>
-                    <a onClick=Delete('/admin/company/hidden/${data}')  class="btn btn-sm btn-danger mx-1">
+                    <a onClick=Delete('/admin/job/hidden/${data}')  class="btn btn-sm btn-danger mx-1">
                         <i class="fa-solid fa-trash"></i> 
                     </a>
-                     <a href="/admin/company/detail?id=${data}"  class="btn btn-sm btn-info mx-1">
+                     <a href="/admin/job/detail?id=${data}"  class="btn btn-sm btn-info mx-1">
                         <i class="fa-solid fa-eye"></i> 
                     </a>
                     </div>`;
                 },
                 "width": "15%"
             }
-        ],
-       "lengthMenu": [
-            [5, 10, 25, -1],
-            [5, 10, 25, 'All']
         ]
     });
 }
@@ -65,7 +61,7 @@ function Delete(url) {
                 }
             })
 
-        
+
         }
     });
 }
