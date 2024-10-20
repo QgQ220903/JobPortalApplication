@@ -1,0 +1,1064 @@
+﻿@{
+    ViewData["Title"] = "Company";
+}
+ <section class="section-1 py-5 ">
+        <div class="container">
+            <div class="card border-0 shadow p-5">
+                <div class="row">
+                    <div class="col-md-7 mb-3 mb-sm-3 mb-lg-0">
+                        <input type="text" class="form-control" name="search" id="search" placeholder="Keywords">
+                    </div>
+        
+                    <div class="col-md-2 mb-3 mb-sm-3 mb-lg-0">
+                        <select name="location" id="location" class="form-control">
+                            <option value="">Select a location</option>
+                            <option value="">Hồ Chí Minh</option>
+                            <option value="">Hà Nội</option>
+                            <option value="">Đà Nẵng</option>
+                        </select>
+                    </div>
+
+                    <div class=" col-md-3 mb-xs-3 mb-sm-3 mb-lg-0">
+                        <div class="d-grid gap-2">
+                            <a href="jobs.html" class="btn btn-primary btn-block">Search</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- slide Company-->
+    <section class="section-3  py-5 py-sm-4 bg-2">
+        <div class="container">
+            <h2>Top Company</h2>
+            <div id="companySlideID" class="carousel slide pt-5 pt-sm-4 g-3" data-bs-ride="carousel" data-bs-pause="hover" data-bs-wrap="true">
+                <div class="carousel-inner w-80 m-auto">
+                    <div class="carousel-item active" data-bs-interval="5000">
+                        <div class="row g-4">
+                            <!-- card 01 -->
+                            <div class="col-12 col-lg-4 col-md-6  ">
+
+                                <div class="card card-h-100  border-0">
+                                    <div class="card-header bg-white">
+                                        <div class="card-img__grou d-flex justify-content-between align-content-start gap-3 ">
+                                            <a href="#!" class="card-img" style="width: 80px;">
+                                                <img class="center rounded object-fit-cover"
+                                                    src="~/img/fpt_corporation_logo.jpg" alt="">
+                                            </a>
+                                            <button class=" border-0 bg-transparent p-0" style="height: 100%;">
+                                                <span>
+                                                    <svg stroke="currentColor" fill="none" stroke-width="1.5" viewBox="0 0 24 24"
+                                                        aria-hidden="true" height="1em" width="1em"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z">
+                                                        </path>
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                        </div>
+
+                                        <div>
+                                            <a href="#!">
+                                                <p class="card-title fw-bolder fs-4 mb-0">Software Engineer</p>
+                                            </a>
+                                            <a href="#!">
+                                                <p class="card-title text-black-50 mb-0">FPT Technology</p>
+                                            </a>
+
+                                            <a class="card-link " href="#!">
+                                                <span class="text-primary small fw-bolder text-decoration-underline">
+                                                    Sign in to view salary
+                                                </span>
+                                            </a>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="card-body pt-2 pb-3">
+                                        <div class="mb-1">
+                                            <p class="mb-0">
+                                                <span class="fw-bolder fs-5"><i class="fa fa-map-marker"></i></span>
+                                                <span class="ps-1"> Quận 7, Hồ Chí Minh</span>
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <p class="mb-0">
+                                                    <span class="fw-bolder "><i class="fa fa-clock-o"></i></span>
+                                                    <span class="ps-1">Full Time</span>
+                                                </p>
+                                                <a href="#!">
+                                                    <span class="text-primary small fw-bolder">
+                                                        4 jobs
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- card 02 -->
+                            <div class="col-12 col-lg-4 col-md-6  ">
+
+                                <div class=" card-h-100 card  border-0">
+                                    <div class="card-header bg-white">
+                                        <div class="card-img__grou d-flex justify-content-between align-content-start gap-3 ">
+                                            <a href="#!" class="card-img" style="width: 80px;">
+                                                <img class="center rounded object-fit-cover"
+                                                    src="~/img/fpt_corporation_logo.jpg" alt="">
+                                            </a>
+                                            <button class=" border-0 bg-transparent p-0" style="height: 100%;">
+                                                <span>
+                                                    <svg stroke="currentColor" fill="none" stroke-width="1.5" viewBox="0 0 24 24"
+                                                        aria-hidden="true" height="1em" width="1em"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z">
+                                                        </path>
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                        </div>
+
+                                        <div>
+                                            <a href="#!">
+                                                <p class="card-title fw-bolder fs-4 mb-0">Software Engineer</p>
+                                            </a>
+                                            <a href="#!">
+                                                <p class="card-title text-black-50 mb-0">FPT Technology</p>
+                                            </a>
+
+                                            <a class="card-link " href="#!">
+                                                <span class="text-primary small fw-bolder text-decoration-underline">
+                                                    Sign in to view salary
+                                                </span>
+                                            </a>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="card-body pt-2 pb-3">
+                                        <div class="mb-1">
+                                            <p class="mb-0">
+                                                <span class="fw-bolder fs-5"><i class="fa fa-map-marker"></i></span>
+                                                <span class="ps-1"> Quận 7, Hồ Chí Minh</span>
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <p class="mb-0">
+                                                    <span class="fw-bolder "><i class="fa fa-clock-o"></i></span>
+                                                    <span class="ps-1">Full Time</span>
+                                                </p>
+                                                <a href="#!">
+                                                    <span class="text-primary small fw-bolder">
+                                                        4 jobs
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- card 03 -->
+                            <div class="col-12 col-lg-4 col-md-6  ">
+
+                                <div class="card-h-100 card  border-0">
+                                    <div class="card-header bg-white">
+                                        <div class="card-img__grou d-flex justify-content-between align-content-start gap-3 ">
+                                            <a href="#!" class="card-img" style="width: 80px;">
+                                                <img class="center rounded object-fit-cover"
+                                                    src="~/img/fpt_corporation_logo.jpg" alt="">
+                                            </a>
+                                            <button class=" border-0 bg-transparent p-0" style="height: 100%;">
+                                                <span>
+                                                    <svg stroke="currentColor" fill="none" stroke-width="1.5" viewBox="0 0 24 24"
+                                                        aria-hidden="true" height="1em" width="1em"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z">
+                                                        </path>
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                        </div>
+
+                                        <div>
+                                            <a href="#!">
+                                                <p class="card-title fw-bolder fs-4 mb-0">Software Engineer</p>
+                                            </a>
+                                            <a href="#!">
+                                                <p class="card-title text-black-50 mb-0">FPT Technology</p>
+                                            </a>
+
+                                            <a class="card-link " href="#!">
+                                                <span class="text-primary small fw-bolder text-decoration-underline">
+                                                    Sign in to view salary
+                                                </span>
+                                            </a>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="card-body pt-2 pb-3">
+                                        <div class="mb-1">
+                                            <p class="mb-0">
+                                                <span class="fw-bolder fs-5"><i class="fa fa-map-marker"></i></span>
+                                                <span class="ps-1"> Quận 7, Hồ Chí Minh</span>
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <p class="mb-0">
+                                                    <span class="fw-bolder "><i class="fa fa-clock-o"></i></span>
+                                                    <span class="ps-1">Full Time</span>
+                                                </p>
+                                                <a href="#!">
+                                                    <span class="text-primary small fw-bolder">
+                                                        4 jobs
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                      
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <div class="row g-4">
+                              <!-- card 01 -->
+                              <div class="col-12 col-lg-4 col-md-6  ">
+
+                                <div class="card card-h-100  border-0">
+                                    <div class="card-header bg-white">
+                                        <div class="card-img__grou d-flex justify-content-between align-content-start gap-3 ">
+                                            <a href="#!" class="card-img" style="width: 80px;">
+                                                <img class="center rounded object-fit-cover"
+                                                    src="~/img/fpt_corporation_logo.jpg" alt="">
+                                            </a>
+                                            <button class=" border-0 bg-transparent p-0" style="height: 100%;">
+                                                <span>
+                                                    <svg stroke="currentColor" fill="none" stroke-width="1.5" viewBox="0 0 24 24"
+                                                        aria-hidden="true" height="1em" width="1em"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z">
+                                                        </path>
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                        </div>
+
+                                        <div>
+                                            <a href="#!">
+                                                <p class="card-title fw-bolder fs-4 mb-0">Software Engineer</p>
+                                            </a>
+                                            <a href="#!">
+                                                <p class="card-title text-black-50 mb-0">FPT Technology</p>
+                                            </a>
+
+                                            <a class="card-link " href="#!">
+                                                <span class="text-primary small fw-bolder text-decoration-underline">
+                                                    Sign in to view salary
+                                                </span>
+                                            </a>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="card-body pt-2 pb-3">
+                                        <div class="mb-1">
+                                            <p class="mb-0">
+                                                <span class="fw-bolder fs-5"><i class="fa fa-map-marker"></i></span>
+                                                <span class="ps-1"> Quận 7, Hồ Chí Minh</span>
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <p class="mb-0">
+                                                    <span class="fw-bolder "><i class="fa fa-clock-o"></i></span>
+                                                    <span class="ps-1">Full Time</span>
+                                                </p>
+                                                <a href="#!">
+                                                    <span class="text-primary small fw-bolder">
+                                                        4 jobs
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- card 02 -->
+                            <div class="col-12 col-lg-4 col-md-6  ">
+
+                                <div class=" card-h-100 card  border-0">
+                                    <div class="card-header bg-white">
+                                        <div class="card-img__grou d-flex justify-content-between align-content-start gap-3 ">
+                                            <a href="#!" class="card-img" style="width: 80px;">
+                                                <img class="center rounded object-fit-cover"
+                                                    src="~/img/fpt_corporation_logo.jpg" alt="">
+                                            </a>
+                                            <button class=" border-0 bg-transparent p-0" style="height: 100%;">
+                                                <span>
+                                                    <svg stroke="currentColor" fill="none" stroke-width="1.5" viewBox="0 0 24 24"
+                                                        aria-hidden="true" height="1em" width="1em"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z">
+                                                        </path>
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                        </div>
+
+                                        <div>
+                                            <a href="#!">
+                                                <p class="card-title fw-bolder fs-4 mb-0">Software Engineer</p>
+                                            </a>
+                                            <a href="#!">
+                                                <p class="card-title text-black-50 mb-0">FPT Technology</p>
+                                            </a>
+
+                                            <a class="card-link " href="#!">
+                                                <span class="text-primary small fw-bolder text-decoration-underline">
+                                                    Sign in to view salary
+                                                </span>
+                                            </a>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="card-body pt-2 pb-3">
+                                        <div class="mb-1">
+                                            <p class="mb-0">
+                                                <span class="fw-bolder fs-5"><i class="fa fa-map-marker"></i></span>
+                                                <span class="ps-1"> Quận 7, Hồ Chí Minh</span>
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <p class="mb-0">
+                                                    <span class="fw-bolder "><i class="fa fa-clock-o"></i></span>
+                                                    <span class="ps-1">Full Time</span>
+                                                </p>
+                                                <a href="#!">
+                                                    <span class="text-primary small fw-bolder">
+                                                        4 jobs
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- card 03 -->
+                            <div class="col-12 col-lg-4 col-md-6  ">
+
+                                <div class="card-h-100 card  border-0">
+                                    <div class="card-header bg-white">
+                                        <div class="card-img__grou d-flex justify-content-between align-content-start gap-3 ">
+                                            <a href="#!" class="card-img" style="width: 80px;">
+                                                <img class="center rounded object-fit-cover"
+                                                    src="~/img/fpt_corporation_logo.jpg" alt="">
+                                            </a>
+                                            <button class=" border-0 bg-transparent p-0" style="height: 100%;">
+                                                <span>
+                                                    <svg stroke="currentColor" fill="none" stroke-width="1.5" viewBox="0 0 24 24"
+                                                        aria-hidden="true" height="1em" width="1em"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z">
+                                                        </path>
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                        </div>
+
+                                        <div>
+                                            <a href="#!">
+                                                <p class="card-title fw-bolder fs-4 mb-0">Software Engineer</p>
+                                            </a>
+                                            <a href="#!">
+                                                <p class="card-title text-black-50 mb-0">FPT Technology</p>
+                                            </a>
+
+                                            <a class="card-link " href="#!">
+                                                <span class="text-primary small fw-bolder text-decoration-underline">
+                                                    Sign in to view salary
+                                                </span>
+                                            </a>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="card-body pt-2 pb-3">
+                                        <div class="mb-1">
+                                            <p class="mb-0">
+                                                <span class="fw-bolder fs-5"><i class="fa fa-map-marker"></i></span>
+                                                <span class="ps-1"> Quận 7, Hồ Chí Minh</span>
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <p class="mb-0">
+                                                    <span class="fw-bolder "><i class="fa fa-clock-o"></i></span>
+                                                    <span class="ps-1">Full Time</span>
+                                                </p>
+                                                <a href="#!">
+                                                    <span class="text-primary small fw-bolder">
+                                                        4 jobs
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#companySlideID" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#companySlideID" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Company -->
+    <section class="section-2 py-5 py-sm-4">
+        <div class="container">
+            <h2>Featured Company</h2>
+            <div class="row pt-5 pt-sm-4 g-3">
+
+                <!-- card 01 -->
+                <div class="col-12 col-lg-4 col-md-6  ">
+
+                    <div class="card card-h-100  shadow border-0">
+                        <div class="card-header bg-white">
+                            <div class="card-img__grou d-flex justify-content-between align-content-start gap-3 ">
+                                <a asp-area="EndUser" asp-controller="Company" asp-action="Detail"class="card-img" style="width: 80px;">
+                                    <img class="center rounded object-fit-cover"
+                                        src="~/img/fpt_corporation_logo.jpg" alt="">
+                                </a>
+                                <button class=" border-0 bg-transparent p-0" style="height: 100%;">
+                                    <span>
+                                        <svg stroke="currentColor" fill="none" stroke-width="1.5" viewBox="0 0 24 24"
+                                            aria-hidden="true" height="1em" width="1em"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </button>
+                            </div>
+
+                            <div>
+                                <a asp-area="EndUser" asp-controller="Company" asp-action="Detail">
+                                    <p class="card-title fw-bolder fs-4 mb-0">Software Engineer</p>
+                                </a>
+                                <a asp-area="EndUser" asp-controller="Company" asp-action="Detail">
+                                    <p class="card-title text-black-50 mb-0">FPT Technology</p>
+                                </a>
+
+                                <a class="card-link " href="#!">
+                                    <span class="text-primary small fw-bolder text-decoration-underline">
+                                        Sign in to view salary
+                                    </span>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="card-body pt-2 pb-3">
+                            <div class="mb-1">
+                                <p class="mb-0">
+                                    <span class="fw-bolder fs-5"><i class="fa fa-map-marker"></i></span>
+                                    <span class="ps-1"> Quận 7, Hồ Chí Minh</span>
+                                </p>
+                                <div class="d-flex justify-content-between">
+                                    <p class="mb-0">
+                                        <span class="fw-bolder "><i class="fa fa-clock-o"></i></span>
+                                        <span class="ps-1">Full Time</span>
+                                    </p>
+                                    <a href="#!">
+                                        <span class="text-primary small fw-bolder">
+                                            4 jobs
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- card 02 -->
+                <div class="col-12 col-lg-4 col-md-6  ">
+
+                    <div class=" card-h-100 card shadow border-0">
+                        <div class="card-header bg-white">
+                            <div class="card-img__grou d-flex justify-content-between align-content-start gap-3 ">
+                                <a href="#!" class="card-img" style="width: 80px;">
+                                    <img class="center rounded object-fit-cover"
+                                        src="~/img/fpt_corporation_logo.jpg" alt="">
+                                </a>
+                                <button class=" border-0 bg-transparent p-0" style="height: 100%;">
+                                    <span>
+                                        <svg stroke="currentColor" fill="none" stroke-width="1.5" viewBox="0 0 24 24"
+                                            aria-hidden="true" height="1em" width="1em"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </button>
+                            </div>
+
+                            <div>
+                                <a href="#!">
+                                    <p class="card-title fw-bolder fs-4 mb-0">Software Engineer</p>
+                                </a>
+                                <a href="#!">
+                                    <p class="card-title text-black-50 mb-0">FPT Technology</p>
+                                </a>
+
+                                <a class="card-link " href="#!">
+                                    <span class="text-primary small fw-bolder text-decoration-underline">
+                                        Sign in to view salary
+                                    </span>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="card-body pt-2 pb-3">
+                            <div class="mb-1">
+                                <p class="mb-0">
+                                    <span class="fw-bolder fs-5"><i class="fa fa-map-marker"></i></span>
+                                    <span class="ps-1"> Quận 7, Hồ Chí Minh</span>
+                                </p>
+                                <div class="d-flex justify-content-between">
+                                    <p class="mb-0">
+                                        <span class="fw-bolder "><i class="fa fa-clock-o"></i></span>
+                                        <span class="ps-1">Full Time</span>
+                                    </p>
+                                    <a href="#!">
+                                        <span class="text-primary small fw-bolder">
+                                            4 jobs
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- card 03 -->
+                <div class="col-12 col-lg-4 col-md-6  ">
+
+                    <div class="card-h-100 card shadow border-0">
+                        <div class="card-header bg-white">
+                            <div class="card-img__grou d-flex justify-content-between align-content-start gap-3 ">
+                                <a href="#!" class="card-img" style="width: 80px;">
+                                    <img class="center rounded object-fit-cover"
+                                        src="~/img/fpt_corporation_logo.jpg" alt="">
+                                </a>
+                                <button class=" border-0 bg-transparent p-0" style="height: 100%;">
+                                    <span>
+                                        <svg stroke="currentColor" fill="none" stroke-width="1.5" viewBox="0 0 24 24"
+                                            aria-hidden="true" height="1em" width="1em"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </button>
+                            </div>
+
+                            <div>
+                                <a href="#!">
+                                    <p class="card-title fw-bolder fs-4 mb-0">Software Engineer</p>
+                                </a>
+                                <a href="#!">
+                                    <p class="card-title text-black-50 mb-0">FPT Technology</p>
+                                </a>
+
+                                <a class="card-link " href="#!">
+                                    <span class="text-primary small fw-bolder text-decoration-underline">
+                                        Sign in to view salary
+                                    </span>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="card-body pt-2 pb-3">
+                            <div class="mb-1">
+                                <p class="mb-0">
+                                    <span class="fw-bolder fs-5"><i class="fa fa-map-marker"></i></span>
+                                    <span class="ps-1"> Quận 7, Hồ Chí Minh</span>
+                                </p>
+                                <div class="d-flex justify-content-between">
+                                    <p class="mb-0">
+                                        <span class="fw-bolder "><i class="fa fa-clock-o"></i></span>
+                                        <span class="ps-1">Full Time</span>
+                                    </p>
+                                    <a href="#!">
+                                        <span class="text-primary small fw-bolder">
+                                            4 jobs
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Company with latest jobs -->
+    <section class="section-2 bg-2 py-5 py-sm-4">
+        <div class="container">
+            <h2>Company with latest jobs</h2>
+            <div class="row pt-5 pt-sm-4 g-3">
+
+                <!-- card 01 -->
+                <div class="col-12 col-lg-4 col-md-6  ">
+
+                    <div class="card card-h-100  shadow border-0">
+                        <div class="card-header bg-white">
+                            <div class="card-img__grou d-flex justify-content-between align-content-start gap-3 ">
+                                <a href="#!" class="card-img" style="width: 80px;">
+                                    <img class="center rounded object-fit-cover"
+                                        src="~/img/fpt_corporation_logo.jpg" alt="">
+                                </a>
+                                <button class=" border-0 bg-transparent p-0" style="height: 100%;">
+                                    <span>
+                                        <svg stroke="currentColor" fill="none" stroke-width="1.5" viewBox="0 0 24 24"
+                                            aria-hidden="true" height="1em" width="1em"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </button>
+                            </div>
+
+                            <div>
+                                <a href="#!">
+                                    <p class="card-title fw-bolder fs-4 mb-0">Software Engineer</p>
+                                </a>
+                                <a href="#!">
+                                    <p class="card-title text-black-50 mb-0">FPT Technology</p>
+                                </a>
+
+                                <a class="card-link " href="#!">
+                                    <span class="text-primary small fw-bolder text-decoration-underline">
+                                        Sign in to view salary
+                                    </span>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="card-body pt-2 pb-3">
+                            <div class="mb-1">
+                                <p class="mb-0">
+                                    <span class="fw-bolder fs-5"><i class="fa fa-map-marker"></i></span>
+                                    <span class="ps-1"> Quận 7, Hồ Chí Minh</span>
+                                </p>
+                                <div class="d-flex justify-content-between">
+                                    <p class="mb-0">
+                                        <span class="fw-bolder "><i class="fa fa-clock-o"></i></span>
+                                        <span class="ps-1">Full Time</span>
+                                    </p>
+                                    <a href="#!">
+                                        <span class="text-primary small fw-bolder">
+                                            4 jobs
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- card 02 -->
+                <div class="col-12 col-lg-4 col-md-6  ">
+
+                    <div class=" card-h-100 card shadow border-0">
+                        <div class="card-header bg-white">
+                            <div class="card-img__grou d-flex justify-content-between align-content-start gap-3 ">
+                                <a href="#!" class="card-img" style="width: 80px;">
+                                    <img class="center rounded object-fit-cover"
+                                        src="~/img/fpt_corporation_logo.jpg" alt="">
+                                </a>
+                                <button class=" border-0 bg-transparent p-0" style="height: 100%;">
+                                    <span>
+                                        <svg stroke="currentColor" fill="none" stroke-width="1.5" viewBox="0 0 24 24"
+                                            aria-hidden="true" height="1em" width="1em"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </button>
+                            </div>
+
+                            <div>
+                                <a href="#!">
+                                    <p class="card-title fw-bolder fs-4 mb-0">Software Engineer</p>
+                                </a>
+                                <a href="#!">
+                                    <p class="card-title text-black-50 mb-0">FPT Technology</p>
+                                </a>
+
+                                <a class="card-link " href="#!">
+                                    <span class="text-primary small fw-bolder text-decoration-underline">
+                                        Sign in to view salary
+                                    </span>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="card-body pt-2 pb-3">
+                            <div class="mb-1">
+                                <p class="mb-0">
+                                    <span class="fw-bolder fs-5"><i class="fa fa-map-marker"></i></span>
+                                    <span class="ps-1"> Quận 7, Hồ Chí Minh</span>
+                                </p>
+                                <div class="d-flex justify-content-between">
+                                    <p class="mb-0">
+                                        <span class="fw-bolder "><i class="fa fa-clock-o"></i></span>
+                                        <span class="ps-1">Full Time</span>
+                                    </p>
+                                    <a href="#!">
+                                        <span class="text-primary small fw-bolder">
+                                            4 jobs
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- card 03 -->
+                <div class="col-12 col-lg-4 col-md-6  ">
+
+                    <div class="card-h-100 card shadow border-0">
+                        <div class="card-header bg-white">
+                            <div class="card-img__grou d-flex justify-content-between align-content-start gap-3 ">
+                                <a href="#!" class="card-img" style="width: 80px;">
+                                    <img class="center rounded object-fit-cover"
+                                        src="~/img/fpt_corporation_logo.jpg" alt="">
+                                </a>
+                                <button class=" border-0 bg-transparent p-0" style="height: 100%;">
+                                    <span>
+                                        <svg stroke="currentColor" fill="none" stroke-width="1.5" viewBox="0 0 24 24"
+                                            aria-hidden="true" height="1em" width="1em"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </button>
+                            </div>
+
+                            <div>
+                                <a href="#!">
+                                    <p class="card-title fw-bolder fs-4 mb-0">Software Engineer</p>
+                                </a>
+                                <a href="#!">
+                                    <p class="card-title text-black-50 mb-0">FPT Technology</p>
+                                </a>
+
+                                <a class="card-link " href="#!">
+                                    <span class="text-primary small fw-bolder text-decoration-underline">
+                                        Sign in to view salary
+                                    </span>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="card-body pt-2 pb-3">
+                            <div class="mb-1">
+                                <p class="mb-0">
+                                    <span class="fw-bolder fs-5"><i class="fa fa-map-marker"></i></span>
+                                    <span class="ps-1"> Quận 7, Hồ Chí Minh</span>
+                                </p>
+                                <div class="d-flex justify-content-between">
+                                    <p class="mb-0">
+                                        <span class="fw-bolder "><i class="fa fa-clock-o"></i></span>
+                                        <span class="ps-1">Full Time</span>
+                                    </p>
+                                    <a href="#!">
+                                        <span class="text-primary small fw-bolder">
+                                            4 jobs
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Most followed company -->
+    <section class="section-2 py-5 py-sm-4">
+        <div class="container">
+            <h2>Most followed company</h2>
+            <div class="row pt-5 pt-sm-4 g-3">
+
+                <!-- card 01 -->
+                <div class="col-12 col-lg-4 col-md-6  ">
+
+                    <div class="card card-h-100  shadow border-0">
+                        <div class="card-header bg-white">
+                            <div class="card-img__grou d-flex justify-content-between align-content-start gap-3 ">
+                                <a href="#!" class="card-img" style="width: 80px;">
+                                    <img class="center rounded object-fit-cover"
+                                        src="~/img/fpt_corporation_logo.jpg" alt="">
+                                </a>
+                                <button class=" border-0 bg-transparent p-0" style="height: 100%;">
+                                    <span>
+                                        <svg stroke="currentColor" fill="none" stroke-width="1.5" viewBox="0 0 24 24"
+                                            aria-hidden="true" height="1em" width="1em"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </button>
+                            </div>
+
+                            <div>
+                                <a href="#!">
+                                    <p class="card-title fw-bolder fs-4 mb-0">Software Engineer</p>
+                                </a>
+                                <a href="#!">
+                                    <p class="card-title text-black-50 mb-0">FPT Technology</p>
+                                </a>
+
+                                <a class="card-link " href="#!">
+                                    <span class="text-primary small fw-bolder text-decoration-underline">
+                                        Sign in to view salary
+                                    </span>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="card-body pt-2 pb-3">
+                            <div class="mb-1">
+                                <p class="mb-0">
+                                    <span class="fw-bolder fs-5"><i class="fa fa-map-marker"></i></span>
+                                    <span class="ps-1"> Quận 7, Hồ Chí Minh</span>
+                                </p>
+                                <div class="d-flex justify-content-between">
+                                    <p class="mb-0">
+                                        <span class="fw-bolder "><i class="fa fa-clock-o"></i></span>
+                                        <span class="ps-1">Full Time</span>
+                                    </p>
+                                    <a href="#!">
+                                        <span class="text-primary small fw-bolder">
+                                            4 jobs
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- card 02 -->
+                <div class="col-12 col-lg-4 col-md-6  ">
+
+                    <div class=" card-h-100 card shadow border-0">
+                        <div class="card-header bg-white">
+                            <div class="card-img__grou d-flex justify-content-between align-content-start gap-3 ">
+                                <a href="#!" class="card-img" style="width: 80px;">
+                                    <img class="center rounded object-fit-cover"
+                                        src="~/img/fpt_corporation_logo.jpg" alt="">
+                                </a>
+                                <button class=" border-0 bg-transparent p-0" style="height: 100%;">
+                                    <span>
+                                        <svg stroke="currentColor" fill="none" stroke-width="1.5" viewBox="0 0 24 24"
+                                            aria-hidden="true" height="1em" width="1em"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </button>
+                            </div>
+
+                            <div>
+                                <a href="#!">
+                                    <p class="card-title fw-bolder fs-4 mb-0">Software Engineer</p>
+                                </a>
+                                <a href="#!">
+                                    <p class="card-title text-black-50 mb-0">FPT Technology</p>
+                                </a>
+
+                                <a class="card-link " href="#!">
+                                    <span class="text-primary small fw-bolder text-decoration-underline">
+                                        Sign in to view salary
+                                    </span>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="card-body pt-2 pb-3">
+                            <div class="mb-1">
+                                <p class="mb-0">
+                                    <span class="fw-bolder fs-5"><i class="fa fa-map-marker"></i></span>
+                                    <span class="ps-1"> Quận 7, Hồ Chí Minh</span>
+                                </p>
+                                <div class="d-flex justify-content-between">
+                                    <p class="mb-0">
+                                        <span class="fw-bolder "><i class="fa fa-clock-o"></i></span>
+                                        <span class="ps-1">Full Time</span>
+                                    </p>
+                                    <a href="#!">
+                                        <span class="text-primary small fw-bolder">
+                                            4 jobs
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- card 03 -->
+                <div class="col-12 col-lg-4 col-md-6  ">
+
+                    <div class="card-h-100 card shadow border-0">
+                        <div class="card-header bg-white">
+                            <div class="card-img__grou d-flex justify-content-between align-content-start gap-3 ">
+                                <a href="#!" class="card-img" style="width: 80px;">
+                                    <img class="center rounded object-fit-cover"
+                                        src="~/img/fpt_corporation_logo.jpg" alt="">
+                                </a>
+                                <button class=" border-0 bg-transparent p-0" style="height: 100%;">
+                                    <span>
+                                        <svg stroke="currentColor" fill="none" stroke-width="1.5" viewBox="0 0 24 24"
+                                            aria-hidden="true" height="1em" width="1em"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </button>
+                            </div>
+
+                            <div>
+                                <a href="#!">
+                                    <p class="card-title fw-bolder fs-4 mb-0">Software Engineer</p>
+                                </a>
+                                <a href="#!">
+                                    <p class="card-title text-black-50 mb-0">FPT Technology</p>
+                                </a>
+
+                                <a class="card-link " href="#!">
+                                    <span class="text-primary small fw-bolder text-decoration-underline">
+                                        Sign in to view salary
+                                    </span>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="card-body pt-2 pb-3">
+                            <div class="mb-1">
+                                <p class="mb-0">
+                                    <span class="fw-bolder fs-5"><i class="fa fa-map-marker"></i></span>
+                                    <span class="ps-1"> Quận 7, Hồ Chí Minh</span>
+                                </p>
+                                <div class="d-flex justify-content-between">
+                                    <p class="mb-0">
+                                        <span class="fw-bolder "><i class="fa fa-clock-o"></i></span>
+                                        <span class="ps-1">Full Time</span>
+                                    </p>
+                                    <a href="#!">
+                                        <span class="text-primary small fw-bolder">
+                                            4 jobs
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </section>

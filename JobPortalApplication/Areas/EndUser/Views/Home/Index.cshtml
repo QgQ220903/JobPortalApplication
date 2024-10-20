@@ -1,8 +1,1791 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home User";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+   <!-- hero -->
+    <section class="section-0 lazy d-flex bg-image-style dark align-items-center " class=""
+        data-bg="/img/banner5.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-xl-8">
+                    <h1>Find your dream job</h1>
+                    <p>Thounsands of jobs available.</p>
+                    <div class="banner-btn mt-5"><a href="#" class="btn btn-primary mb-4 mb-sm-0">Explore Now</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search -->
+    <section class="section-1 py-5 ">
+        <div class="container">
+            <div class="card border-0 shadow p-5">
+                <div class="row">
+                    <div class="col-md-3 mb-3 mb-sm-3 mb-lg-0">
+                        <input type="text" class="form-control" name="search" id="search" placeholder="Keywords">
+                    </div>
+                    <div class="col-md-3 mb-3 mb-sm-3 mb-lg-0">
+                        <input type="text" class="form-control" name="search" id="search" placeholder="Location">
+                    </div>
+                    <div class="col-md-3 mb-3 mb-sm-3 mb-lg-0">
+                        <select name="category" id="category" class="form-control">
+                            <option value="">Select a Category</option>
+                            <option value="">Engineering</option>
+                            <option value="">Accountant</option>
+                            <option value="">Information Technology</option>
+                            <option value="">Fashion designing</option>
+                        </select>
+                    </div>
+
+                    <div class=" col-md-3 mb-xs-3 mb-sm-3 mb-lg-0">
+                        <div class="d-grid gap-2">
+                            <a href="jobs.html" class="btn btn-primary btn-block">Search</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+    <!-- slide Company-->
+    <section class="section-3  py-5 py-sm-4 bg-2">
+        <div class="container">
+            <h2>Top Company</h2>
+            <div id="companySlideID" class="carousel slide pt-5 pt-sm-4 g-3" data-bs-ride="carousel" data-bs-pause="hover" data-bs-wrap="true">
+                <div class="carousel-inner w-80 m-auto">
+                    <div class="carousel-item active" data-bs-interval="5000">
+                        <div class="row g-4">
+                            <!-- card 01 -->
+                            <div class="col-12 col-lg-4 col-md-6  ">
+
+                                <div class="card card-h-100  border-0">
+                                    <div class="card-header bg-white">
+                                        <div class="card-img__grou d-flex justify-content-between align-content-start gap-3 ">
+                                            <a href="#!" class="card-img" style="width: 80px;">
+                                                <img class="center rounded object-fit-cover"
+                                                    src="~/img/fpt_corporation_logo.jpg" alt="">
+                                            </a>
+                                            <button class=" border-0 bg-transparent p-0" style="height: 100%;">
+                                                <span>
+                                                    <svg stroke="currentColor" fill="none" stroke-width="1.5" viewBox="0 0 24 24"
+                                                        aria-hidden="true" height="1em" width="1em"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z">
+                                                        </path>
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                        </div>
+
+                                        <div>
+                                            <a href="#!">
+                                                <p class="card-title fw-bolder fs-4 mb-0">Software Engineer</p>
+                                            </a>
+                                            <a href="#!">
+                                                <p class="card-title text-black-50 mb-0">FPT Technology</p>
+                                            </a>
+
+                                            <a class="card-link " href="#!">
+                                                <span class="text-primary small fw-bolder text-decoration-underline">
+                                                    Sign in to view salary
+                                                </span>
+                                            </a>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="card-body pt-2 pb-3">
+                                        <div class="mb-1">
+                                            <p class="mb-0">
+                                                <span class="fw-bolder fs-5"><i class="fa fa-map-marker"></i></span>
+                                                <span class="ps-1"> Quận 7, Hồ Chí Minh</span>
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <p class="mb-0">
+                                                    <span class="fw-bolder "><i class="fa fa-clock-o"></i></span>
+                                                    <span class="ps-1">Full Time</span>
+                                                </p>
+                                                <a href="#!">
+                                                    <span class="text-primary small fw-bolder">
+                                                        4 jobs
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- card 02 -->
+                            <div class="col-12 col-lg-4 col-md-6  ">
+
+                                <div class=" card-h-100 card  border-0">
+                                    <div class="card-header bg-white">
+                                        <div class="card-img__grou d-flex justify-content-between align-content-start gap-3 ">
+                                            <a href="#!" class="card-img" style="width: 80px;">
+                                                <img class="center rounded object-fit-cover"
+                                                    src="~/img/fpt_corporation_logo.jpg" alt="">
+                                            </a>
+                                            <button class=" border-0 bg-transparent p-0" style="height: 100%;">
+                                                <span>
+                                                    <svg stroke="currentColor" fill="none" stroke-width="1.5" viewBox="0 0 24 24"
+                                                        aria-hidden="true" height="1em" width="1em"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z">
+                                                        </path>
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                        </div>
+
+                                        <div>
+                                            <a href="#!">
+                                                <p class="card-title fw-bolder fs-4 mb-0">Software Engineer</p>
+                                            </a>
+                                            <a href="#!">
+                                                <p class="card-title text-black-50 mb-0">FPT Technology</p>
+                                            </a>
+
+                                            <a class="card-link " href="#!">
+                                                <span class="text-primary small fw-bolder text-decoration-underline">
+                                                    Sign in to view salary
+                                                </span>
+                                            </a>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="card-body pt-2 pb-3">
+                                        <div class="mb-1">
+                                            <p class="mb-0">
+                                                <span class="fw-bolder fs-5"><i class="fa fa-map-marker"></i></span>
+                                                <span class="ps-1"> Quận 7, Hồ Chí Minh</span>
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <p class="mb-0">
+                                                    <span class="fw-bolder "><i class="fa fa-clock-o"></i></span>
+                                                    <span class="ps-1">Full Time</span>
+                                                </p>
+                                                <a href="#!">
+                                                    <span class="text-primary small fw-bolder">
+                                                        4 jobs
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- card 03 -->
+                            <div class="col-12 col-lg-4 col-md-6  ">
+
+                                <div class="card-h-100 card  border-0">
+                                    <div class="card-header bg-white">
+                                        <div class="card-img__grou d-flex justify-content-between align-content-start gap-3 ">
+                                            <a href="#!" class="card-img" style="width: 80px;">
+                                                <img class="center rounded object-fit-cover"
+                                                    src="~/img/fpt_corporation_logo.jpg" alt="">
+                                            </a>
+                                            <button class=" border-0 bg-transparent p-0" style="height: 100%;">
+                                                <span>
+                                                    <svg stroke="currentColor" fill="none" stroke-width="1.5" viewBox="0 0 24 24"
+                                                        aria-hidden="true" height="1em" width="1em"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z">
+                                                        </path>
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                        </div>
+
+                                        <div>
+                                            <a href="#!">
+                                                <p class="card-title fw-bolder fs-4 mb-0">Software Engineer</p>
+                                            </a>
+                                            <a href="#!">
+                                                <p class="card-title text-black-50 mb-0">FPT Technology</p>
+                                            </a>
+
+                                            <a class="card-link " href="#!">
+                                                <span class="text-primary small fw-bolder text-decoration-underline">
+                                                    Sign in to view salary
+                                                </span>
+                                            </a>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="card-body pt-2 pb-3">
+                                        <div class="mb-1">
+                                            <p class="mb-0">
+                                                <span class="fw-bolder fs-5"><i class="fa fa-map-marker"></i></span>
+                                                <span class="ps-1"> Quận 7, Hồ Chí Minh</span>
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <p class="mb-0">
+                                                    <span class="fw-bolder "><i class="fa fa-clock-o"></i></span>
+                                                    <span class="ps-1">Full Time</span>
+                                                </p>
+                                                <a href="#!">
+                                                    <span class="text-primary small fw-bolder">
+                                                        4 jobs
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                      
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <div class="row g-4">
+                              <!-- card 01 -->
+                              <div class="col-12 col-lg-4 col-md-6  ">
+
+                                <div class="card card-h-100  border-0">
+                                    <div class="card-header bg-white">
+                                        <div class="card-img__grou d-flex justify-content-between align-content-start gap-3 ">
+                                            <a href="#!" class="card-img" style="width: 80px;">
+                                                <img class="center rounded object-fit-cover"
+                                                    src="~/img/fpt_corporation_logo.jpg" alt="">
+                                            </a>
+                                            <button class=" border-0 bg-transparent p-0" style="height: 100%;">
+                                                <span>
+                                                    <svg stroke="currentColor" fill="none" stroke-width="1.5" viewBox="0 0 24 24"
+                                                        aria-hidden="true" height="1em" width="1em"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z">
+                                                        </path>
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                        </div>
+
+                                        <div>
+                                            <a href="#!">
+                                                <p class="card-title fw-bolder fs-4 mb-0">Software Engineer</p>
+                                            </a>
+                                            <a href="#!">
+                                                <p class="card-title text-black-50 mb-0">FPT Technology</p>
+                                            </a>
+
+                                            <a class="card-link " href="#!">
+                                                <span class="text-primary small fw-bolder text-decoration-underline">
+                                                    Sign in to view salary
+                                                </span>
+                                            </a>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="card-body pt-2 pb-3">
+                                        <div class="mb-1">
+                                            <p class="mb-0">
+                                                <span class="fw-bolder fs-5"><i class="fa fa-map-marker"></i></span>
+                                                <span class="ps-1"> Quận 7, Hồ Chí Minh</span>
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <p class="mb-0">
+                                                    <span class="fw-bolder "><i class="fa fa-clock-o"></i></span>
+                                                    <span class="ps-1">Full Time</span>
+                                                </p>
+                                                <a href="#!">
+                                                    <span class="text-primary small fw-bolder">
+                                                        4 jobs
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- card 02 -->
+                            <div class="col-12 col-lg-4 col-md-6  ">
+
+                                <div class=" card-h-100 card  border-0">
+                                    <div class="card-header bg-white">
+                                        <div class="card-img__grou d-flex justify-content-between align-content-start gap-3 ">
+                                            <a href="#!" class="card-img" style="width: 80px;">
+                                                <img class="center rounded object-fit-cover"
+                                                    src="~/img/fpt_corporation_logo.jpg" alt="">
+                                            </a>
+                                            <button class=" border-0 bg-transparent p-0" style="height: 100%;">
+                                                <span>
+                                                    <svg stroke="currentColor" fill="none" stroke-width="1.5" viewBox="0 0 24 24"
+                                                        aria-hidden="true" height="1em" width="1em"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z">
+                                                        </path>
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                        </div>
+
+                                        <div>
+                                            <a href="#!">
+                                                <p class="card-title fw-bolder fs-4 mb-0">Software Engineer</p>
+                                            </a>
+                                            <a href="#!">
+                                                <p class="card-title text-black-50 mb-0">FPT Technology</p>
+                                            </a>
+
+                                            <a class="card-link " href="#!">
+                                                <span class="text-primary small fw-bolder text-decoration-underline">
+                                                    Sign in to view salary
+                                                </span>
+                                            </a>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="card-body pt-2 pb-3">
+                                        <div class="mb-1">
+                                            <p class="mb-0">
+                                                <span class="fw-bolder fs-5"><i class="fa fa-map-marker"></i></span>
+                                                <span class="ps-1"> Quận 7, Hồ Chí Minh</span>
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <p class="mb-0">
+                                                    <span class="fw-bolder "><i class="fa fa-clock-o"></i></span>
+                                                    <span class="ps-1">Full Time</span>
+                                                </p>
+                                                <a href="#!">
+                                                    <span class="text-primary small fw-bolder">
+                                                        4 jobs
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- card 03 -->
+                            <div class="col-12 col-lg-4 col-md-6  ">
+
+                                <div class="card-h-100 card  border-0">
+                                    <div class="card-header bg-white">
+                                        <div class="card-img__grou d-flex justify-content-between align-content-start gap-3 ">
+                                            <a href="#!" class="card-img" style="width: 80px;">
+                                                <img class="center rounded object-fit-cover"
+                                                    src="~/img/fpt_corporation_logo.jpg" alt="">
+                                            </a>
+                                            <button class=" border-0 bg-transparent p-0" style="height: 100%;">
+                                                <span>
+                                                    <svg stroke="currentColor" fill="none" stroke-width="1.5" viewBox="0 0 24 24"
+                                                        aria-hidden="true" height="1em" width="1em"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z">
+                                                        </path>
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                        </div>
+
+                                        <div>
+                                            <a href="#!">
+                                                <p class="card-title fw-bolder fs-4 mb-0">Software Engineer</p>
+                                            </a>
+                                            <a href="#!">
+                                                <p class="card-title text-black-50 mb-0">FPT Technology</p>
+                                            </a>
+
+                                            <a class="card-link " href="#!">
+                                                <span class="text-primary small fw-bolder text-decoration-underline">
+                                                    Sign in to view salary
+                                                </span>
+                                            </a>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="card-body pt-2 pb-3">
+                                        <div class="mb-1">
+                                            <p class="mb-0">
+                                                <span class="fw-bolder fs-5"><i class="fa fa-map-marker"></i></span>
+                                                <span class="ps-1"> Quận 7, Hồ Chí Minh</span>
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <p class="mb-0">
+                                                    <span class="fw-bolder "><i class="fa fa-clock-o"></i></span>
+                                                    <span class="ps-1">Full Time</span>
+                                                </p>
+                                                <a href="#!">
+                                                    <span class="text-primary small fw-bolder">
+                                                        4 jobs
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#companySlideID" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#companySlideID" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Jobs -->
+    <section class="section-3  py-5 py-sm-4">
+        <div class="container">
+            <h2>Featured Jobs</h2>
+            <div class="row pt-5 pt-sm-4">
+                <div class="job_listing_area">
+                    <div class="job_lists">
+                        <div class="row g-3">
+                            <!-- card 01 -->
+                            <div class="col-12 col-lg-6">
+                                <div class="card-h-100 card shadow border-0">
+                                    <div class="card-header bg-white">
+                                        <div class="d-flex justify-content-between">
+                                            <p class="small mb-1">Posted 2 days ago</p>
+                                            <button class="border-0 bg-transparent p-0">
+                                                <span>
+                                                    <svg stroke="currentColor" fill="none" stroke-width="1.5"
+                                                        viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z">
+                                                        </path>
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <a href="job-detail.html" class="card-link mb-2 ">
+                                            <p class="card-title h5 fw-bolder ">
+                                                Fullstack Dev & Support (Java, Spring,Angular)
+                                            </p>
+                                        </a>
+                                        <div class="card-img__grou d-flex gap-3 align-items-center">
+                                            <a href="#!" class="card-img" style="width: 60px;">
+                                                <img class="center border rounded object-fit-cover"
+                                                    src="~/img/fpt_corporation_logo.jpg" alt="">
+                                            </a>
+                                            <a href="#!" class="card-img-title ">
+                                                <p class="small  fw-bolder mb-0 text-black">Bosch Global Software
+                                                    Technologies Company Limited</p>
+                                            </a>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2 mt-2">
+                                            <svg fill="none" height="20" stroke="currentColor" viewBox="0 0 24 24"
+                                                width="20" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12.0044 6V18" stroke-linecap="round" stroke-linejoin="round"
+                                                    stroke-width="2"></path>
+                                                <path
+                                                    d="M14.9287 7.90332H10.5395C9.99625 7.90332 9.47527 8.11912 9.09114 8.50325C8.70701 8.88738 8.49121 9.40836 8.49121 9.9516C8.49121 10.4948 8.70701 11.0158 9.09114 11.4C9.47527 11.7841 9.99625 11.9999 10.5395 11.9999H13.4656C14.0088 11.9999 14.5298 12.2157 14.914 12.5998C15.2981 12.9839 15.5139 13.5049 15.5139 14.0482C15.5139 14.5914 15.2981 15.1124 14.914 15.4965C14.5298 15.8806 14.0088 16.0964 13.4656 16.0964H8.49121"
+                                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    stroke="currentColor"></path>
+                                                <circle cx="12.0002" cy="12.0002" r="9.3" stroke-width="2"
+                                                    stroke="currentColor"></circle>
+                                            </svg>
+                                            <a class="card-link " href="#!"> <span
+                                                    class="text-black fs-6 fw-bolder text-decoration-underline">Sign in
+                                                    to view salary</span></a>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="card-body pt-2 pb-3">
+                                        <div class="mb-1">
+                                            <p class="mb-0">
+                                                <span class="fw-bolder fs-5"><i class="fa fa-map-marker"></i></span>
+                                                <span class="ps-1">HCM</span>
+                                            </p>
+                                            <p class="mb-0">
+                                                <span class="fw-bolder "><i class="fa fa-clock-o"></i></span>
+                                                <span class="ps-1">Remote</span>
+                                            </p>
+                                        </div>
+                                        <div class="d-flex gap-1">
+                                            <button type="button" class="btn btn-outline-secondary btn-skill"> Java
+                                            </button>
+                                            <button type="button" class="btn btn-outline-secondary btn-skill"> Spring
+                                            </button>
+                                            <button type="button" class="btn btn-outline-secondary btn-skill"> Angular
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- card 02 -->
+                            <div class="card-h-100 col-12 col-lg-6">
+                                <div class="card shadow border-0">
+                                    <div class="card-header  bg-white ">
+                                        <div class="d-flex justify-content-between">
+                                            <p class="small mb-1">Posted 2 days ago</p>
+                                            <button class="border-0 bg-transparent p-0">
+                                                <span>
+                                                    <svg stroke="currentColor" fill="none" stroke-width="1.5"
+                                                        viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z">
+                                                        </path>
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <a class="card-link mb-2 " href="job-detail.html">
+                                            <p class="card-title h5 fw-bolder ">
+                                                Middle - Senior Full Stack Developer (Nodejs, ReactJS)
+                                            </p>
+                                        </a>
+                                        <div class="card-img__grou d-flex gap-3 align-items-center">
+                                            <a href="#!" class="card-img" style="width: 60px;">
+                                                <img class="center border rounded object-fit-cover"
+                                                    src="~/img/future_energy_logo.png" alt="">
+                                            </a>
+                                            <a href="#!" class="card-img-title ">
+                                                <p class="small  fw-bolder mb-0 text-black">Solashi Vietnam</p>
+                                            </a>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2 mt-2">
+                                            <svg fill="none" height="20" stroke="currentColor" viewBox="0 0 24 24"
+                                                width="20" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12.0044 6V18" stroke-linecap="round" stroke-linejoin="round"
+                                                    stroke-width="2"></path>
+                                                <path
+                                                    d="M14.9287 7.90332H10.5395C9.99625 7.90332 9.47527 8.11912 9.09114 8.50325C8.70701 8.88738 8.49121 9.40836 8.49121 9.9516C8.49121 10.4948 8.70701 11.0158 9.09114 11.4C9.47527 11.7841 9.99625 11.9999 10.5395 11.9999H13.4656C14.0088 11.9999 14.5298 12.2157 14.914 12.5998C15.2981 12.9839 15.5139 13.5049 15.5139 14.0482C15.5139 14.5914 15.2981 15.1124 14.914 15.4965C14.5298 15.8806 14.0088 16.0964 13.4656 16.0964H8.49121"
+                                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    stroke="currentColor"></path>
+                                                <circle cx="12.0002" cy="12.0002" r="9.3" stroke-width="2"
+                                                    stroke="currentColor"></circle>
+                                            </svg>
+                                            <a class="card-link " href="#!"> <span
+                                                    class="text-black fs-6 fw-bolder text-decoration-underline">Sign in
+                                                    to view salary</span></a>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="card-body pt-2">
+                                        <div class="mb-1">
+                                            <p class="mb-0">
+                                                <span class="fw-bolder fs-5"><i class="fa fa-map-marker"></i></span>
+                                                <span class="ps-1">HCM</span>
+                                            </p>
+                                            <p class="mb-0">
+                                                <span class="fw-bolder "><i class="fa fa-clock-o"></i></span>
+                                                <span class="ps-1">Remote</span>
+                                            </p>
+                                        </div>
+                                        <div class="d-flex gap-1">
+                                            <button type="button" class="btn btn-outline-secondary btn-skill"> Java
+                                            </button>
+                                            <button type="button" class="btn btn-outline-secondary btn-skill"> Spring
+                                            </button>
+                                            <button type="button" class="btn btn-outline-secondary btn-skill"> Angular
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>     
+        </div>
+    </section>
+  
+    <!-- Slide top job  -->
+    <section class="section-3  py-5 py-sm-4 bg-2">
+        <div class="container">
+            <h2>Top jobs</h2>
+            <div id="TopJobSlideId" class="carousel slide pt-5 pt-sm-4 g-3">
+               
+                <div class="carousel-inner ">
+                    <div class="carousel-item active mb-2 pb-5 ">
+                           <div class="row g-4">
+                                <!-- card 01 -->
+                                <div class="col-12 col-lg-6">
+                                    <div class="card-h-100 card shadow border-0">
+                                        <div class="card-header bg-white">
+                                            <div class="d-flex justify-content-between">
+                                                <p class="small mb-1">Posted 2 days ago</p>
+                                                <button class="border-0 bg-transparent p-0">
+                                                    <span>
+                                                        <svg stroke="currentColor" fill="none" stroke-width="1.5"
+                                                            viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z">
+                                                            </path>
+                                                        </svg>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                            <a href="job-detail.html" class="card-link mb-2 ">
+                                                <p class="card-title h5 fw-bolder ">
+                                                    Fullstack Dev & Support (Java, Spring,Angular)
+                                                </p>
+                                            </a>
+                                            <div class="card-img__grou d-flex gap-3 align-items-center">
+                                                <a href="#!" class="card-img" style="width: 60px;">
+                                                    <img class="center border rounded object-fit-cover"
+                                                        src="~/img/fpt_corporation_logo.jpg" alt="">
+                                                </a>
+                                                <a href="#!" class="card-img-title ">
+                                                    <p class="small  fw-bolder mb-0 text-black">Bosch Global Software
+                                                        Technologies Company Limited</p>
+                                                </a>
+                                            </div>
+                                            <div class="d-flex align-items-center gap-2 mt-2">
+                                                <svg fill="none" height="20" stroke="currentColor" viewBox="0 0 24 24"
+                                                    width="20" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M12.0044 6V18" stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2"></path>
+                                                    <path
+                                                        d="M14.9287 7.90332H10.5395C9.99625 7.90332 9.47527 8.11912 9.09114 8.50325C8.70701 8.88738 8.49121 9.40836 8.49121 9.9516C8.49121 10.4948 8.70701 11.0158 9.09114 11.4C9.47527 11.7841 9.99625 11.9999 10.5395 11.9999H13.4656C14.0088 11.9999 14.5298 12.2157 14.914 12.5998C15.2981 12.9839 15.5139 13.5049 15.5139 14.0482C15.5139 14.5914 15.2981 15.1124 14.914 15.4965C14.5298 15.8806 14.0088 16.0964 13.4656 16.0964H8.49121"
+                                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                        stroke="currentColor"></path>
+                                                    <circle cx="12.0002" cy="12.0002" r="9.3" stroke-width="2"
+                                                        stroke="currentColor"></circle>
+                                                </svg>
+                                                <a class="card-link " href="#!"> <span
+                                                        class="text-black fs-6 fw-bolder text-decoration-underline">Sign in
+                                                        to view salary</span></a>
+                                            </div>
+    
+                                        </div>
+    
+                                        <div class="card-body pt-2 pb-3">
+                                            <div class="mb-1">
+                                                <p class="mb-0">
+                                                    <span class="fw-bolder fs-5"><i class="fa fa-map-marker"></i></span>
+                                                    <span class="ps-1">HCM</span>
+                                                </p>
+                                                <p class="mb-0">
+                                                    <span class="fw-bolder "><i class="fa fa-clock-o"></i></span>
+                                                    <span class="ps-1">Remote</span>
+                                                </p>
+                                            </div>
+                                            <div class="d-flex gap-1">
+                                                <button type="button" class="btn btn-outline-secondary btn-skill"> Java
+                                                </button>
+                                                <button type="button" class="btn btn-outline-secondary btn-skill"> Spring
+                                                </button>
+                                                <button type="button" class="btn btn-outline-secondary btn-skill"> Angular
+                                                </button>
+                                            </div>
+                                        </div>
+    
+                                    </div>
+                                </div>
+
+                                <!-- card 02 -->
+                                <div class="col-12 col-lg-6">
+                                    <div class="card-h-100 card shadow border-0">
+                                        <div class="card-header bg-white">
+                                            <div class="d-flex justify-content-between">
+                                                <p class="small mb-1">Posted 2 days ago</p>
+                                                <button class="border-0 bg-transparent p-0">
+                                                    <span>
+                                                        <svg stroke="currentColor" fill="none" stroke-width="1.5"
+                                                            viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z">
+                                                            </path>
+                                                        </svg>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                            <a href="job-detail.html" class="card-link mb-2 ">
+                                                <p class="card-title h5 fw-bolder ">
+                                                    Fullstack Dev & Support (Java, Spring,Angular)
+                                                </p>
+                                            </a>
+                                            <div class="card-img__grou d-flex gap-3 align-items-center">
+                                                <a href="#!" class="card-img" style="width: 60px;">
+                                                    <img class="center border rounded object-fit-cover"
+                                                        src="~/img/fpt_corporation_logo.jpg" alt="">
+                                                </a>
+                                                <a href="#!" class="card-img-title ">
+                                                    <p class="small  fw-bolder mb-0 text-black">Bosch Global Software
+                                                        Technologies Company Limited</p>
+                                                </a>
+                                            </div>
+                                            <div class="d-flex align-items-center gap-2 mt-2">
+                                                <svg fill="none" height="20" stroke="currentColor" viewBox="0 0 24 24"
+                                                    width="20" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M12.0044 6V18" stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2"></path>
+                                                    <path
+                                                        d="M14.9287 7.90332H10.5395C9.99625 7.90332 9.47527 8.11912 9.09114 8.50325C8.70701 8.88738 8.49121 9.40836 8.49121 9.9516C8.49121 10.4948 8.70701 11.0158 9.09114 11.4C9.47527 11.7841 9.99625 11.9999 10.5395 11.9999H13.4656C14.0088 11.9999 14.5298 12.2157 14.914 12.5998C15.2981 12.9839 15.5139 13.5049 15.5139 14.0482C15.5139 14.5914 15.2981 15.1124 14.914 15.4965C14.5298 15.8806 14.0088 16.0964 13.4656 16.0964H8.49121"
+                                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                        stroke="currentColor"></path>
+                                                    <circle cx="12.0002" cy="12.0002" r="9.3" stroke-width="2"
+                                                        stroke="currentColor"></circle>
+                                                </svg>
+                                                <a class="card-link " href="#!"> <span
+                                                        class="text-black fs-6 fw-bolder text-decoration-underline">Sign in
+                                                        to view salary</span></a>
+                                            </div>
+    
+                                        </div>
+    
+                                        <div class="card-body pt-2 pb-3">
+                                            <div class="mb-1">
+                                                <p class="mb-0">
+                                                    <span class="fw-bolder fs-5"><i class="fa fa-map-marker"></i></span>
+                                                    <span class="ps-1">HCM</span>
+                                                </p>
+                                                <p class="mb-0">
+                                                    <span class="fw-bolder "><i class="fa fa-clock-o"></i></span>
+                                                    <span class="ps-1">Remote</span>
+                                                </p>
+                                            </div>
+                                            <div class="d-flex gap-1">
+                                                <button type="button" class="btn btn-outline-secondary btn-skill"> Java
+                                                </button>
+                                                <button type="button" class="btn btn-outline-secondary btn-skill"> Spring
+                                                </button>
+                                                <button type="button" class="btn btn-outline-secondary btn-skill"> Angular
+                                                </button>
+                                            </div>
+                                        </div>
+    
+                                    </div>
+                                </div>
+
+                                
+    
+                           </div>
+                           
+                    </div>
+                    <div class="carousel-item  mb-2 pb-5">
+                        <div class="row g-4">
+                            <!-- card 01 -->
+                            <div class="col-12 col-lg-6">
+                                <div class="card-h-100 card shadow border-0">
+                                    <div class="card-header bg-white">
+                                        <div class="d-flex justify-content-between">
+                                            <p class="small mb-1">Posted 2 days ago</p>
+                                            <button class="border-0 bg-transparent p-0">
+                                                <span>
+                                                    <svg stroke="currentColor" fill="none" stroke-width="1.5"
+                                                        viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z">
+                                                        </path>
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <a href="job-detail.html" class="card-link mb-2 ">
+                                            <p class="card-title h5 fw-bolder ">
+                                                Fullstack Dev & Support (Java, Spring,Angular)
+                                            </p>
+                                        </a>
+                                        <div class="card-img__grou d-flex gap-3 align-items-center">
+                                            <a href="#!" class="card-img" style="width: 60px;">
+                                                <img class="center border rounded object-fit-cover"
+                                                    src="~/img/fpt_corporation_logo.jpg" alt="">
+                                            </a>
+                                            <a href="#!" class="card-img-title ">
+                                                <p class="small  fw-bolder mb-0 text-black">Bosch Global Software
+                                                    Technologies Company Limited</p>
+                                            </a>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2 mt-2">
+                                            <svg fill="none" height="20" stroke="currentColor" viewBox="0 0 24 24"
+                                                width="20" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12.0044 6V18" stroke-linecap="round" stroke-linejoin="round"
+                                                    stroke-width="2"></path>
+                                                <path
+                                                    d="M14.9287 7.90332H10.5395C9.99625 7.90332 9.47527 8.11912 9.09114 8.50325C8.70701 8.88738 8.49121 9.40836 8.49121 9.9516C8.49121 10.4948 8.70701 11.0158 9.09114 11.4C9.47527 11.7841 9.99625 11.9999 10.5395 11.9999H13.4656C14.0088 11.9999 14.5298 12.2157 14.914 12.5998C15.2981 12.9839 15.5139 13.5049 15.5139 14.0482C15.5139 14.5914 15.2981 15.1124 14.914 15.4965C14.5298 15.8806 14.0088 16.0964 13.4656 16.0964H8.49121"
+                                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    stroke="currentColor"></path>
+                                                <circle cx="12.0002" cy="12.0002" r="9.3" stroke-width="2"
+                                                    stroke="currentColor"></circle>
+                                            </svg>
+                                            <a class="card-link " href="#!"> <span
+                                                    class="text-black fs-6 fw-bolder text-decoration-underline">Sign in
+                                                    to view salary</span></a>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="card-body pt-2 pb-3">
+                                        <div class="mb-1">
+                                            <p class="mb-0">
+                                                <span class="fw-bolder fs-5"><i class="fa fa-map-marker"></i></span>
+                                                <span class="ps-1">HCM</span>
+                                            </p>
+                                            <p class="mb-0">
+                                                <span class="fw-bolder "><i class="fa fa-clock-o"></i></span>
+                                                <span class="ps-1">Remote</span>
+                                            </p>
+                                        </div>
+                                        <div class="d-flex gap-1">
+                                            <button type="button" class="btn btn-outline-secondary btn-skill"> Java
+                                            </button>
+                                            <button type="button" class="btn btn-outline-secondary btn-skill"> Spring
+                                            </button>
+                                            <button type="button" class="btn btn-outline-secondary btn-skill"> Angular
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- card 02 -->
+                            <div class="col-12 col-lg-6">
+                                <div class="card-h-100 card shadow border-0">
+                                    <div class="card-header bg-white">
+                                        <div class="d-flex justify-content-between">
+                                            <p class="small mb-1">Posted 2 days ago</p>
+                                            <button class="border-0 bg-transparent p-0">
+                                                <span>
+                                                    <svg stroke="currentColor" fill="none" stroke-width="1.5"
+                                                        viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z">
+                                                        </path>
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <a href="job-detail.html" class="card-link mb-2 ">
+                                            <p class="card-title h5 fw-bolder ">
+                                                Fullstack Dev & Support (Java, Spring,Angular)
+                                            </p>
+                                        </a>
+                                        <div class="card-img__grou d-flex gap-3 align-items-center">
+                                            <a href="#!" class="card-img" style="width: 60px;">
+                                                <img class="center border rounded object-fit-cover"
+                                                    src="~/img/fpt_corporation_logo.jpg" alt="">
+                                            </a>
+                                            <a href="#!" class="card-img-title ">
+                                                <p class="small  fw-bolder mb-0 text-black">Bosch Global Software
+                                                    Technologies Company Limited</p>
+                                            </a>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2 mt-2">
+                                            <svg fill="none" height="20" stroke="currentColor" viewBox="0 0 24 24"
+                                                width="20" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12.0044 6V18" stroke-linecap="round" stroke-linejoin="round"
+                                                    stroke-width="2"></path>
+                                                <path
+                                                    d="M14.9287 7.90332H10.5395C9.99625 7.90332 9.47527 8.11912 9.09114 8.50325C8.70701 8.88738 8.49121 9.40836 8.49121 9.9516C8.49121 10.4948 8.70701 11.0158 9.09114 11.4C9.47527 11.7841 9.99625 11.9999 10.5395 11.9999H13.4656C14.0088 11.9999 14.5298 12.2157 14.914 12.5998C15.2981 12.9839 15.5139 13.5049 15.5139 14.0482C15.5139 14.5914 15.2981 15.1124 14.914 15.4965C14.5298 15.8806 14.0088 16.0964 13.4656 16.0964H8.49121"
+                                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    stroke="currentColor"></path>
+                                                <circle cx="12.0002" cy="12.0002" r="9.3" stroke-width="2"
+                                                    stroke="currentColor"></circle>
+                                            </svg>
+                                            <a class="card-link " href="#!"> <span
+                                                    class="text-black fs-6 fw-bolder text-decoration-underline">Sign in
+                                                    to view salary</span></a>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="card-body pt-2 pb-3">
+                                        <div class="mb-1">
+                                            <p class="mb-0">
+                                                <span class="fw-bolder fs-5"><i class="fa fa-map-marker"></i></span>
+                                                <span class="ps-1">HCM</span>
+                                            </p>
+                                            <p class="mb-0">
+                                                <span class="fw-bolder "><i class="fa fa-clock-o"></i></span>
+                                                <span class="ps-1">Remote</span>
+                                            </p>
+                                        </div>
+                                        <div class="d-flex gap-1">
+                                            <button type="button" class="btn btn-outline-secondary btn-skill"> Java
+                                            </button>
+                                            <button type="button" class="btn btn-outline-secondary btn-skill"> Spring
+                                            </button>
+                                            <button type="button" class="btn btn-outline-secondary btn-skill"> Angular
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                       </div>
+                    </div>
+                    <div class="carousel-item  mb-2 pb-5">
+                        <div class="row g-4">
+                            <!-- card 01 -->
+                            <div class="col-12 col-lg-6">
+                                <div class="card-h-100 card shadow border-0">
+                                    <div class="card-header bg-white">
+                                        <div class="d-flex justify-content-between">
+                                            <p class="small mb-1">Posted 2 days ago</p>
+                                            <button class="border-0 bg-transparent p-0">
+                                                <span>
+                                                    <svg stroke="currentColor" fill="none" stroke-width="1.5"
+                                                        viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z">
+                                                        </path>
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <a href="job-detail.html" class="card-link mb-2 ">
+                                            <p class="card-title h5 fw-bolder ">
+                                                Fullstack Dev & Support (Java, Spring,Angular)
+                                            </p>
+                                        </a>
+                                        <div class="card-img__grou d-flex gap-3 align-items-center">
+                                            <a href="#!" class="card-img" style="width: 60px;">
+                                                <img class="center border rounded object-fit-cover"
+                                                    src="~/img/fpt_corporation_logo.jpg" alt="">
+                                            </a>
+                                            <a href="#!" class="card-img-title ">
+                                                <p class="small  fw-bolder mb-0 text-black">Bosch Global Software
+                                                    Technologies Company Limited</p>
+                                            </a>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2 mt-2">
+                                            <svg fill="none" height="20" stroke="currentColor" viewBox="0 0 24 24"
+                                                width="20" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12.0044 6V18" stroke-linecap="round" stroke-linejoin="round"
+                                                    stroke-width="2"></path>
+                                                <path
+                                                    d="M14.9287 7.90332H10.5395C9.99625 7.90332 9.47527 8.11912 9.09114 8.50325C8.70701 8.88738 8.49121 9.40836 8.49121 9.9516C8.49121 10.4948 8.70701 11.0158 9.09114 11.4C9.47527 11.7841 9.99625 11.9999 10.5395 11.9999H13.4656C14.0088 11.9999 14.5298 12.2157 14.914 12.5998C15.2981 12.9839 15.5139 13.5049 15.5139 14.0482C15.5139 14.5914 15.2981 15.1124 14.914 15.4965C14.5298 15.8806 14.0088 16.0964 13.4656 16.0964H8.49121"
+                                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    stroke="currentColor"></path>
+                                                <circle cx="12.0002" cy="12.0002" r="9.3" stroke-width="2"
+                                                    stroke="currentColor"></circle>
+                                            </svg>
+                                            <a class="card-link " href="#!"> <span
+                                                    class="text-black fs-6 fw-bolder text-decoration-underline">Sign in
+                                                    to view salary</span></a>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="card-body pt-2 pb-3">
+                                        <div class="mb-1">
+                                            <p class="mb-0">
+                                                <span class="fw-bolder fs-5"><i class="fa fa-map-marker"></i></span>
+                                                <span class="ps-1">HCM</span>
+                                            </p>
+                                            <p class="mb-0">
+                                                <span class="fw-bolder "><i class="fa fa-clock-o"></i></span>
+                                                <span class="ps-1">Remote</span>
+                                            </p>
+                                        </div>
+                                        <div class="d-flex gap-1">
+                                            <button type="button" class="btn btn-outline-secondary btn-skill"> Java
+                                            </button>
+                                            <button type="button" class="btn btn-outline-secondary btn-skill"> Spring
+                                            </button>
+                                            <button type="button" class="btn btn-outline-secondary btn-skill"> Angular
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- card 02 -->
+                            <div class="col-12 col-lg-6">
+                                <div class="card-h-100 card shadow border-0">
+                                    <div class="card-header bg-white">
+                                        <div class="d-flex justify-content-between">
+                                            <p class="small mb-1">Posted 2 days ago</p>
+                                            <button class="border-0 bg-transparent p-0">
+                                                <span>
+                                                    <svg stroke="currentColor" fill="none" stroke-width="1.5"
+                                                        viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z">
+                                                        </path>
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <a href="job-detail.html" class="card-link mb-2 ">
+                                            <p class="card-title h5 fw-bolder ">
+                                                Fullstack Dev & Support (Java, Spring,Angular)
+                                            </p>
+                                        </a>
+                                        <div class="card-img__grou d-flex gap-3 align-items-center">
+                                            <a href="#!" class="card-img" style="width: 60px;">
+                                                <img class="center border rounded object-fit-cover"
+                                                    src="~/img/fpt_corporation_logo.jpg" alt="">
+                                            </a>
+                                            <a href="#!" class="card-img-title ">
+                                                <p class="small  fw-bolder mb-0 text-black">Bosch Global Software
+                                                    Technologies Company Limited</p>
+                                            </a>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2 mt-2">
+                                            <svg fill="none" height="20" stroke="currentColor" viewBox="0 0 24 24"
+                                                width="20" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12.0044 6V18" stroke-linecap="round" stroke-linejoin="round"
+                                                    stroke-width="2"></path>
+                                                <path
+                                                    d="M14.9287 7.90332H10.5395C9.99625 7.90332 9.47527 8.11912 9.09114 8.50325C8.70701 8.88738 8.49121 9.40836 8.49121 9.9516C8.49121 10.4948 8.70701 11.0158 9.09114 11.4C9.47527 11.7841 9.99625 11.9999 10.5395 11.9999H13.4656C14.0088 11.9999 14.5298 12.2157 14.914 12.5998C15.2981 12.9839 15.5139 13.5049 15.5139 14.0482C15.5139 14.5914 15.2981 15.1124 14.914 15.4965C14.5298 15.8806 14.0088 16.0964 13.4656 16.0964H8.49121"
+                                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    stroke="currentColor"></path>
+                                                <circle cx="12.0002" cy="12.0002" r="9.3" stroke-width="2"
+                                                    stroke="currentColor"></circle>
+                                            </svg>
+                                            <a class="card-link " href="#!"> <span
+                                                    class="text-black fs-6 fw-bolder text-decoration-underline">Sign in
+                                                    to view salary</span></a>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="card-body pt-2 pb-3">
+                                        <div class="mb-1">
+                                            <p class="mb-0">
+                                                <span class="fw-bolder fs-5"><i class="fa fa-map-marker"></i></span>
+                                                <span class="ps-1">HCM</span>
+                                            </p>
+                                            <p class="mb-0">
+                                                <span class="fw-bolder "><i class="fa fa-clock-o"></i></span>
+                                                <span class="ps-1">Remote</span>
+                                            </p>
+                                        </div>
+                                        <div class="d-flex gap-1">
+                                            <button type="button" class="btn btn-outline-secondary btn-skill"> Java
+                                            </button>
+                                            <button type="button" class="btn btn-outline-secondary btn-skill"> Spring
+                                            </button>
+                                            <button type="button" class="btn btn-outline-secondary btn-skill"> Angular
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                       </div>
+                    </div>
+                </div>
+                
+                <div class="carousel-indicators">
+                    <button class="btn-icon-chevron-left" type="button" data-bs-target="#TopJobSlideId" data-bs-slide="prev">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button type="button" data-bs-target="#TopJobSlideId" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></button>
+                    <button type="button" data-bs-target="#TopJobSlideId" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+                    <button type="button" data-bs-target="#TopJobSlideId" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
+                    <button class="btn-icon-chevron-right" type="button" data-bs-target="#TopJobSlideId" data-bs-slide="next">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+                                         
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Jobs -->
+    <section class="section-3 py-5 py-sm-4">
+        <div class="container">
+            <h2>Latest Jobs</h2>
+            <div class="row pt-5 pt-sm-4">
+                <div class="job_listing_area">
+                    <div class="job_lists">
+                        <div class="row g-3">
+                            <!-- card 01 -->
+                            <div class="col-12 col-lg-6">
+                                <div class="card-h-100 card shadow border-0">
+                                    <div class="card-header bg-white">
+                                        <div class="d-flex justify-content-between">
+                                            <p class="small mb-1">Posted 2 days ago</p>
+                                            <button class="border-0 bg-transparent p-0">
+                                                <span>
+                                                    <svg stroke="currentColor" fill="none" stroke-width="1.5"
+                                                        viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z">
+                                                        </path>
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <a class="card-link mb-2 " href="job-detail.html">
+                                            <p class="card-title h5 fw-bolder ">
+                                                Fullstack Dev & Support (Java, Spring,Angular)
+                                            </p>
+                                        </a>
+                                        <div class="card-img__grou d-flex gap-3 align-items-center">
+                                            <a href="#!" class="card-img" style="width: 60px;">
+                                                <img class="center border rounded object-fit-cover"
+                                                    src="~/img/fpt_corporation_logo.jpg" alt="">
+                                            </a>
+                                            <a href="#!" class="card-img-title ">
+                                                <p class="small  fw-bolder mb-0 text-black">Bosch Global Software
+                                                    Technologies Company Limited</p>
+                                            </a>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2 mt-2">
+                                            <svg fill="none" height="20" stroke="currentColor" viewBox="0 0 24 24"
+                                                width="20" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12.0044 6V18" stroke-linecap="round" stroke-linejoin="round"
+                                                    stroke-width="2"></path>
+                                                <path
+                                                    d="M14.9287 7.90332H10.5395C9.99625 7.90332 9.47527 8.11912 9.09114 8.50325C8.70701 8.88738 8.49121 9.40836 8.49121 9.9516C8.49121 10.4948 8.70701 11.0158 9.09114 11.4C9.47527 11.7841 9.99625 11.9999 10.5395 11.9999H13.4656C14.0088 11.9999 14.5298 12.2157 14.914 12.5998C15.2981 12.9839 15.5139 13.5049 15.5139 14.0482C15.5139 14.5914 15.2981 15.1124 14.914 15.4965C14.5298 15.8806 14.0088 16.0964 13.4656 16.0964H8.49121"
+                                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    stroke="currentColor"></path>
+                                                <circle cx="12.0002" cy="12.0002" r="9.3" stroke-width="2"
+                                                    stroke="currentColor"></circle>
+                                            </svg>
+                                            <a class="card-link " href="#!"> <span
+                                                    class="text-black fs-6 fw-bolder text-decoration-underline">Sign in
+                                                    to view salary</span></a>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="card-body pt-2 pb-3">
+                                        <div class="mb-1">
+                                            <p class="mb-0">
+                                                <span class="fw-bolder fs-5"><i class="fa fa-map-marker"></i></span>
+                                                <span class="ps-1">HCM</span>
+                                            </p>
+                                            <p class="mb-0">
+                                                <span class="fw-bolder "><i class="fa fa-clock-o"></i></span>
+                                                <span class="ps-1">Remote</span>
+                                            </p>
+                                        </div>
+                                        <div class="d-flex gap-1">
+                                            <button type="button" class="btn btn-outline-secondary btn-skill"> Java
+                                            </button>
+                                            <button type="button" class="btn btn-outline-secondary btn-skill"> Spring
+                                            </button>
+                                            <button type="button" class="btn btn-outline-secondary btn-skill"> Angular
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- card 02 -->
+                            <div class="col-12 col-lg-6">
+                                <div class="card-h-100 card shadow border-0">
+                                    <div class="card-header bg-white">
+                                        <div class="d-flex justify-content-between">
+                                            <p class="small mb-1">Posted 2 days ago</p>
+                                            <button class="border-0 bg-transparent p-0">
+                                                <span>
+                                                    <svg stroke="currentColor" fill="none" stroke-width="1.5"
+                                                        viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z">
+                                                        </path>
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <a class="card-link mb-2 " href="job-detail.html">
+                                            <p class="card-title h5 fw-bolder ">
+                                                Fullstack Dev & Support (Java, Spring,Angular)
+                                            </p>
+                                        </a>
+                                        <div class="card-img__grou d-flex gap-3 align-items-center">
+                                            <a href="#!" class="card-img" style="width: 60px;">
+                                                <img class="center border rounded object-fit-cover"
+                                                    src="~/img/fpt_corporation_logo.jpg" alt="">
+                                            </a>
+                                            <a href="#!" class="card-img-title ">
+                                                <p class="small  fw-bolder mb-0 text-black">Bosch Global Software
+                                                    Technologies Company Limited</p>
+                                            </a>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2 mt-2">
+                                            <svg fill="none" height="20" stroke="currentColor" viewBox="0 0 24 24"
+                                                width="20" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12.0044 6V18" stroke-linecap="round" stroke-linejoin="round"
+                                                    stroke-width="2"></path>
+                                                <path
+                                                    d="M14.9287 7.90332H10.5395C9.99625 7.90332 9.47527 8.11912 9.09114 8.50325C8.70701 8.88738 8.49121 9.40836 8.49121 9.9516C8.49121 10.4948 8.70701 11.0158 9.09114 11.4C9.47527 11.7841 9.99625 11.9999 10.5395 11.9999H13.4656C14.0088 11.9999 14.5298 12.2157 14.914 12.5998C15.2981 12.9839 15.5139 13.5049 15.5139 14.0482C15.5139 14.5914 15.2981 15.1124 14.914 15.4965C14.5298 15.8806 14.0088 16.0964 13.4656 16.0964H8.49121"
+                                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    stroke="currentColor"></path>
+                                                <circle cx="12.0002" cy="12.0002" r="9.3" stroke-width="2"
+                                                    stroke="currentColor"></circle>
+                                            </svg>
+                                            <a class="card-link " href="#!"> <span
+                                                    class="text-black fs-6 fw-bolder text-decoration-underline">Sign in
+                                                    to view salary</span></a>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="card-body pt-2 pb-3">
+                                        <div class="mb-1">
+                                            <p class="mb-0">
+                                                <span class="fw-bolder fs-5"><i class="fa fa-map-marker"></i></span>
+                                                <span class="ps-1">HCM</span>
+                                            </p>
+                                            <p class="mb-0">
+                                                <span class="fw-bolder "><i class="fa fa-clock-o"></i></span>
+                                                <span class="ps-1">Remote</span>
+                                            </p>
+                                        </div>
+                                        <div class="d-flex gap-1">
+                                            <button type="button" class="btn btn-outline-secondary btn-skill"> Java
+                                            </button>
+                                            <button type="button" class="btn btn-outline-secondary btn-skill"> Spring
+                                            </button>
+                                            <button type="button" class="btn btn-outline-secondary btn-skill"> Angular
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                         
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide job hot -->
+    <section class="section-3  py-5 py-sm-4 bg-2">
+        <div class="container">
+            <h2>Hot Jobs</h2>
+            <div id="HotJobsSlideId" class="carousel slide pt-5 pt-sm-4 g-3">
+               
+                <div class="carousel-inner ">
+                    <div class="carousel-item active mb-2 pb-5 ">
+                           <div class="row g-4">
+                                <!-- card 01 -->
+                                <div class="col-12 col-lg-6">
+                                    <div class="card-h-100 card shadow border-0">
+                                        <div class="card-header bg-white">
+                                            <div class="d-flex justify-content-between">
+                                                <p class="small mb-1">Posted 2 days ago</p>
+                                                <button class="border-0 bg-transparent p-0">
+                                                    <span>
+                                                        <svg stroke="currentColor" fill="none" stroke-width="1.5"
+                                                            viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z">
+                                                            </path>
+                                                        </svg>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                            <a href="job-detail.html" class="card-link mb-2 ">
+                                                <p class="card-title h5 fw-bolder ">
+                                                    Fullstack Dev & Support (Java, Spring,Angular)
+                                                </p>
+                                            </a>
+                                            <div class="card-img__grou d-flex gap-3 align-items-center">
+                                                <a href="#!" class="card-img" style="width: 60px;">
+                                                    <img class="center border rounded object-fit-cover"
+                                                        src="~/img/fpt_corporation_logo.jpg" alt="">
+                                                </a>
+                                                <a href="#!" class="card-img-title ">
+                                                    <p class="small  fw-bolder mb-0 text-black">Bosch Global Software
+                                                        Technologies Company Limited</p>
+                                                </a>
+                                            </div>
+                                            <div class="d-flex align-items-center gap-2 mt-2">
+                                                <svg fill="none" height="20" stroke="currentColor" viewBox="0 0 24 24"
+                                                    width="20" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M12.0044 6V18" stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2"></path>
+                                                    <path
+                                                        d="M14.9287 7.90332H10.5395C9.99625 7.90332 9.47527 8.11912 9.09114 8.50325C8.70701 8.88738 8.49121 9.40836 8.49121 9.9516C8.49121 10.4948 8.70701 11.0158 9.09114 11.4C9.47527 11.7841 9.99625 11.9999 10.5395 11.9999H13.4656C14.0088 11.9999 14.5298 12.2157 14.914 12.5998C15.2981 12.9839 15.5139 13.5049 15.5139 14.0482C15.5139 14.5914 15.2981 15.1124 14.914 15.4965C14.5298 15.8806 14.0088 16.0964 13.4656 16.0964H8.49121"
+                                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                        stroke="currentColor"></path>
+                                                    <circle cx="12.0002" cy="12.0002" r="9.3" stroke-width="2"
+                                                        stroke="currentColor"></circle>
+                                                </svg>
+                                                <a class="card-link " href="#!"> <span
+                                                        class="text-black fs-6 fw-bolder text-decoration-underline">Sign in
+                                                        to view salary</span></a>
+                                            </div>
+    
+                                        </div>
+    
+                                        <div class="card-body pt-2 pb-3">
+                                            <div class="mb-1">
+                                                <p class="mb-0">
+                                                    <span class="fw-bolder fs-5"><i class="fa fa-map-marker"></i></span>
+                                                    <span class="ps-1">HCM</span>
+                                                </p>
+                                                <p class="mb-0">
+                                                    <span class="fw-bolder "><i class="fa fa-clock-o"></i></span>
+                                                    <span class="ps-1">Remote</span>
+                                                </p>
+                                            </div>
+                                            <div class="d-flex gap-1">
+                                                <button type="button" class="btn btn-outline-secondary btn-skill"> Java
+                                                </button>
+                                                <button type="button" class="btn btn-outline-secondary btn-skill"> Spring
+                                                </button>
+                                                <button type="button" class="btn btn-outline-secondary btn-skill"> Angular
+                                                </button>
+                                            </div>
+                                        </div>
+    
+                                    </div>
+                                </div>
+
+                                <!-- card 02 -->
+                                <div class="col-12 col-lg-6">
+                                    <div class="card-h-100 card shadow border-0">
+                                        <div class="card-header bg-white">
+                                            <div class="d-flex justify-content-between">
+                                                <p class="small mb-1">Posted 2 days ago</p>
+                                                <button class="border-0 bg-transparent p-0">
+                                                    <span>
+                                                        <svg stroke="currentColor" fill="none" stroke-width="1.5"
+                                                            viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z">
+                                                            </path>
+                                                        </svg>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                            <a href="job-detail.html" class="card-link mb-2 ">
+                                                <p class="card-title h5 fw-bolder ">
+                                                    Fullstack Dev & Support (Java, Spring,Angular)
+                                                </p>
+                                            </a>
+                                            <div class="card-img__grou d-flex gap-3 align-items-center">
+                                                <a href="#!" class="card-img" style="width: 60px;">
+                                                    <img class="center border rounded object-fit-cover"
+                                                        src="~/img/fpt_corporation_logo.jpg" alt="">
+                                                </a>
+                                                <a href="#!" class="card-img-title ">
+                                                    <p class="small  fw-bolder mb-0 text-black">Bosch Global Software
+                                                        Technologies Company Limited</p>
+                                                </a>
+                                            </div>
+                                            <div class="d-flex align-items-center gap-2 mt-2">
+                                                <svg fill="none" height="20" stroke="currentColor" viewBox="0 0 24 24"
+                                                    width="20" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M12.0044 6V18" stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2"></path>
+                                                    <path
+                                                        d="M14.9287 7.90332H10.5395C9.99625 7.90332 9.47527 8.11912 9.09114 8.50325C8.70701 8.88738 8.49121 9.40836 8.49121 9.9516C8.49121 10.4948 8.70701 11.0158 9.09114 11.4C9.47527 11.7841 9.99625 11.9999 10.5395 11.9999H13.4656C14.0088 11.9999 14.5298 12.2157 14.914 12.5998C15.2981 12.9839 15.5139 13.5049 15.5139 14.0482C15.5139 14.5914 15.2981 15.1124 14.914 15.4965C14.5298 15.8806 14.0088 16.0964 13.4656 16.0964H8.49121"
+                                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                        stroke="currentColor"></path>
+                                                    <circle cx="12.0002" cy="12.0002" r="9.3" stroke-width="2"
+                                                        stroke="currentColor"></circle>
+                                                </svg>
+                                                <a class="card-link " href="#!"> <span
+                                                        class="text-black fs-6 fw-bolder text-decoration-underline">Sign in
+                                                        to view salary</span></a>
+                                            </div>
+    
+                                        </div>
+    
+                                        <div class="card-body pt-2 pb-3">
+                                            <div class="mb-1">
+                                                <p class="mb-0">
+                                                    <span class="fw-bolder fs-5"><i class="fa fa-map-marker"></i></span>
+                                                    <span class="ps-1">HCM</span>
+                                                </p>
+                                                <p class="mb-0">
+                                                    <span class="fw-bolder "><i class="fa fa-clock-o"></i></span>
+                                                    <span class="ps-1">Remote</span>
+                                                </p>
+                                            </div>
+                                            <div class="d-flex gap-1">
+                                                <button type="button" class="btn btn-outline-secondary btn-skill"> Java
+                                                </button>
+                                                <button type="button" class="btn btn-outline-secondary btn-skill"> Spring
+                                                </button>
+                                                <button type="button" class="btn btn-outline-secondary btn-skill"> Angular
+                                                </button>
+                                            </div>
+                                        </div>
+    
+                                    </div>
+                                </div>
+
+                                
+    
+                           </div>
+                           
+                    </div>
+                    <div class="carousel-item  mb-2 pb-5">
+                        <div class="row g-4">
+                            <!-- card 01 -->
+                            <div class="col-12 col-lg-6">
+                                <div class="card-h-100 card shadow border-0">
+                                    <div class="card-header bg-white">
+                                        <div class="d-flex justify-content-between">
+                                            <p class="small mb-1">Posted 2 days ago</p>
+                                            <button class="border-0 bg-transparent p-0">
+                                                <span>
+                                                    <svg stroke="currentColor" fill="none" stroke-width="1.5"
+                                                        viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z">
+                                                        </path>
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <a href="job-detail.html" class="card-link mb-2 ">
+                                            <p class="card-title h5 fw-bolder ">
+                                                Fullstack Dev & Support (Java, Spring,Angular)
+                                            </p>
+                                        </a>
+                                        <div class="card-img__grou d-flex gap-3 align-items-center">
+                                            <a href="#!" class="card-img" style="width: 60px;">
+                                                <img class="center border rounded object-fit-cover"
+                                                    src="~/img/fpt_corporation_logo.jpg" alt="">
+                                            </a>
+                                            <a href="#!" class="card-img-title ">
+                                                <p class="small  fw-bolder mb-0 text-black">Bosch Global Software
+                                                    Technologies Company Limited</p>
+                                            </a>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2 mt-2">
+                                            <svg fill="none" height="20" stroke="currentColor" viewBox="0 0 24 24"
+                                                width="20" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12.0044 6V18" stroke-linecap="round" stroke-linejoin="round"
+                                                    stroke-width="2"></path>
+                                                <path
+                                                    d="M14.9287 7.90332H10.5395C9.99625 7.90332 9.47527 8.11912 9.09114 8.50325C8.70701 8.88738 8.49121 9.40836 8.49121 9.9516C8.49121 10.4948 8.70701 11.0158 9.09114 11.4C9.47527 11.7841 9.99625 11.9999 10.5395 11.9999H13.4656C14.0088 11.9999 14.5298 12.2157 14.914 12.5998C15.2981 12.9839 15.5139 13.5049 15.5139 14.0482C15.5139 14.5914 15.2981 15.1124 14.914 15.4965C14.5298 15.8806 14.0088 16.0964 13.4656 16.0964H8.49121"
+                                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    stroke="currentColor"></path>
+                                                <circle cx="12.0002" cy="12.0002" r="9.3" stroke-width="2"
+                                                    stroke="currentColor"></circle>
+                                            </svg>
+                                            <a class="card-link " href="#!"> <span
+                                                    class="text-black fs-6 fw-bolder text-decoration-underline">Sign in
+                                                    to view salary</span></a>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="card-body pt-2 pb-3">
+                                        <div class="mb-1">
+                                            <p class="mb-0">
+                                                <span class="fw-bolder fs-5"><i class="fa fa-map-marker"></i></span>
+                                                <span class="ps-1">HCM</span>
+                                            </p>
+                                            <p class="mb-0">
+                                                <span class="fw-bolder "><i class="fa fa-clock-o"></i></span>
+                                                <span class="ps-1">Remote</span>
+                                            </p>
+                                        </div>
+                                        <div class="d-flex gap-1">
+                                            <button type="button" class="btn btn-outline-secondary btn-skill"> Java
+                                            </button>
+                                            <button type="button" class="btn btn-outline-secondary btn-skill"> Spring
+                                            </button>
+                                            <button type="button" class="btn btn-outline-secondary btn-skill"> Angular
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- card 02 -->
+                            <div class="col-12 col-lg-6">
+                                <div class="card-h-100 card shadow border-0">
+                                    <div class="card-header bg-white">
+                                        <div class="d-flex justify-content-between">
+                                            <p class="small mb-1">Posted 2 days ago</p>
+                                            <button class="border-0 bg-transparent p-0">
+                                                <span>
+                                                    <svg stroke="currentColor" fill="none" stroke-width="1.5"
+                                                        viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z">
+                                                        </path>
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <a href="job-detail.html" class="card-link mb-2 ">
+                                            <p class="card-title h5 fw-bolder ">
+                                                Fullstack Dev & Support (Java, Spring,Angular)
+                                            </p>
+                                        </a>
+                                        <div class="card-img__grou d-flex gap-3 align-items-center">
+                                            <a href="#!" class="card-img" style="width: 60px;">
+                                                <img class="center border rounded object-fit-cover"
+                                                    src="~/img/fpt_corporation_logo.jpg" alt="">
+                                            </a>
+                                            <a href="#!" class="card-img-title ">
+                                                <p class="small  fw-bolder mb-0 text-black">Bosch Global Software
+                                                    Technologies Company Limited</p>
+                                            </a>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2 mt-2">
+                                            <svg fill="none" height="20" stroke="currentColor" viewBox="0 0 24 24"
+                                                width="20" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12.0044 6V18" stroke-linecap="round" stroke-linejoin="round"
+                                                    stroke-width="2"></path>
+                                                <path
+                                                    d="M14.9287 7.90332H10.5395C9.99625 7.90332 9.47527 8.11912 9.09114 8.50325C8.70701 8.88738 8.49121 9.40836 8.49121 9.9516C8.49121 10.4948 8.70701 11.0158 9.09114 11.4C9.47527 11.7841 9.99625 11.9999 10.5395 11.9999H13.4656C14.0088 11.9999 14.5298 12.2157 14.914 12.5998C15.2981 12.9839 15.5139 13.5049 15.5139 14.0482C15.5139 14.5914 15.2981 15.1124 14.914 15.4965C14.5298 15.8806 14.0088 16.0964 13.4656 16.0964H8.49121"
+                                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    stroke="currentColor"></path>
+                                                <circle cx="12.0002" cy="12.0002" r="9.3" stroke-width="2"
+                                                    stroke="currentColor"></circle>
+                                            </svg>
+                                            <a class="card-link " href="#!"> <span
+                                                    class="text-black fs-6 fw-bolder text-decoration-underline">Sign in
+                                                    to view salary</span></a>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="card-body pt-2 pb-3">
+                                        <div class="mb-1">
+                                            <p class="mb-0">
+                                                <span class="fw-bolder fs-5"><i class="fa fa-map-marker"></i></span>
+                                                <span class="ps-1">HCM</span>
+                                            </p>
+                                            <p class="mb-0">
+                                                <span class="fw-bolder "><i class="fa fa-clock-o"></i></span>
+                                                <span class="ps-1">Remote</span>
+                                            </p>
+                                        </div>
+                                        <div class="d-flex gap-1">
+                                            <button type="button" class="btn btn-outline-secondary btn-skill"> Java
+                                            </button>
+                                            <button type="button" class="btn btn-outline-secondary btn-skill"> Spring
+                                            </button>
+                                            <button type="button" class="btn btn-outline-secondary btn-skill"> Angular
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                       </div>
+                    </div>
+                    <div class="carousel-item  mb-2 pb-5">
+                        <div class="row g-4">
+                            <!-- card 01 -->
+                            <div class="col-12 col-lg-6">
+                                <div class="card-h-100 card shadow border-0">
+                                    <div class="card-header bg-white">
+                                        <div class="d-flex justify-content-between">
+                                            <p class="small mb-1">Posted 2 days ago</p>
+                                            <button class="border-0 bg-transparent p-0">
+                                                <span>
+                                                    <svg stroke="currentColor" fill="none" stroke-width="1.5"
+                                                        viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z">
+                                                        </path>
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <a href="job-detail.html" class="card-link mb-2 ">
+                                            <p class="card-title h5 fw-bolder ">
+                                                Fullstack Dev & Support (Java, Spring,Angular)
+                                            </p>
+                                        </a>
+                                        <div class="card-img__grou d-flex gap-3 align-items-center">
+                                            <a href="#!" class="card-img" style="width: 60px;">
+                                                <img class="center border rounded object-fit-cover"
+                                                    src="~/img/fpt_corporation_logo.jpg" alt="">
+                                            </a>
+                                            <a href="#!" class="card-img-title ">
+                                                <p class="small  fw-bolder mb-0 text-black">Bosch Global Software
+                                                    Technologies Company Limited</p>
+                                            </a>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2 mt-2">
+                                            <svg fill="none" height="20" stroke="currentColor" viewBox="0 0 24 24"
+                                                width="20" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12.0044 6V18" stroke-linecap="round" stroke-linejoin="round"
+                                                    stroke-width="2"></path>
+                                                <path
+                                                    d="M14.9287 7.90332H10.5395C9.99625 7.90332 9.47527 8.11912 9.09114 8.50325C8.70701 8.88738 8.49121 9.40836 8.49121 9.9516C8.49121 10.4948 8.70701 11.0158 9.09114 11.4C9.47527 11.7841 9.99625 11.9999 10.5395 11.9999H13.4656C14.0088 11.9999 14.5298 12.2157 14.914 12.5998C15.2981 12.9839 15.5139 13.5049 15.5139 14.0482C15.5139 14.5914 15.2981 15.1124 14.914 15.4965C14.5298 15.8806 14.0088 16.0964 13.4656 16.0964H8.49121"
+                                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    stroke="currentColor"></path>
+                                                <circle cx="12.0002" cy="12.0002" r="9.3" stroke-width="2"
+                                                    stroke="currentColor"></circle>
+                                            </svg>
+                                            <a class="card-link " href="#!"> <span
+                                                    class="text-black fs-6 fw-bolder text-decoration-underline">Sign in
+                                                    to view salary</span></a>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="card-body pt-2 pb-3">
+                                        <div class="mb-1">
+                                            <p class="mb-0">
+                                                <span class="fw-bolder fs-5"><i class="fa fa-map-marker"></i></span>
+                                                <span class="ps-1">HCM</span>
+                                            </p>
+                                            <p class="mb-0">
+                                                <span class="fw-bolder "><i class="fa fa-clock-o"></i></span>
+                                                <span class="ps-1">Remote</span>
+                                            </p>
+                                        </div>
+                                        <div class="d-flex gap-1">
+                                            <button type="button" class="btn btn-outline-secondary btn-skill"> Java
+                                            </button>
+                                            <button type="button" class="btn btn-outline-secondary btn-skill"> Spring
+                                            </button>
+                                            <button type="button" class="btn btn-outline-secondary btn-skill"> Angular
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- card 02 -->
+                            <div class="col-12 col-lg-6">
+                                <div class="card-h-100 card shadow border-0">
+                                    <div class="card-header bg-white">
+                                        <div class="d-flex justify-content-between">
+                                            <p class="small mb-1">Posted 2 days ago</p>
+                                            <button class="border-0 bg-transparent p-0">
+                                                <span>
+                                                    <svg stroke="currentColor" fill="none" stroke-width="1.5"
+                                                        viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z">
+                                                        </path>
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <a href="job-detail.html" class="card-link mb-2 ">
+                                            <p class="card-title h5 fw-bolder ">
+                                                Fullstack Dev & Support (Java, Spring,Angular)
+                                            </p>
+                                        </a>
+                                        <div class="card-img__grou d-flex gap-3 align-items-center">
+                                            <a href="#!" class="card-img" style="width: 60px;">
+                                                <img class="center border rounded object-fit-cover"
+                                                    src="~/img/fpt_corporation_logo.jpg" alt="">
+                                            </a>
+                                            <a href="#!" class="card-img-title ">
+                                                <p class="small  fw-bolder mb-0 text-black">Bosch Global Software
+                                                    Technologies Company Limited</p>
+                                            </a>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2 mt-2">
+                                            <svg fill="none" height="20" stroke="currentColor" viewBox="0 0 24 24"
+                                                width="20" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12.0044 6V18" stroke-linecap="round" stroke-linejoin="round"
+                                                    stroke-width="2"></path>
+                                                <path
+                                                    d="M14.9287 7.90332H10.5395C9.99625 7.90332 9.47527 8.11912 9.09114 8.50325C8.70701 8.88738 8.49121 9.40836 8.49121 9.9516C8.49121 10.4948 8.70701 11.0158 9.09114 11.4C9.47527 11.7841 9.99625 11.9999 10.5395 11.9999H13.4656C14.0088 11.9999 14.5298 12.2157 14.914 12.5998C15.2981 12.9839 15.5139 13.5049 15.5139 14.0482C15.5139 14.5914 15.2981 15.1124 14.914 15.4965C14.5298 15.8806 14.0088 16.0964 13.4656 16.0964H8.49121"
+                                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    stroke="currentColor"></path>
+                                                <circle cx="12.0002" cy="12.0002" r="9.3" stroke-width="2"
+                                                    stroke="currentColor"></circle>
+                                            </svg>
+                                            <a class="card-link " href="#!"> <span
+                                                    class="text-black fs-6 fw-bolder text-decoration-underline">Sign in
+                                                    to view salary</span></a>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="card-body pt-2 pb-3">
+                                        <div class="mb-1">
+                                            <p class="mb-0">
+                                                <span class="fw-bolder fs-5"><i class="fa fa-map-marker"></i></span>
+                                                <span class="ps-1">HCM</span>
+                                            </p>
+                                            <p class="mb-0">
+                                                <span class="fw-bolder "><i class="fa fa-clock-o"></i></span>
+                                                <span class="ps-1">Remote</span>
+                                            </p>
+                                        </div>
+                                        <div class="d-flex gap-1">
+                                            <button type="button" class="btn btn-outline-secondary btn-skill"> Java
+                                            </button>
+                                            <button type="button" class="btn btn-outline-secondary btn-skill"> Spring
+                                            </button>
+                                            <button type="button" class="btn btn-outline-secondary btn-skill"> Angular
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                       </div>
+                    </div>
+                </div>
+                
+                <div class="carousel-indicators">
+                    <button class="btn-icon-chevron-left" type="button" data-bs-target="#HotJobsSlideId" data-bs-slide="prev">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button type="button" data-bs-target="#HotJobsSlideId" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></button>
+                    <button type="button" data-bs-target="#HotJobsSlideId" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+                    <button type="button" data-bs-target="#HotJobsSlideId" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
+                    <button class="btn-icon-chevron-right" type="button" data-bs-target="#HotJobsSlideId" data-bs-slide="next">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+                                         
+            </div>
+        </div>
+    </section>
