@@ -24,24 +24,27 @@
                 </div>
                 <div class="card account-nav border-0 shadow mb-4 mb-lg-0">
                     <div class="card-body p-0">
-                        <ul class="list-group list-group-flush ">
+                       <ul class="list-group list-group-flush ">
                             <li class="list-group-item d-flex justify-content-between p-3">
-                                <a href="account.html">Account Settings</a>
+                                <a asp-area="EndUser" asp-controller="Account" asp-action="Index" >Account Settings</a>
                             </li>
                             <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                                <a href="my-profile.html">My Profile</a>
+                                <a asp-area="EndUser" asp-controller="Account" asp-action="Profile" >My Profile</a>
                             </li>
                             <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                                <a href="post-job.html">Post a Job</a>
+                                <a asp-area="EndUser" asp-controller="Account" asp-action="ProfileEmployer" >My Profile Employer</a>
                             </li>
                             <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                                <a href="my-jobs.html">My Jobs</a>
+                                <a asp-area="EndUser" asp-controller="Account" asp-action="PostJob" >Post a Job</a>
                             </li>
                             <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                                <a href="job-applied.html">Jobs Applied</a>
+                                <a asp-area="EndUser" asp-controller="Account" asp-action="MyJob">My Jobs</a>
                             </li>
                             <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                                <a href="saved-jobs.html">Saved Jobs</a>
+                                <a asp-area="EndUser" asp-controller="Account" asp-action="JobApply">Jobs Applied</a>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                                <a asp-area="EndUser" asp-controller="Account" asp-action="SavedJob">Saved Jobs</a>
                             </li>
                         </ul>
                     </div>

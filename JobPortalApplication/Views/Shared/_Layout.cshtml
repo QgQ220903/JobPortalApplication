@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="~/css/footer.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/mycss.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/JobPortalApplication.styles.css" asp-append-version="true" />
+
 
     @* icon  *@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
@@ -53,7 +53,7 @@
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="main_nav">
+                <div class="collapse navbar-collapse justify-content-between" id="main_nav">
 
 
                     <ul class="navbar-nav ms-0 ms-sm-0 me-auto mb-2 mb-lg-0 ms-lg-4">
@@ -93,24 +93,44 @@
                         </li>
                     </ul>
 
-                    <a class="btn btn-outline-primary me-2" type="submit" asp-area="EndUser" asp-controller="Account" asp-action="Login">Login</a>
-                    <a class="btn btn-primary" type="submit" asp-area="EndUser" asp-controller="Account" asp-action="PostJob">Post a Job</a>
+                  @*   <a class="btn btn-outline-primary me-2" type="submit" asp-area="EndUser" asp-controller="Account" asp-action="Login">Login/Register</a>
+                    <a class="btn btn-primary" type="submit" asp-area="EndUser" asp-controller="Account" asp-action="Login">For Employers</a>
+                   *@
+                    <!-- login -->
+                    <div class="w-25 ms-auto ms-sm-0">
+                        <div class="dropdown me-1">
+
+                          <button class="p-0 btn border-0 bg-transparent dropdown-toggle d-flex align-items-center gap-2" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="20,20">
+                           
+                              <img class="object-fit-cove img-thumbnail rounded-circle" style="max-width: 40px;" src="~/img/avatar7.png" alt="avatar7">
+                            
+                              <span class=" fs-6 ">Trần Quang Trường</span>  
+                          </button>
+                        
+                          <ul class="dropdown-menu mt-2 ms-2">
+                            <li>
+                              <a class="dropdown-item" asp-area="EndUser" asp-controller="Account" asp-action="Index">Accout Setting</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#">Log out</a>
+                              </li>
+                          </ul>
+                        </div> 
+
+                       
+                    </div>
                 </div> <!-- navbar-collapse.// -->
 
             </div> <!-- container-fluid.// -->
         </nav>
     </header>
 
-      <main> @RenderBody()</main>
+    <main> 
 
-    @* <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - JobPortalApplication - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-        <a class="" asp-controller=></a>
-    </footer> *@
-    @* Start Footer *@
-    <!-- FOOTER -->
+      @RenderBody()
+
+    </main>
+
     <div class="pg-footer mt-2">
         <footer class="footer">
           <svg class="footer-wave-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 100" preserveAspectRatio="none">
@@ -267,6 +287,7 @@
     @* End Footer *@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
     <script src="~/js/instantpages.5.1.0.min.js"></script>
     <script src="~/js/lazyload.17.6.0.min.js"></script>
     <script src="~/js/slick.min.js"></script>

@@ -25,6 +25,15 @@ namespace JobPortalApplication.Areas.EndUser.Controllers
             return View();
         }
 
+        public IActionResult ProfileEmployer() { 
+            return View();
+        }
+
+        public IActionResult ListApplicants()
+        {
+            return View();
+        }
+
         public IActionResult PostJob() { 
             return View();
         }
