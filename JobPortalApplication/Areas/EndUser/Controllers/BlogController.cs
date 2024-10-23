@@ -14,5 +14,10 @@ namespace JobPortalApplication.Areas.EndUser.Controllers
         {
             return View();
         }
+
+        public IActionResult PostBlog()
+        {
+            return View();
+        }
     }
 }

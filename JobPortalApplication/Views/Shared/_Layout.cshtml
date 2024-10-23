@@ -15,35 +15,12 @@
  
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
    
+   @* tiny textarea *@
+   <script src="https://cdn.tiny.cloud/1/2ejhh9vscfzh8ssrdz6zerfb93x9zmatio3l0iwfcbfkd8w8/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+
 
 </head>
 <body data-instant-intensity="mousedown">
-    @* <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">JobPortalApplication</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-primary" asp-area="EndUser" asp-controller="Home" asp-action="Index" >Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-primary" asp-area="EndUser" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div> *@
 
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-white shadow py-3">
@@ -97,23 +74,35 @@
                     <a class="btn btn-primary" type="submit" asp-area="EndUser" asp-controller="Account" asp-action="Login">For Employers</a>
                    *@
                     <!-- login -->
-                    <div class="w-25 ms-auto ms-sm-0">
-                        <div class="dropdown me-1">
-
+                    <div class="w-25 ms-sm-0 ps-xxl-5 ps-xl-3 ps-lg-1">
+                        <div class="dropdown d-flex align-items-center gap-3 justify-content-lg-end">
+                          <a href="#!" class="fs-5">
+                            <i class="fa-solid fa-bell"></i>
+                          </a>
                           <button class="p-0 btn border-0 bg-transparent dropdown-toggle d-flex align-items-center gap-2" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="20,20">
                            
                               <img class="object-fit-cove img-thumbnail rounded-circle" style="max-width: 40px;" src="~/img/avatar7.png" alt="avatar7">
                             
-                              <span class=" fs-6 ">Trần Quang Trường</span>  
+                              @* <span class=" fs-6 ">Trần Quang Trường</span>   *@
                           </button>
                         
-                          <ul class="dropdown-menu mt-2 ms-2">
+                          <ul class="dropdown-menu mt-2 end-0 ">
+                            <li>
+                                    <div class="dropdown-item d-flex flex-lg-column flex-xl-row align-items-xl-center align-items-lg-start gap-2 pb-2  border-bottom">
+                                  <img class="object-fit-cove img-thumbnail rounded-circle" style="max-width: 40px;" src="~/img/avatar7.png" alt="avatar7">
+                              
+                                  <span class=" fs-6 ">Trần Quang Trường</span>  
+                              </div>
+                            </li>
                             <li>
                               <a class="dropdown-item" asp-area="EndUser" asp-controller="Account" asp-action="Index">Accout Setting</a>
                             </li>
                             <li>
+                              <a class="dropdown-item" aria-activedescendant=""asp-area="EndUser" asp-controller="Blog" asp-action="PostBlog" >Post a Blog</a>
+                            </li>
+                            <li>
                               <a class="dropdown-item" href="#">Log out</a>
-                              </li>
+                            </li>
                           </ul>
                         </div> 
 
