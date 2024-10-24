@@ -10,7 +10,8 @@ namespace JobPortalApplication.Areas.Admin.Controllers
     public class JobSkillController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
-        public JobSkillController(IUnitOfWork unitOfWork)
+
+        public JobSkillController(IUnitOfWork unitOfWork) 
         {
             _unitOfWork = unitOfWork;
         }
@@ -44,7 +45,8 @@ namespace JobPortalApplication.Areas.Admin.Controllers
                 return NotFound();
             }
             Skill? skill = _unitOfWork.SkillRepo.Get(x => x.Id == id);
-            if (skill == null)
+
+            if(skill == null)
             {
                 return NotFound();
             }
@@ -63,34 +65,6 @@ namespace JobPortalApplication.Areas.Admin.Controllers
             }
             return View();
         }
-
-/*        public IActionResult Delete(int id)
-        {
-            if (id == null || id == 0)
-            {
-                return NotFound();
-            }
-            Skill? skill = _unitOfWork.SkillRepo.Get(x => x.Id == id);
-            if (skill == null)
-            {
-                return NotFound();
-            }
-            return View(skill);
-        }*/
-/*        [HttpPost, ActionName("Delete")]
-        public IActionResult DeletePOST(int id)
-        {
-            Skill? skill = _unitOfWork.SkillRepo.Get(x => x.Id == id);
-            if (skill == null)
-            {
-                return NotFound();
-            }
-            _unitOfWork.SkillRepo.Remove(skill);
-            _unitOfWork.Save();
-            TempData["success"] = "Skill deleted successfully";
-            return RedirectToAction("Index", "JobSkill");
-        }*/
-
 
         #region API CALLS
         [HttpGet]
