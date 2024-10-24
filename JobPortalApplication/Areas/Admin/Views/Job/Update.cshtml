@@ -1,0 +1,120 @@
+﻿@model JobVM
+<div class="container-fluid pt-4 px-4">
+    <div class="row g-4">
+        <div class="col-lg-12">
+            <div class="bg-light rounded h-100 p-4">
+                <h3 class="mb-4 fw-bold text-primary">Job Infomation</h3>
+                <form method="post" enctype="multipart/form-data" class="row">
+                    <input asp-for="@Model.Job.Id" type="hidden">
+
+                    <div class="form-floating mb-3 col-lg-6">
+                        <input asp-for="@Model.Job.Title" type="text" class="form-control" id="floatingInput" placeholder="">
+                        <label asp-for="@Model.Job.Title" for="floatingInput"></label>
+                        <div style="position: relative;">
+                            <span asp-validation-for="@Model.Job.Title" class="text-danger m-2"></span>
+                        </div>
+                    </div>
+                    <div class="form-floating mb-3 col-lg-6">
+                        <input asp-for="@Model.Job.Salary" type="text" class="form-control" id="floatingInput" placeholder="">
+                        <label asp-for="@Model.Job.Salary" for="floatingInput"></label>
+                        <div style="position: relative;">
+                            <span asp-validation-for="@Model.Job.Salary" class="text-danger m-2"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-floating mb-3 col-lg-6">
+                        <input asp-for="@Model.Job.ExpiredDate" type="text" class="form-control" id="floatingInput" placeholder="">
+                        <label asp-for="@Model.Job.ExpiredDate" for="floatingInput"></label>
+                        <div style="position: relative;">
+                            <span asp-validation-for="@Model.Job.ExpiredDate" class="text-danger m-2"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-floating mb-3 col-lg-6">
+                        <input asp-for="@Model.Job.CreateOn" type="text" class="form-control" id="floatingInput" placeholder="">
+                        <label asp-for="@Model.Job.CreateOn" for="floatingInput"></label>
+                        <div style="position: relative;">
+                            <span asp-validation-for="@Model.Job.CreateOn" class="text-danger m-2"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-floating mb-3 col-lg-6">
+                        <input asp-for="@Model.Job.UpdatedOn" type="text" class="form-control" id="floatingInput" placeholder="">
+                        <label asp-for="@Model.Job.UpdatedOn" for="floatingInput"></label>
+                        <div style="position: relative;">
+                            <span asp-validation-for="@Model.Job.UpdatedOn" class="text-danger m-2"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-floating mb-3 col-lg-6">
+                        <input asp-for="@Model.Job.Employer.Email" type="text" class="form-control" id="floatingInput" placeholder="">
+                        <label asp-for="@Model.Job.Employer.Email" for="floatingInput"></label>
+                        <div style="position: relative;">
+                            <span asp-validation-for="@Model.Job.Employer.Email" class="text-danger m-2"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-floating mb-3 col-lg-6">
+                        <input asp-for="@Model.Job.JobLevel" type="text" class="form-control" id="floatingInput" placeholder="">
+                        <label asp-for="@Model.Job.JobLevel" for="floatingInput"></label>
+                        <div style="position: relative;">
+                            <span asp-validation-for="@Model.Job.JobLevel" class="text-danger m-2"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-floating mb-3 col-lg-6">
+                        <input asp-for="@Model.Job.JobType" type="text" class="form-control" id="floatingInput" placeholder="">
+                        <label asp-for="@Model.Job.JobType" for="floatingInput"></label>
+                        <div style="position: relative;">
+                            <span asp-validation-for="@Model.Job.JobType" class="text-danger m-2"></span>
+                        </div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input asp-for="@Model.Job.Description" type="text" class="form-control" id="floatingInput" placeholder="">
+                        <label asp-for="@Model.Job.Description" for="floatingInput"></label>
+                        <div style="position: relative;">
+                            <span asp-validation-for="@Model.Job.Description" class="text-danger m-2"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input asp-for="@Model.Job.Requirements" type="text" class="form-control" id="floatingInput" placeholder="">
+                        <label asp-for="@Model.Job.Requirements" for="floatingInput"></label>
+                        <div style="position: relative;">
+                            <span asp-validation-for="@Model.Job.Requirements" class="text-danger m-2"></span>
+                        </div>
+                    </div>
+
+
+                    <div class="form-floating mb-3">
+                        <input asp-for="@Model.Job.Benefits" type="text" class="form-control" id="floatingInput" placeholder="">
+                        <label asp-for="@Model.Job.Benefits" for="floatingInput"></label>
+                        <div style="position: relative;">
+                            <span asp-validation-for="@Model.Job.Benefits" class="text-danger m-2"></span>
+                        </div>
+                    </div>
+
+
+                    <div class="form-floating mb-3 col-lg-6">
+                        <select asp-for="@Model.Job.JobStatus" asp-items="@Model.JobStatusList" class="form-control">
+                            <option disabled selected>--Select Status--</option>
+                        </select>
+                        <label asp-for="@Model.JobStatusList"></label>
+                        <span asp-validation-for="@Model.JobStatusList" class="text-danger m-2"></span>
+                    </div>
+
+
+
+                    <input asp-for="@Model.Job.UpdatedOn" type="hidden" class="form-control" id="floatingInputCreate"
+                           value="@DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss")" placeholder="">
+
+                    
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                    <a asp-area="Admin" asp-controller="Employer" asp-action="Index" class="btn btn-danger">Back To List</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+                           

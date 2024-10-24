@@ -74,7 +74,7 @@ namespace JobPortalApplication.Migrations
                         new
                         {
                             Id = 1,
-                            Create = new DateTime(2022, 10, 10, 10, 20, 48, 409, DateTimeKind.Local).AddTicks(4926),
+                            Create = new DateTime(2022, 10, 22, 21, 57, 55, 872, DateTimeKind.Local).AddTicks(7731),
                             Description = "Leading company in tech innovations and AI solutions.",
                             Email = "contact@techinnovators.com",
                             Industry = "Technology",
@@ -82,13 +82,13 @@ namespace JobPortalApplication.Migrations
                             Name = "Tech Innovators",
                             Phone = "123-456-7890",
                             Status = true,
-                            Update = new DateTime(2024, 10, 10, 10, 20, 48, 409, DateTimeKind.Local).AddTicks(4942),
+                            Update = new DateTime(2024, 10, 22, 21, 57, 55, 872, DateTimeKind.Local).AddTicks(7747),
                             Website = "https://www.techinnovators.com"
                         },
                         new
                         {
                             Id = 2,
-                            Create = new DateTime(2021, 10, 10, 10, 20, 48, 409, DateTimeKind.Local).AddTicks(4949),
+                            Create = new DateTime(2021, 10, 22, 21, 57, 55, 872, DateTimeKind.Local).AddTicks(7751),
                             Description = "Sustainable solutions for a greener future.",
                             Email = "info@greenearth.com",
                             Industry = "Environmental",
@@ -96,13 +96,13 @@ namespace JobPortalApplication.Migrations
                             Name = "Green Earth Co.",
                             Phone = "987-654-3210",
                             Status = true,
-                            Update = new DateTime(2024, 10, 10, 10, 20, 48, 409, DateTimeKind.Local).AddTicks(4950),
+                            Update = new DateTime(2024, 10, 22, 21, 57, 55, 872, DateTimeKind.Local).AddTicks(7752),
                             Website = "https://www.greenearth.com"
                         },
                         new
                         {
                             Id = 3,
-                            Create = new DateTime(2019, 10, 10, 10, 20, 48, 409, DateTimeKind.Local).AddTicks(4952),
+                            Create = new DateTime(2019, 10, 22, 21, 57, 55, 872, DateTimeKind.Local).AddTicks(7753),
                             Description = "Providing innovative healthcare solutions worldwide.",
                             Email = "support@healthfirst.com",
                             Industry = "Healthcare",
@@ -110,13 +110,13 @@ namespace JobPortalApplication.Migrations
                             Name = "HealthFirst Inc.",
                             Phone = "555-678-1234",
                             Status = true,
-                            Update = new DateTime(2024, 10, 10, 10, 20, 48, 409, DateTimeKind.Local).AddTicks(4953),
+                            Update = new DateTime(2024, 10, 22, 21, 57, 55, 872, DateTimeKind.Local).AddTicks(7754),
                             Website = "https://www.healthfirst.com"
                         },
                         new
                         {
                             Id = 4,
-                            Create = new DateTime(2023, 10, 10, 10, 20, 48, 409, DateTimeKind.Local).AddTicks(4954),
+                            Create = new DateTime(2023, 10, 22, 21, 57, 55, 872, DateTimeKind.Local).AddTicks(7756),
                             Description = "Investing in future leaders and breakthrough industries.",
                             Email = "contact@globalventures.com",
                             Industry = "Investment",
@@ -124,13 +124,13 @@ namespace JobPortalApplication.Migrations
                             Name = "Global Ventures",
                             Phone = "321-987-6543",
                             Status = true,
-                            Update = new DateTime(2024, 10, 10, 10, 20, 48, 409, DateTimeKind.Local).AddTicks(4955),
+                            Update = new DateTime(2024, 10, 22, 21, 57, 55, 872, DateTimeKind.Local).AddTicks(7757),
                             Website = "https://www.globalventures.com"
                         },
                         new
                         {
                             Id = 5,
-                            Create = new DateTime(2020, 10, 10, 10, 20, 48, 409, DateTimeKind.Local).AddTicks(4956),
+                            Create = new DateTime(2020, 10, 22, 21, 57, 55, 872, DateTimeKind.Local).AddTicks(7759),
                             Description = "Developing renewable energy solutions for the future.",
                             Email = "support@futureenergy.com",
                             Industry = "Energy",
@@ -138,13 +138,13 @@ namespace JobPortalApplication.Migrations
                             Name = "Future Energy Corp",
                             Phone = "222-333-4444",
                             Status = true,
-                            Update = new DateTime(2024, 10, 10, 10, 20, 48, 409, DateTimeKind.Local).AddTicks(4958),
+                            Update = new DateTime(2024, 10, 22, 21, 57, 55, 872, DateTimeKind.Local).AddTicks(7764),
                             Website = "https://www.futureenergy.com"
                         },
                         new
                         {
                             Id = 6,
-                            Create = new DateTime(2018, 10, 10, 10, 20, 48, 409, DateTimeKind.Local).AddTicks(4959),
+                            Create = new DateTime(2018, 10, 22, 21, 57, 55, 872, DateTimeKind.Local).AddTicks(7766),
                             Description = "Bringing technology into the classroom to transform learning.",
                             Email = "info@edutech.com",
                             Industry = "Education",
@@ -152,7 +152,7 @@ namespace JobPortalApplication.Migrations
                             Name = "EduTech Solutions",
                             Phone = "999-888-7777",
                             Status = true,
-                            Update = new DateTime(2024, 10, 10, 10, 20, 48, 409, DateTimeKind.Local).AddTicks(4960),
+                            Update = new DateTime(2024, 10, 22, 21, 57, 55, 872, DateTimeKind.Local).AddTicks(7767),
                             Website = "https://www.edutech.com"
                         });
                 });
@@ -208,13 +208,13 @@ namespace JobPortalApplication.Migrations
                         {
                             Id = 1,
                             CompanyId = 3,
-                            Create = new DateTime(2022, 10, 10, 10, 20, 48, 409, DateTimeKind.Local).AddTicks(5012),
+                            Create = new DateTime(2022, 10, 22, 21, 57, 55, 872, DateTimeKind.Local).AddTicks(7817),
                             Email = "contact@techinnovators.com",
                             Fullname = "Phan Duy Cuu",
                             Location = "Bac ruong",
                             Password = "123456789Aa",
                             Status = true,
-                            Update = new DateTime(2024, 10, 10, 10, 20, 48, 409, DateTimeKind.Local).AddTicks(5014),
+                            Update = new DateTime(2024, 10, 22, 21, 57, 55, 872, DateTimeKind.Local).AddTicks(7818),
                             Username = "phanduycuu"
                         });
                 });
@@ -231,7 +231,7 @@ namespace JobPortalApplication.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("Create")
+                    b.Property<DateTime>("CreateOn")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
@@ -241,18 +241,27 @@ namespace JobPortalApplication.Migrations
                     b.Property<int>("EmployerId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime?>("Expired")
+                    b.Property<DateTime?>("ExpiredDate")
+                        .IsRequired()
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("JobLevelId")
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsFeature")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsHot")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("JobLevel")
                         .HasColumnType("int");
 
-                    b.Property<int>("JobTypeId")
+                    b.Property<int>("JobStatus")
                         .HasColumnType("int");
 
-                    b.Property<string>("Location")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("JobType")
+                        .HasColumnType("int");
 
                     b.Property<string>("Requirements")
                         .IsRequired()
@@ -261,70 +270,55 @@ namespace JobPortalApplication.Migrations
                     b.Property<double>("Salary")
                         .HasColumnType("float");
 
-                    b.Property<bool>("Status")
-                        .HasColumnType("bit");
-
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("Update")
+                    b.Property<DateTime?>("UpdatedOn")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
                     b.HasIndex("EmployerId");
 
-                    b.HasIndex("JobLevelId");
-
-                    b.HasIndex("JobTypeId");
-
                     b.ToTable("Jobs");
-                });
-
-            modelBuilder.Entity("JobPortalApplication.Models.JobLevel", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("Status")
-                        .HasColumnType("bit");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("JobLevels");
 
                     b.HasData(
                         new
                         {
                             Id = 1,
-                            Name = "Intern",
-                            Status = true
+                            Benefits = "BHXH & Bảo hiểm khác/Social Insurance & Other InsurancesDu lịch/ TravelThưởng/ BonusHuấn luyện đào tạo/TrainningChăm sóc sức khỏe/ Health careChính sách review lương/Annual Salary ReviewPhép năm/Annual LeaveTừ thứ hai đến thứ sáu: 8:30 – 17:30/ From Monday to Friday: 08:30am – 05:30pm",
+                            CreateOn = new DateTime(2024, 10, 22, 21, 57, 55, 872, DateTimeKind.Local).AddTicks(7841),
+                            Description = "Analyze system requirements from business departments.Tìm hiểu, phân tích yêu cầu hệ thống từ các phòng ban nghiệp vụ.Analyze, design necessary services based on business requirements to ensure compliance with the system development procedure. with the insurance business regulation, and the company's compliance.Phân tích, thiết kế các dịch vụ cần thiết dựa trên các yêu cầu nghiệp vụ đảm bảo tuân thủ quy định của quy trình phát triển ứng dụng. quy định của nghiệp vụ bảo hiểm, và tuân thủ quy định của công ty.   Analyze data, design and develop reports to meet business requirements.Phân tích dữ liệu, thiết kế và phát triển các báo cáo đáp ứng yêu cầu nghiệp vụ.Maintain and develop the functions of the application system according to the assigned modules.Bảo trì, phát triển các chức năng của hệ thống ứng dụng theo yêu cầu nghiệp vụ được giao.Administrate, operate the company's applications in accordance with the company's SOP.Quản trị, vận hành các ứng dụng của công ty theo đúng quy trình và tiêu chuẩn của công ty",
+                            EmployerId = 1,
+                            ExpiredDate = new DateTime(2025, 1, 22, 21, 57, 55, 872, DateTimeKind.Local).AddTicks(7838),
+                            IsDeleted = false,
+                            IsFeature = false,
+                            IsHot = true,
+                            JobLevel = 0,
+                            JobStatus = 1,
+                            JobType = 0,
+                            Requirements = "Graduated College / Bachelor degree major ITTốt nghiệp Cao Đẳng/ Đại học chuyên ngành liên quanAble to use English or Chinese in working (prefer)Có khả năng sử dụng Tiếng Anh hoặc Tiếng Trung trong công việc (ưu tiên)Knowledge about Java, JavaScript, Java Swing. Hiểu biết về Java, JavaScript, Java Swing.",
+                            Salary = 0.0,
+                            Title = "Fresher Java Developer (English/Chinese)"
                         },
                         new
                         {
                             Id = 2,
-                            Name = "Fresher",
-                            Status = true
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Name = "Junior",
-                            Status = true
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Name = "Middle",
-                            Status = true
+                            Benefits = "BHXH & Bảo hiểm khác/Social Insurance & Other InsurancesDu lịch/ TravelThưởng/ BonusHuấn luyện đào tạo/TrainningChăm sóc sức khỏe/ Health careChính sách review lương/Annual Salary ReviewPhép năm/Annual LeaveTừ thứ hai đến thứ sáu: 8:30 – 17:30/ From Monday to Friday: 08:30am – 05:30pm",
+                            CreateOn = new DateTime(2024, 10, 22, 21, 57, 55, 872, DateTimeKind.Local).AddTicks(7845),
+                            Description = "ONE OF THE TOP ICT JAPANESE COMPANIES IN VIETNAM.NEC Corp is a leader in the integration of IT and network technologies that benefit businesses and people around the world. NEC has more than 50 countries, 289 branches, and 117,418 employees worldwide. Under the company's corporate message of Orchestrating a brighter world,NEC aims to help solve a wide range of challenging issues and to create new social value for the changing world of tomorrow.Established in 2006, up to now, NEC Vietnam has grown with more than 200 employees in Hanoi and Ho Chi Minh City. We have been working hard to carry out many social contribution activities to bring more laughter and improve the quality of life.",
+                            EmployerId = 2,
+                            ExpiredDate = new DateTime(2025, 3, 22, 21, 57, 55, 872, DateTimeKind.Local).AddTicks(7844),
+                            IsDeleted = false,
+                            IsFeature = false,
+                            IsHot = true,
+                            JobLevel = 4,
+                            JobStatus = 0,
+                            JobType = 0,
+                            Requirements = "Graduated College / Bachelor degree major ITTốt nghiệp Cao Đẳng/ Đại học chuyên ngành liên quanAble to use English or Chinese in working (prefer)Có khả năng sử dụng Tiếng Anh hoặc Tiếng Trung trong công việc (ưu tiên)Knowledge about Java, JavaScript, Java Swing. Hiểu biết về Java, JavaScript, Java Swing.",
+                            Salary = 0.0,
+                            Title = "Project Leader (BrSE, Sign-on Bonus)"
                         });
                 });
 
@@ -432,26 +426,6 @@ namespace JobPortalApplication.Migrations
                         });
                 });
 
-            modelBuilder.Entity("JobPortalApplication.Models.JobType", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("Status")
-                        .HasColumnType("bit");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("JobTypes");
-                });
-
             modelBuilder.Entity("JobPortalApplication.Models.Skill", b =>
                 {
                     b.Property<int>("Id")
@@ -523,23 +497,7 @@ namespace JobPortalApplication.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("JobPortalApplication.Models.JobLevel", "JobLevel")
-                        .WithMany()
-                        .HasForeignKey("JobLevelId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("JobPortalApplication.Models.JobType", "JobType")
-                        .WithMany()
-                        .HasForeignKey("JobTypeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.Navigation("Employer");
-
-                    b.Navigation("JobLevel");
-
-                    b.Navigation("JobType");
                 });
 #pragma warning restore 612, 618
         }

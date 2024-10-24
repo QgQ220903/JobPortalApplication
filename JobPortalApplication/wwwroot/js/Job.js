@@ -4,43 +4,42 @@ $(document).ready(function () {
     loadDataTable();
 });
 
-function loadDataTable() {
+loadDataTable = function () {
     dataTable = $('#tbtJobData').DataTable({
         "ajax": {
             url: '/admin/job/getall',
             dataSrc: function (json) {
-                console.log(json);  // In ra dữ liệu từ API
-                return json.data || [];
+                // Check the actual structure from the console log
+                console.log(json);  // Analyze the response structure here
+                return json.data || []; // Assuming data is within a "data" property
             }
         },
         "columns": [
             { data: 'id', "width": "5%" },
             { data: 'title', "width": "25%" },
-            { data: 'employer.fullname', "width": "15%" },
-            { data: 'employer.company.name', "width": "15%" },
-            { data: 'jobLevel.name', "width": "15%" },
-            { data: 'jobType.name', "width": "15%" },
+            { data: 'employerEmail', "width": "15%" },
+            { data: 'companyName', "width": "15%" },
+            { data: 'jobStatus', "width": "15%" }, // Check if the API uses "jobStatus" or something else
             {
                 data: 'id',
                 "render": function (data) {
                     return `<div class = "w-75 d-flex gap-1" role=""> 
-                    <a href="/admin/job/Upsert?id=${data}" class="btn btn-sm btn-warning mx-1">
-                        <i class="fa-solid fa-pen-to-square"></i> 
-                    </a>
-                    <a onClick=Delete('/admin/job/hidden/${data}')  class="btn btn-sm btn-danger mx-1">
-                        <i class="fa-solid fa-trash"></i> 
-                    </a>
-                     <a href="/admin/job/detail?id=${data}"  class="btn btn-sm btn-info mx-1">
-                        <i class="fa-solid fa-eye"></i> 
-                    </a>
-                    </div>`;
+                  <a href="/admin/job/Update?id=${data}" class="btn btn-sm btn-warning mx-1">
+                    <i class="fa-solid fa-pen-to-square"></i> 
+                  </a>
+                  <a onClick=Delete('/admin/job/hidden/${data}')  class="btn btn-sm btn-danger mx-1">
+                    <i class="fa-solid fa-trash"></i> 
+                  </a>
+                  <a href="/admin/job/detail?id=${data}"  class="btn btn-sm btn-info mx-1">
+                    <i class="fa-solid fa-eye"></i> 
+                  </a>
+                </div>`;
                 },
                 "width": "15%"
             }
         ]
     });
-}
-
+};
 function Delete(url) {
     Swal.fire({
         title: "Are you sure?",

@@ -6,7 +6,6 @@
             <div class="bg-light rounded h-100 p-4">
                 <div class="d-flex align-items-center justify-content-between mb-4">
                     <h4 class="mb-0 fw-bold text-primary">Job List</h4>
-                    <a asp-area="Admin" asp-controller="Job" asp-action="Upsert" class="btn btn-primary"><i class="fa-solid fa-circle-plus"></i> Add New Job</a>
                 </div>
 
                 <div class="table-responsive ">
@@ -16,17 +15,30 @@
                                 <th scope="col" class="text-center">Id</th>
                                 <th scope="col" class="text-center">Title</th>
                                 <th scope="col" class="text-center">Employer</th>
-                             @*    <th scope="col" asp-for="Description" class="text-center">Description</th>
-                                <th scope="col" asp-for="Logo" class="text-center">Logo</th> *@
-                             @*    <th scope="col" asp-for="Website" class="text-center">Website</th> *@
                                 <th scope="col" class="text-center">Company</th>
-                                <th scope="col" class="text-center">Job Level</th>  
-                                <th scope="col" class="text-center">Job Type</th> 
-                            
+                                <th scope="col" class="text-center">Job Status</th>
                                 <th scope="col" class="text-center">Action</th>
-                                  
                             </tr>
                         </thead>
+                        
+                        <tbody>
+                            @* @foreach(var item in Model)
+                            {
+                                <tr>
+                                    <td class="text-center">@item.Id</td>
+                                    <td class="text-center">@item.Title</td>
+                                    <td class="text-center">@item.Employer.Email</td>
+                                    <td class="text-center">@item.Employer.Company.Name</td>
+                                    <td class="text-center">@item.JobStatus</td>
+
+                                    <td class="text-center">
+                                        <a class="btn btn-sm btn-warning" href=""><i class="fa-solid fa-pen-to-square"></i></a>
+                                        <a class="btn btn-sm btn-danger" href=""><i class="fa-solid fa-trash"></i></a>
+                                        <a class="btn btn-sm btn-primary" href=""><i class="fa-solid fa-eye"></i></a>
+                                    </td>
+                                </tr>
+                            } *@
+                        </tbody>
                       
                     </table>
                 </div>

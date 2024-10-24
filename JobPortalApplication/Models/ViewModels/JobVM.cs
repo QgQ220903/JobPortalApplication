@@ -7,10 +7,10 @@ namespace JobPortalApplication.Models.ViewModels
     {
         public Job Job { get; set; }
         [ValidateNever]
-        public IEnumerable<SelectListItem> EmployerList { get; set; }
-        [ValidateNever]
         public IEnumerable<SelectListItem> JobLevelList { get; set; }
         [ValidateNever]
         public IEnumerable<SelectListItem> JobTypeList { get; set; }
+        [ValidateNever]
+        public IEnumerable<SelectListItem> JobStatusList { get; set; }
     }
 }

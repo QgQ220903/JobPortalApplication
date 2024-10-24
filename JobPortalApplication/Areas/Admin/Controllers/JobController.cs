@@ -4,6 +4,9 @@ using JobPortalApplication.Repository.IRepository;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Hosting;
+using NuGet.Common;
+using JobPortalApplication.Helpers;
+using JobPortalApplication.Models.Enum;
 
 namespace JobPortalApplication.Areas.Admin.Controllers
 {
@@ -19,30 +22,30 @@ namespace JobPortalApplication.Areas.Admin.Controllers
         }
         public IActionResult Index()
         {
-            List<Job> JobList = _unitOfWork.JobRepo.GetAll_WSET(e => e.Status == true, includeProperties: "Employer,Employer.Company,JobLevel,JobType").ToList();
+            List<Job> JobList = _unitOfWork.JobRepo.GetAll_WSET(e => e.IsDeleted == false, includeProperties: "Employer,Employer.Company").ToList();
             return View(JobList);
+
         }
 
-        public IActionResult Upsert(int? id)
+        public IActionResult Update(int id)
         {
             JobVM jobVM = new JobVM()
             {
-                EmployerList = _unitOfWork.EmployerRepo.GetAll_WSET(e => e.Status == true, includeProperties: "Company").Select(u => new SelectListItem
+                JobLevelList = Enum.GetValues(typeof(JobLevel)).Cast<JobLevel>().Select(jobLevel => new SelectListItem
                 {
-                    Text = u.Fullname,
-                    Value = u.Id.ToString()
-                }),
-                JobLevelList = _unitOfWork.LevelRepo.GetAll_WSET(e => e.Status == true).Select(u => new SelectListItem
+                    Text = jobLevel.ToString(),
+                    Value = ((int)jobLevel).ToString()
+                }).ToList(),
+                JobTypeList = Enum.GetValues(typeof(JobType)).Cast<JobType>().Select(jobType => new SelectListItem
                 {
-                    Text = u.Name,
-                    Value = u.Id.ToString()
-                }),
-                JobTypeList = _unitOfWork.JobTypeRepo.GetAll_WSET(e => e.Status == true).Select(u => new SelectListItem
+                    Text = jobType.ToString(),
+                    Value = ((int)jobType).ToString()
+                }).ToList(),
+                JobStatusList = Enum.GetValues(typeof(JobStatus)).Cast<JobStatus>().Select(jobStatus => new SelectListItem
                 {
-                    Text = u.Name,
-                    Value = u.Id.ToString()
-                }),
-                Job = new Job()
+                    Text = jobStatus.ToString(),
+                    Value = ((int)jobStatus).ToString()
+                }).ToList(),
 
             };
             if (id == null || id == 0)
@@ -55,7 +58,9 @@ namespace JobPortalApplication.Areas.Admin.Controllers
                 return View(jobVM);
             }
         }
-        [HttpPost]
+
+
+/*        [HttpPost]
         public IActionResult Upsert(JobVM jobVM, IFormFile? file)
         {
 
@@ -80,24 +85,11 @@ namespace JobPortalApplication.Areas.Admin.Controllers
                     Text = u.Fullname,
                     Value = u.Id.ToString()
                 });
-                jobVM.JobLevelList = _unitOfWork.LevelRepo.GetAll_WSET(e => e.Status == true).Select(u => new SelectListItem
-                {
-                    Text = u.Name,
-                    Value = u.Id.ToString()
-                });
-                jobVM.JobTypeList = _unitOfWork.JobTypeRepo.GetAll_WSET(e => e.Status == true).Select(u => new SelectListItem
-                {
-                    Text = u.Name,
-                    Value = u.Id.ToString()
-                });
                 return View(jobVM);
             }
+        }*/
 
-
-
-        }
-
-        public IActionResult Detail(int id)
+/*        public IActionResult Detail(int id)
         {
             JobVM jobVM = new JobVM()
             {
@@ -105,18 +97,7 @@ namespace JobPortalApplication.Areas.Admin.Controllers
                 {
                     Text = u.Fullname,
                     Value = u.Id.ToString()
-                }),
-                JobLevelList = _unitOfWork.LevelRepo.GetAll_WSET(e => e.Status == true).Select(u => new SelectListItem
-                {
-                    Text = u.Name,
-                    Value = u.Id.ToString()
-                }),
-                JobTypeList = _unitOfWork.JobTypeRepo.GetAll_WSET(e => e.Status == true).Select(u => new SelectListItem
-                {
-                    Text = u.Name,
-                    Value = u.Id.ToString()
-                }),
-                Job = new Job()
+                })
 
             };
             if (id == null || id == 0)
@@ -129,7 +110,7 @@ namespace JobPortalApplication.Areas.Admin.Controllers
                 return View(jobVM);
             }
         }
-        //[HttpPost, ActionName("Delete")]
+*/        //[HttpPost, ActionName("Delete")]
         //public IActionResult DeletePOST(int id)
         //{
         //    Employer employer = _unitOfWork.EmployerRepo.Get(e => e.Id == id);
@@ -145,20 +126,37 @@ namespace JobPortalApplication.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult GetAll()
         {
-            //List<Company> companyList = _unitOfWork.CompanyRepo.GetAll().ToList();
-            List<Job> JobList = _unitOfWork.JobRepo
-                .GetAll_WSET(e => e.Status == true, includeProperties: "Employer,Employer.Company,JobLevel,JobType")
-                .ToList();
-            return Json(new { Data = JobList });
-        }
+            List<Job> JobList = _unitOfWork.JobRepo.GetAll_WSET(e => e.IsDeleted == false, includeProperties: "Employer,Employer.Company").ToList();
+            var jobViewModel = JobList.Select(j => new
+            {
+                j.Id,
+                j.Title,
+                j.Description,
+                employerEmail = j.Employer.Email,
+                companyName = j.Employer.Company.Name,
+                j.Requirements,
+                j.Benefits,
+                j.Salary,
+                j.ExpiredDate,
+                j.CreateOn,
+                j.UpdatedOn,
+                j.IsFeature,
+                j.IsHot,
+                j.IsDeleted,
+                jobType = EnumHelper.GetEnumDescription(j.JobType),
+                jobLevel = EnumHelper.GetEnumDescription(j.JobLevel),
+                jobStatus = EnumHelper.GetEnumDescription(j.JobStatus)
 
+            }).ToList();
+            return Json(new { Data = jobViewModel });
+        }
 
 
         [HttpPut]
         public IActionResult Hidden(int? id)
         {
             Job? job = _unitOfWork.JobRepo.Get(x => x.Id == id);
-            job.Status = false;
+            job.IsDeleted = true;
 
             _unitOfWork.JobRepo.Update(job);
             _unitOfWork.Save();
